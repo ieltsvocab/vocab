@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IELTS Vocab – Band 5.0–6.0</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f2f5fa;--card:#fff;--ink:#14213d;--mute:#5b6784;--line:#d9e0ee;--acc:#2f6fed;--accink:#fff;--ok:#1b8a5a;--bad:#d64545;--mid:#c27a0a;--hl:#ffe07a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1626;--card:#18223a;--ink:#eef2fb;--mute:#9aa6c4;--line:#2a3757;--acc:#6b9bff;--accink:#0f1626;--ok:#4cc790;--bad:#ff7a7a;--mid:#f0b34a;--hl:#6b5a14}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1626;--card:#18223a;--ink:#eef2fb;--mute:#9aa6c4;--line:#2a3757;--acc:#6b9bff;--accink:#0f1626;--ok:#4cc790;--bad:#ff7a7a;--mid:#f0b34a;--hl:#6b5a14}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 'Be Vietnam Pro','Segoe UI',system-ui,'Noto Sans',sans-serif}
+main{max-width:560px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:20px;margin:0 0 4px;line-height:1.3}
+.sub,.pt,.hint{color:var(--mute);font-size:14px}
+.sub{margin:0 0 16px}.pt{margin:8px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px;margin-bottom:12px}
+label{display:block;font-weight:500;margin-bottom:12px}
+input{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink)}
+button{font:inherit;color:var(--ink)}
+button:focus-visible,input:focus-visible,.card:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.btn{padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-weight:500;cursor:pointer;width:100%}
+.btn.main{background:var(--acc);border-color:var(--acc);color:var(--accink);font-weight:700}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.link{background:none;border:0;color:var(--mute);text-decoration:underline;font-size:14px;cursor:pointer;padding:6px 0;width:auto}
+.err{color:var(--bad);font-size:14px;min-height:20px;margin:0 0 8px}
+.chips{display:flex;gap:6px;margin:14px 0}
+.chip{flex:1;text-align:center;border:1px solid var(--line);border-radius:10px;padding:6px 2px;font-size:12px;color:var(--mute)}
+.chip.on{background:var(--ok);border-color:var(--ok);color:#fff;font-weight:700}
+.big{font-size:20px;font-weight:700;margin:0 0 8px}
+.sent{font-size:22px;font-weight:500;line-height:1.5;margin:0 0 12px}
+mark{background:var(--hl);color:inherit;border-radius:4px;padding:0 3px}
+.word{font-size:34px;font-weight:700;line-height:1.15;margin:0}
+.ipa{font-size:20px;color:var(--acc);margin:4px 0 0;font-family:'Noto Sans','Segoe UI','Lucida Sans Unicode',sans-serif}
+.mean{font-size:19px;font-weight:500;margin:12px 0}
+.vi{color:var(--mute);margin:6px 0 0}
+.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.spk{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--bg);font-size:19px;cursor:pointer;flex:none}
+.spk.on{background:var(--hl)}
+.fcard{cursor:pointer;min-height:200px}
+.act{display:flex;gap:8px}
+.act .btn{padding:13px 4px}
+.no{border-color:var(--bad);color:var(--bad)}.mid{border-color:var(--mid);color:var(--mid)}.yes{border-color:var(--ok);color:var(--ok)}
+.opt{display:block;text-align:left;margin-bottom:8px}
+.opt.right{border-color:var(--ok);background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad);color:#fff}
+.li{padding:8px 0;border-bottom:1px solid var(--line)}
+.set{display:block;text-align:left;margin-bottom:10px;border-left-width:8px;padding:14px}
+.set b{display:block;font-size:17px}.set span{display:block;font-size:14px;color:var(--mute)}
+.set .st{font-weight:700;margin-top:4px}
+.set.late{border-left-color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,var(--card))}.set.late .st{color:var(--bad)}
+.set.now{border-left-color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,var(--card))}.set.now .st{color:var(--acc)}
+.set.wait{border-left-color:var(--line)}
+.set.done{border-left-color:var(--ok)}.set.done .st{color:var(--ok)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+const SETS=[{id:"play",title:"The Importance of Children’s Play",band:"5.0–6.0",words:[
+["capacity","n","/kəˈpæsəti/","khả năng, năng lực","Children have a great capacity for learning new things.","Trẻ em có khả năng học hỏi những điều mới rất lớn."],
+["abandon","v","/əˈbændən/","bỏ, từ bỏ","She abandoned the game and went outside.","Cô bé bỏ dở trò chơi và chạy ra ngoài."],
+["regulate","v","/ˈreɡjuleɪt/","điều chỉnh, kiểm soát","Young children are still learning to regulate their emotions.","Trẻ nhỏ vẫn đang học cách kiểm soát cảm xúc của mình."],
+["adaptable","adj","/əˈdæptəbl/","dễ thích nghi","Humans are highly adaptable to new environments.","Con người có khả năng thích nghi rất cao với môi trường mới."],
+["scarce","adj","/skeəs/","khan hiếm","Safe play areas are becoming scarce in big cities.","Khu vui chơi an toàn đang ngày càng khan hiếm ở các thành phố lớn."],
+["perception","n","/pəˈsepʃn/","nhận thức, cách nhìn nhận","Parents’ perception of danger limits outdoor play.","Nhận thức của cha mẹ về nguy hiểm đã hạn chế việc chơi ngoài trời."],
+["emphasis","n","/ˈemfəsɪs/","sự nhấn mạnh, sự coi trọng","Many schools put more emphasis on exams than on play.","Nhiều trường coi trọng thi cử hơn là vui chơi."],
+["policy","n","/ˈpɒləsi/","chính sách","The government introduced a new policy on children’s rights.","Chính phủ đã ban hành chính sách mới về quyền trẻ em."],
+["evidence","n","/ˈevɪdəns/","bằng chứng","There is strong evidence that play improves problem-solving skills.","Có bằng chứng mạnh mẽ cho thấy vui chơi cải thiện kỹ năng giải quyết vấn đề."],
+["intervene","v","/ˌɪntəˈviːn/","can thiệp","Researchers should not intervene while children are playing.","Các nhà nghiên cứu không nên can thiệp khi trẻ đang chơi."],
+["impact","n","/ˈɪmpækt/","tác động, ảnh hưởng","Screen time can have a negative impact on sleep.","Thời gian dùng màn hình có thể ảnh hưởng xấu đến giấc ngủ."],
+["indicator","n","/ˈɪndɪkeɪtə(r)/","chỉ báo, dấu hiệu","Playful behaviour is an indicator of healthy development.","Hành vi vui chơi là dấu hiệu của sự phát triển lành mạnh."],
+["diagnosis","n","/ˌdaɪəɡˈnəʊsɪs/","chẩn đoán","Early diagnosis can help children get the right support.","Chẩn đoán sớm có thể giúp trẻ nhận được sự hỗ trợ phù hợp."],
+["stimulus","n","/ˈstɪmjələs/","tác nhân kích thích, sự khích lệ","A toy can be a useful stimulus for creative writing.","Một món đồ chơi có thể là nguồn kích thích hữu ích cho việc viết sáng tạo."],
+["trivial","adj","/ˈtrɪviəl/","tầm thường, không quan trọng","Some people see play as trivial, but it is essential for learning.","Một số người cho vui chơi là chuyện tầm thường, nhưng nó rất cần thiết cho việc học."],
+["fundamental","adj","/ˌfʌndəˈmentl/","cơ bản, căn bản","Play makes a fundamental contribution to child development.","Vui chơi đóng góp căn bản vào sự phát triển của trẻ."],
+["contrast","v","/kənˈtrɑːst/","tương phản, trái ngược","Play is often seen as contrasting with serious work.","Vui chơi thường bị coi là trái ngược với công việc nghiêm túc."],
+["curtail","v","/kɜːˈteɪl/","cắt giảm, hạn chế","Heavy traffic curtails children’s freedom to play outside.","Giao thông đông đúc hạn chế quyền tự do chơi ngoài trời của trẻ."],
+["competition","n","/ˌkɒmpəˈtɪʃn/","sự cạnh tranh, cuộc thi","There is growing competition between students for places at top universities.","Ngày càng có nhiều sự cạnh tranh giữa học sinh để giành suất vào các trường đại học hàng đầu."],
+["benefit","n","/ˈbenɪfɪt/","lợi ích","Regular exercise has many health benefits for children.","Tập thể dục đều đặn mang lại nhiều lợi ích sức khỏe cho trẻ em."]
+].map(a=>({w:a[0],p:a[1],i:a[2],m:a[3],e:a[4],v:a[5]}))}];
+let W=[],SET=null;
+const GAP=[1,2,4,7,7,9]; // ngày chờ sau lần review 1..6 → mốc +1, +3, +7, +14, +21, +30
+const $=s=>document.querySelector(s),app=$("#app");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today=()=>iso(new Date());
+const addDays=(s,n)=>{const d=new Date(s+"T00:00:00");d.setDate(d.getDate()+n);return iso(d)};
+const fmt=s=>s.split("-").reverse().join("/");
+const getLS=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
+const setLS=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+const key=u=>"vocab7:"+(u.name+"|"+u.en).toLowerCase().replace(/\s+/g," ").trim();
+let P=null,S={};
+const save=()=>setLS(key(P),JSON.stringify(P));
+const D=id=>P.sets[id]||(P.sets[id]=[]);
+const dueOf=id=>{const d=D(id),n=d.length;return n&&n<7?addDays(d[n-1],GAP[n-1]):today()};
+const hl=w=>esc(w.e).replace(new RegExp("\\b("+w.w+"\\w*)","i"),"<mark>$1</mark>");
+const tts="speechSynthesis" in window;let voice=null;
+function pick(){if(!tts)return;const v=speechSynthesis.getVoices();voice=v.find(x=>x.lang==="en-GB")||v.find(x=>x.lang&&x.lang.startsWith("en"))||null}
+if(tts){pick();speechSynthesis.onvoiceschanged=pick}
+function say(t,b){if(!tts)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-GB";if(voice)u.voice=voice;u.rate=.9;
+ document.querySelectorAll(".spk.on").forEach(x=>x.classList.remove("on"));
+ if(b){b.classList.add("on");u.onend=u.onerror=()=>b.classList.remove("on")}speechSynthesis.speak(u)}
+const back=()=>`<button class="link" id="bk">← Về trang chính</button>`;
+const bindBack=()=>{const b=$("#bk");if(b)b.onclick=home};
+
+function login(){
+ app.innerHTML=`<h1>Từ vựng IELTS · Band 5.0–6.0</h1><p class="sub">Nhập tên để app lưu tiến độ học của bạn.</p>
+ <div class="card"><label>Họ và tên<input id="nm" autocomplete="name"></label><label>Tên tiếng Anh<input id="en"></label><p class="err" id="er"></p><button class="btn main" id="go">Vào học</button></div>`;
+ $("#go").onclick=()=>{const name=$("#nm").value.trim(),en=$("#en").value.trim();
+  if(!name||!en){$("#er").textContent="Hãy nhập cả họ tên và tên tiếng Anh.";return}
+  setLS("vocab7:last",JSON.stringify({name,en}));enter({name,en})};
+}
+function enter(u){let p=null;try{p=JSON.parse(getLS(key(u)))}catch(e){}P=p||{name:u.name,en:u.en};P.sets=P.sets||{play:P.dates||[]};home()}
+
+function stat(id){const n=D(id).length;if(n>=7)return{k:"done",t:"Đã hoàn thành 7/7"};
+ const d=dueOf(id),t=today();if(!n)return{k:"now",t:"Bộ mới · học ngay"};
+ const diff=Math.round((new Date(d+"T00:00:00")-new Date(t+"T00:00:00"))/864e5);
+ if(diff<0)return{k:"late",t:"Lỡ hẹn "+(-diff)+" ngày · ôn ngay"};
+ if(diff===0)return{k:"now",t:"Đến hạn hôm nay · ôn ngay"};
+ return{k:"wait",t:"Ôn tiếp ngày "+fmt(d)+" (còn "+diff+" ngày)"}}
+function home(){
+ const order={late:0,now:1,wait:2,done:3};
+ const L=SETS.map(s=>({s,st:stat(s.id)})).sort((a,b)=>order[a.st.k]-order[b.st.k]);
+ app.innerHTML=`<h1>Xin chào, ${esc(P.name)} (${esc(P.en)})</h1><p class="sub">Chọn bộ từ để học. Bộ cần ôn gấp nhất nằm trên cùng.</p>`+
+ L.map(x=>`<button class="btn set ${x.st.k}" data-id="${x.s.id}"><b>${esc(x.s.title)}</b><span>Band ${x.s.band} · Lần ${D(x.s.id).length}/7</span><span class="st">${x.st.t}</span></button>`).join("")+
+ `<button class="link" id="sw2">Đổi người học</button>`;
+ document.querySelectorAll(".set").forEach(b=>b.onclick=()=>setHome(b.dataset.id));
+ $("#sw2").onclick=()=>{setLS("vocab7:last","");login()};
+}
+function setHome(id){SET=SETS.find(s=>s.id===id);W=SET.words;
+ const n=D(id).length,d=dueOf(id),t=today();let st;
+ if(n>=7)st=`<p class="big">🎉 Bạn đã hoàn thành 7/7 lần review.</p><p class="sub">Chúc mừng, 20 từ này đã vào trí nhớ dài hạn.</p>`;
+ else if(d>t)st=`<p class="big">Đã xong lần ${n}/7</p><p>Lần review tiếp theo (lần ${n+1}): <b>${fmt(d)}</b></p><button class="btn main" disabled>Chưa đến ngày ôn</button>`;
+ else st=`<p class="big">${n?"Đến ngày ôn rồi":"Bắt đầu học bộ từ"}</p><p class="sub">Lần review ${n+1}/7 · 20 từ</p><button class="btn main" id="st">Bắt đầu lần review ${n+1}</button>`;
+ let chips="";for(let i=0;i<7;i++)chips+=`<div class="chip${D(SET.id)[i]?" on":""}">${D(SET.id)[i]?fmt(D(SET.id)[i]).slice(0,5):"Lần "+(i+1)}</div>`;
+ app.innerHTML=`<button class="link" id="bk">← Tất cả bộ từ</button><h1>${esc(SET.title)}</h1><p class="sub">Band ${SET.band} · 20 từ</p>
+ <div class="chips">${chips}</div><div class="card">${st}</div>`;
+ if($("#st"))$("#st").onclick=()=>{S={q:W.map((_,i)=>i),must:[]};study()};
+ bindBack();
+}
+
+function study(){
+ if(!S.q.length)return test();
+ const w=W[S.q[0]];
+ app.innerHTML=`${back()}<div class="pt">Còn ${S.q.length} thẻ trong lượt này</div>
+ <div class="card fcard" id="cd" tabindex="0" role="button" aria-label="Lật thẻ">
+ <div id="fr"><p class="sent">${hl(w)}</p><button class="spk" id="s1" aria-label="Nghe câu">🔊</button><p class="hint">Chạm vào thẻ để lật</p></div>
+ <div id="bc" hidden><div class="top"><h2 class="word">${esc(w.w)}</h2><button class="spk" id="s2" aria-label="Nghe từ">🔊</button><span class="hint">(${w.p})</span></div>
+ <p class="ipa">${esc(w.i)}</p><p class="mean">${esc(w.m)}</p><p class="sent" style="font-size:17px">${hl(w)}</p><p class="vi">${esc(w.v)}</p><button class="spk" id="s3" aria-label="Nghe câu">🔊</button></div></div>
+ <div class="act" id="ra" hidden><button class="btn no" data-r="n">Chưa thuộc</button><button class="btn mid" data-r="m">Hơi nhớ</button><button class="btn yes" data-r="k">Đã thuộc</button></div>`;
+ bindBack();
+ let f=false;
+ const flip=()=>{if(f)return;f=true;$("#fr").hidden=true;$("#bc").hidden=false;$("#ra").hidden=false;say(w.w,$("#s2"))};
+ $("#cd").onclick=flip;$("#cd").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();flip()}};
+ $("#s1").onclick=e=>{e.stopPropagation();say(w.e,$("#s1"))};
+ $("#s2").onclick=e=>{e.stopPropagation();say(w.w,$("#s2"))};
+ $("#s3").onclick=e=>{e.stopPropagation();say(w.e,$("#s3"))};
+ document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{
+  const i=S.q.shift(),r=b.dataset.r;
+  if(r==="n")S.q.splice(Math.min(3,S.q.length),0,i);
+  if(r==="m")S.q.splice(Math.min(7,S.q.length),0,i);
+  study()});
+}
+
+function test(){
+ const rest=shuf(W.map((_,i)=>i).filter(i=>!S.must.includes(i)));
+ S.tq=S.must.concat(rest).slice(0,10);S.ti=0;S.wrong=[];S.score=0;ask();
+}
+function ask(){
+ if(S.ti>=S.tq.length)return fin();
+ const i=S.tq[S.ti],w=W[i];
+ const opts=shuf([i,...shuf(W.map((_,k)=>k).filter(k=>k!==i)).slice(0,3)]);
+ app.innerHTML=`${back()}<div class="pt">Kiểm tra nhanh · câu ${S.ti+1}/${S.tq.length}</div>
+ <div class="card"><p class="hint">Chọn nghĩa đúng của từ:</p><div class="top"><h2 class="word">${esc(w.w)}</h2><button class="spk" id="sp" aria-label="Nghe từ">🔊</button></div></div>
+ ${opts.map(k=>`<button class="btn opt" data-k="${k}">${esc(W[k].m)}</button>`).join("")}<button class="btn main" id="nx" hidden>Tiếp tục</button>`;
+ bindBack();$("#sp").onclick=()=>say(w.w,$("#sp"));say(w.w,$("#sp"));
+ document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+  const k=+b.dataset.k;
+  document.querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(+x.dataset.k===i)x.classList.add("right")});
+  if(k===i)S.score++;else{b.classList.add("wrong");S.wrong.push(i)}
+  $("#nx").hidden=false;$("#nx").focus()});
+ $("#nx").onclick=()=>{S.ti++;ask()};
+}
+function fin(){
+ const ok=S.score>=8,total=S.tq.length;
+ const wl=S.wrong.map(i=>`<div class="li"><b>${esc(W[i].w)}</b> ${esc(W[i].i)} · ${esc(W[i].m)}</div>`).join("");
+ if(ok){
+  D(SET.id).push(today());save();
+  const n=D(SET.id).length;
+  app.innerHTML=`<div class="card"><p class="big">✅ Tính 1 lần review!</p><p>Bạn đã hoàn thành <b>lần ${n}/7</b> (đúng ${S.score}/${total} câu kiểm tra).</p>
+  ${n<7?`<p>Ngày ôn tiếp theo: <b>${fmt(dueOf(SET.id))}</b>. Ôn đúng hẹn để nhớ lâu hơn nhé.</p>`:`<p class="big">🎉 Bạn đã hoàn thành đủ 7 lần review!</p>`}
+  ${wl?`<p class="hint">Từ cần chú ý thêm:</p>${wl}`:""}</div><button class="btn main" id="hm">Về trang chính</button>`;
+  $("#hm").onclick=home;
+ }else{
+  app.innerHTML=`<div class="card"><p class="big">Chưa tính lần review này</p><p>Bạn đúng ${S.score}/${total} câu, cần ít nhất 8 câu. Học lại các từ sai rồi kiểm tra lại nhé.</p>${wl}</div><button class="btn main" id="re">Học lại các từ sai</button>`;
+  $("#re").onclick=()=>{S.q=S.wrong.slice();S.must=S.wrong.slice();study()};
+ }
+}
+let last=null;try{last=JSON.parse(getLS("vocab7:last"))}catch(e){}
+if(last&&last.name&&last.en)enter(last);else login();
+</script>
+</body>
+</html>
