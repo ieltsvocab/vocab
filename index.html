@@ -63,6 +63,7 @@ main.wide{max-width:900px}
 textarea{display:block;width:100%;margin:10px 0;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);resize:vertical}
 .fb{min-height:22px;margin:10px 0}
 @media (max-width:480px){main{padding:14px 10px 32px}.set{padding:10px;border-left-width:6px}.set b,.lib b{font-size:14px}.lib{padding:10px}.lib .btn{padding:10px 6px}}
+.streak{display:flex;align-items:center;gap:6px;flex-wrap:wrap;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 14px;background:var(--card);color:var(--mute);font-size:14px}.streak.on{border-color:var(--mid)}.streak b{font-size:22px;color:var(--ink)}.streak .sm{font-size:13px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 [hidden]{display:none!important}
 </style>
@@ -121,7 +122,34 @@ const SETS=[{id:"play",tag:"C14T1P1",title:"The Importance of Children’s Play"
 ["commission","n","/kəˈmɪʃn/","đơn đặt hàng thực hiện một công trình hay tác phẩm","The artist received a commission to paint the mayor’s portrait.","Nghệ sĩ nhận được đơn đặt hàng vẽ chân dung thị trưởng.","commission"],
 ["depict","v","/dɪˈpɪkt/","miêu tả, khắc họa","The painting depicts a village market at dawn.","Bức tranh khắc họa một khu chợ làng lúc bình minh.","depicts"],
 ["wilderness","n","/ˈwɪldənəs/","vùng hoang dã","They spent two weeks hiking in the wilderness.","Họ đi bộ đường dài hai tuần trong vùng hoang dã.","wilderness"]
+].map(a=>({w:a[0],p:a[1],i:a[2],m:a[3],e:a[4],v:a[5],h:a[6]}))},
+{id:"bike",tag:"C14T1P2",title:"The growth of bike-sharing schemes around the world",words:[
+["set up","phrasal verb","/set ʌp/","thành lập, thiết lập","A group of students set up a recycling scheme at their school.","Một nhóm học sinh đã thành lập chương trình tái chế ở trường.","set up"],
+["come up with","phrasal verb","/kʌm ʌp wɪð/","nghĩ ra, đưa ra (ý tưởng)","She came up with a clever way to save energy at home.","Cô ấy nghĩ ra một cách thông minh để tiết kiệm năng lượng ở nhà.","came up with"],
+["date back to","phrasal verb","/deɪt bæk tuː/","có từ, bắt nguồn từ (thời điểm)","The tradition dates back to the 12th century.","Truyền thống này có từ thế kỷ 12.","dates back to"],
+["distribute","v","/dɪˈstrɪbjuːt/","phân phát, phân bổ","Volunteers distributed free water to the runners.","Các tình nguyện viên phát nước miễn phí cho các vận động viên chạy.","distributed"],
+["be opposed to","collocation","/bi əˈpəʊzd tuː/","phản đối","Many residents are opposed to building a new road.","Nhiều cư dân phản đối việc xây một con đường mới.","opposed to"],
+["try your luck","idiom","/traɪ jɔː lʌk/","thử vận may","He moved abroad to try his luck as a musician.","Anh ấy ra nước ngoài để thử vận may làm nhạc sĩ.","try his luck"],
+["go through with","phrasal verb","/ɡəʊ θruː wɪð/","thực hiện đến cùng (dù ngần ngại)","She was nervous but decided to go through with the interview.","Cô ấy lo lắng nhưng vẫn quyết định thực hiện buổi phỏng vấn đến cùng.","go through with"],
+["environmentally conscious","collocation","/ɪnˌvaɪrənˈmentəli ˈkɒnʃəs/","có ý thức bảo vệ môi trường","More young people are becoming environmentally conscious.","Ngày càng nhiều người trẻ có ý thức bảo vệ môi trường.","environmentally conscious"],
+["perceived threat","collocation","/pəˌsiːvd ˈθret/","mối đe dọa được cảm nhận (chưa chắc có thật)","The perceived threat of crime keeps some people indoors.","Mối đe dọa tội phạm mà người ta cảm nhận khiến một số người ở trong nhà.","perceived threat"],
+["seize an opportunity","collocation","/siːz ən ˌɒpəˈtjuːnəti/","nắm bắt cơ hội","You should seize every opportunity to practise speaking English.","Bạn nên nắm bắt mọi cơ hội để luyện nói tiếng Anh.","seize every opportunity"],
+["be modelled on","collocation","/bi ˈmɒdld ɒn/","được xây dựng theo mẫu của","The new system is modelled on one used in Japan.","Hệ thống mới được xây dựng theo mẫu của một hệ thống ở Nhật Bản.","modelled on"],
+["long for","phrasal verb","/lɒŋ fɔː(r)/","khao khát, mong mỏi","After weeks of rain, everyone longed for sunshine.","Sau nhiều tuần mưa, ai cũng mong mỏi có nắng.","longed for"],
+["be dominated by","collocation","/bi ˈdɒmɪneɪtɪd baɪ/","bị chi phối bởi, bị thống trị bởi","The market is dominated by a few large companies.","Thị trường bị chi phối bởi một vài công ty lớn.","dominated by"],
+["get off the ground","idiom","/ɡet ɒf ðə ɡraʊnd/","bắt đầu vận hành được, khởi động được","The project never got off the ground because of a lack of funding.","Dự án không bao giờ khởi động được vì thiếu kinh phí.","got off the ground"],
+["devise","v","/dɪˈvaɪz/","nghĩ ra, thiết kế (kế hoạch, hệ thống)","Engineers devised a simple method to clean the water.","Các kỹ sư đã nghĩ ra một phương pháp đơn giản để làm sạch nước.","devised"],
+["arouse interest","collocation","/əˈraʊz ˈɪntrəst/","khơi dậy sự quan tâm","The film aroused public interest in wildlife protection.","Bộ phim khơi dậy sự quan tâm của công chúng đến việc bảo vệ động vật hoang dã.","aroused public interest"],
+["prone to","adj","/prəʊn tuː/","dễ bị, có xu hướng","Old buildings are prone to damage during storms.","Các tòa nhà cũ dễ bị hư hại khi có bão.","prone to"],
+["sturdy","adj","/ˈstɜːdi/","chắc chắn, bền","She bought a sturdy pair of boots for the trip.","Cô ấy mua một đôi bốt chắc chắn cho chuyến đi.","sturdy"],
+["abolish","v","/əˈbɒlɪʃ/","bãi bỏ, xóa bỏ","The government decided to abolish the old tax.","Chính phủ quyết định bãi bỏ loại thuế cũ.","abolish"],
+["unanimously","adv","/juˈnænɪməsli/","nhất trí, đồng thanh","The committee voted unanimously in favour of the plan.","Ủy ban đã bỏ phiếu nhất trí ủng hộ kế hoạch.","unanimously"],
+["not in the least","idiom","/nɒt ɪn ðə liːst/","không một chút nào","He was not in the least surprised by the result.","Anh ấy không hề ngạc nhiên chút nào trước kết quả.","not in the least"],
+["a decisive moment","collocation","/ə dɪˈsaɪsɪv ˈməʊmənt/","thời điểm mang tính quyết định","The goal was a decisive moment in the match.","Bàn thắng là thời điểm quyết định của trận đấu.","a decisive moment"],
+["pivotal","adj","/ˈpɪvətl/","then chốt, có vai trò quyết định","Education played a pivotal role in her success.","Giáo dục đóng vai trò then chốt trong thành công của cô ấy.","pivotal"],
+["conspicuous","adj","/kənˈspɪkjuəs/","dễ thấy, nổi bật","The bright orange vest made him conspicuous in the crowd.","Chiếc áo gile màu cam sáng khiến anh ấy nổi bật giữa đám đông.","conspicuous"]
 ].map(a=>({w:a[0],p:a[1],i:a[2],m:a[3],e:a[4],v:a[5],h:a[6]}))}];
+const tk=x=>{const m=x.tag.match(/C(\d+)T(\d+)P(\d+)/);return +m[1]*1e4+ +m[2]*100+ +m[3]};SETS.sort((a,b)=>tk(a)-tk(b));
 let W=[],SET=null;
 const GAP=[1,2,4,7,7,9]; // ngày chờ sau lần review 1..6 → mốc +1, +3, +7, +14, +21, +30
 const $=s=>document.querySelector(s),app=$("#app");
@@ -136,6 +164,8 @@ const setLS=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
 const key=u=>"vocab7:"+(u.name+"|"+u.en).toLowerCase().replace(/\s+/g," ").trim();
 let P=null,S={};
 const save=()=>setLS(key(P),JSON.stringify(P));
+function markActive(){const t=today();P.streak=P.streak||{count:0,last:""};if(P.streak.last===t)return;P.streak.count=P.streak.last===addDays(t,-1)?P.streak.count+1:1;P.streak.last=t;save()}
+function streakNow(){const k=P.streak||{count:0,last:""},t=today();if(k.last===t)return{n:k.count,today:true};if(k.last===addDays(t,-1))return{n:k.count,today:false};return{n:0,today:false}}
 const D=id=>P.sets[id]||(P.sets[id]=[]);
 const dueOf=id=>{const d=D(id),n=d.length;return n&&n<7?addDays(d[n-1],GAP[n-1]):today()};
 const hl=w=>{const s=esc(w.e),t=w.h||w.w;let r=new RegExp(t,"i");if(!r.test(s))r=new RegExp("\\b("+t.split(" ")[0]+"\\w*)","i");return s.replace(r,m=>"<mark>"+m+"</mark>")};
@@ -168,9 +198,10 @@ function home(){
  const order={late:0,now:1,wait:2,done:3};
  const mine=SETS.filter(x=>P.started[x.id]).map(x=>({s:x,st:stat(x.id)})).sort((a,b)=>order[a.st.k]-order[b.st.k]);
  const lib=SETS.filter(x=>!P.started[x.id]);
+ const k=streakNow(),sk=`<div class="streak${k.n?" on":""}"><span>🔥</span><b>${k.n}</b><span>ngày học liên tiếp</span><span class="sm">${k.n?(k.today?"· hôm nay đã học ✓":"· hôm nay chưa học, học để giữ chuỗi"):"· học hôm nay để bắt đầu chuỗi"}</span></div>`;
  const L=mine.length?mine.map(x=>`<button class="btn set ${x.st.k}" data-id="${x.s.id}"><b>${esc(x.s.title)}</b><span>${x.s.tag} · Lần ${D(x.s.id).length}/7</span><span class="st">${x.st.t}</span></button>`).join(""):`<p class="sub">Chưa có bộ nào. Chọn một bộ ở bên phải để bắt đầu học.</p>`;
  const R=lib.length?lib.map(x=>`<div class="card lib"><b>${esc(x.title)}</b><span class="sub">${x.tag} · ${x.words.length} mục</span><button class="btn main" data-go="${x.id}">Bắt đầu học</button></div>`).join(""):`<p class="sub">Bạn đã bắt đầu tất cả các bộ hiện có.</p>`;
- app.className="wide";app.innerHTML=`<h1>Từ Vựng Cambridge IELTS</h1><p class="sub">Xin chào, ${esc(P.name)} (${esc(P.en)})</p>
+ app.className="wide";app.innerHTML=`<h1>Từ Vựng Cambridge IELTS</h1><p class="sub">Xin chào, ${esc(P.name)} (${esc(P.en)})</p>${sk}
  <div class="cols"><div>${L}</div><div><h2 class="coltitle">Bộ Từ Vựng</h2>${R}</div></div><button class="link" id="sw2">Đổi người học</button>`;
  document.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>setHome(b.dataset.id));
  document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>startSet(b.dataset.go));
@@ -207,7 +238,7 @@ function askP(){
  <p class="fb" id="fb" aria-live="polite"></p><div class="act"><button class="btn main" id="ck">Kiểm tra</button><button class="btn" id="gv">Xem đáp án</button></div></div>`;
  bindBack();
  const reveal=ok=>{
-  if(ok)S.ps++;else S.pw.push(S.pq[S.pi]);
+  markActive();if(ok)S.ps++;else S.pw.push(S.pq[S.pi]);
   $("#ans").disabled=true;
   $("#fb").innerHTML=pm(ok?M_OK:M_NO)+`<br><b>Đáp án:</b> ${hl(w)} <button class="spk" id="sp" aria-label="Nghe câu">🔊</button>`;
   $("#sp").onclick=()=>say(w.e,$("#sp"));
@@ -218,7 +249,7 @@ function askP(){
   const v=$("#ans").value.trim();
   if(!v){$("#fb").textContent="Hãy gõ câu trả lời trước nhé.";return}
   if(norm(v)===norm(w.e))return reveal(true);
-  if(sim(v,w.e)>=.8&&tries<2){tries++;$("#fb").textContent=pm(M_NEAR);return}
+  if(sim(v,w.e)>=.8&&tries<2){tries++;markActive();$("#fb").textContent=pm(M_NEAR);return}
   reveal(false);
  };
  $("#gv").onclick=()=>reveal(false);
@@ -245,7 +276,7 @@ function study(){
  $("#s2").onclick=e=>{e.stopPropagation();say(w.w,$("#s2"))};
  $("#s3").onclick=e=>{e.stopPropagation();say(w.e,$("#s3"))};
  document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{
-  S.hist.push(S.q.slice());const i=S.q.shift(),r=b.dataset.r;
+  markActive();S.hist.push(S.q.slice());const i=S.q.shift(),r=b.dataset.r;
   if(r==="n")S.q.splice(Math.min(3,S.q.length),0,i);
   if(r==="m")S.q.splice(Math.min(7,S.q.length),0,i);
   study()});
