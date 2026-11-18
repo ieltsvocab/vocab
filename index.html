@@ -55,6 +55,14 @@ mark{background:var(--hl);color:inherit;border-radius:4px;padding:0 3px}
 .set.now{border-left-color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,var(--card))}.set.now .st{color:var(--acc)}
 .set.wait{border-left-color:var(--line)}
 .set.done{border-left-color:var(--ok)}.set.done .st{color:var(--ok)}
+main.wide{max-width:900px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}.cols>div{min-width:0}
+.coltitle{font-size:16px;margin:0 0 10px;color:var(--mute)}
+.lib{padding:14px}.lib b{display:block;font-size:16px;overflow-wrap:anywhere}.lib .sub{margin:2px 0 10px}
+.set b,.set span{overflow-wrap:anywhere}
+textarea{display:block;width:100%;margin:10px 0;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);resize:vertical}
+.fb{min-height:22px;margin:10px 0}
+@media (max-width:480px){main{padding:14px 10px 32px}.set{padding:10px;border-left-width:6px}.set b,.lib b{font-size:14px}.lib{padding:10px}.lib .btn{padding:10px 6px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 [hidden]{display:none!important}
 </style>
@@ -62,7 +70,7 @@ mark{background:var(--hl);color:inherit;border-radius:4px;padding:0 3px}
 <body>
 <main id="app"></main>
 <script>
-const SETS=[{id:"play",title:"The Importance of Children’s Play",words:[
+const SETS=[{id:"play",tag:"C14T1P1",title:"The Importance of Children’s Play",words:[
 ["take turns","collocation","/teɪk tɜːnz/","thay phiên nhau, lần lượt","The children learn to take turns when they play board games.","Trẻ học cách thay phiên nhau khi chơi các trò chơi cờ bàn.","take turns"],
 ["boss somebody around","phrasal verb","/bɒs ˈsʌmbədi əˈraʊnd/","sai khiến, ra lệnh cho ai","My older sister likes to boss me around.","Chị gái tôi thích sai khiến tôi.","boss me around"],
 ["settle down","phrasal verb","/ˈsetl daʊn/","ổn định, yên vị để làm việc gì","After lunch, the class settled down to read quietly.","Sau bữa trưa, cả lớp yên vị và đọc sách trong im lặng.","settled down"],
@@ -88,7 +96,7 @@ const SETS=[{id:"play",title:"The Importance of Children’s Play",words:[
 ["repercussion","n","/ˌriːpəˈkʌʃn/","hệ quả, tác động lâu dài","Skipping play may have serious repercussions for a child’s development.","Việc bỏ qua vui chơi có thể gây hệ quả nghiêm trọng cho sự phát triển của trẻ.","repercussions"],
 ["trivial","adj","/ˈtrɪviəl/","tầm thường, không quan trọng","Some adults dismiss play as trivial.","Một số người lớn gạt vui chơi đi như chuyện tầm thường.","trivial"]
 ].map(a=>({w:a[0],p:a[1],i:a[2],m:a[3],e:a[4],v:a[5],h:a[6]}))},
-{id:"henderson",title:"Alexander Henderson",words:[
+{id:"henderson",tag:"C14T2P1",title:"Alexander Henderson",words:[
 ["give up","phrasal verb","/ɡɪv ʌp/","từ bỏ","He gave up his job to study full-time.","Anh ấy bỏ việc để học toàn thời gian.","gave up"],
 ["take up","phrasal verb","/teɪk ʌp/","bắt đầu theo đuổi (sở thích, môn mới)","She took up painting after she retired.","Bà bắt đầu học vẽ sau khi nghỉ hưu.","took up"],
 ["settle in","phrasal verb","/ˈsetl ɪn/","ổn định cuộc sống ở nơi mới","It took us a few months to settle in after moving to the city.","Chúng tôi mất vài tháng để ổn định cuộc sống sau khi chuyển lên thành phố.","settle in"],
@@ -141,45 +149,89 @@ const back=()=>`<button class="link" id="bk">← Về trang chính</button>`;
 const bindBack=()=>{const b=$("#bk");if(b)b.onclick=home};
 
 function login(){
- app.innerHTML=`<h1>Từ Vựng Cambridge IELTS</h1><p class="sub">Nhập tên để app lưu tiến độ học của bạn.</p>
+ app.className="";app.innerHTML=`<h1>Từ Vựng Cambridge IELTS</h1><p class="sub">Nhập tên để app lưu tiến độ học của bạn.</p>
  <div class="card"><label>Họ và tên<input id="nm" autocomplete="name"></label><label>Tên tiếng Anh<input id="en"></label><p class="err" id="er"></p><button class="btn main" id="go">Vào học</button></div>`;
  $("#go").onclick=()=>{const name=$("#nm").value.trim(),en=$("#en").value.trim();
   if(!name||!en){$("#er").textContent="Hãy nhập cả họ tên và tên tiếng Anh.";return}
   setLS("vocab7:last",JSON.stringify({name,en}));enter({name,en})};
 }
-function enter(u){let p=null;try{p=JSON.parse(getLS(key(u)))}catch(e){}P=p||{name:u.name,en:u.en};P.sets=P.sets||{play:P.dates||[]};home()}
+function enter(u){let p=null;try{p=JSON.parse(getLS(key(u)))}catch(e){}P=p||{name:u.name,en:u.en};P.sets=P.sets||{play:P.dates||[]};P.started=P.started||{};SETS.forEach(x=>{if(D(x.id).length)P.started[x.id]=true});home()}
 
 function stat(id){const n=D(id).length;if(n>=7)return{k:"done",t:"Đã hoàn thành 7/7"};
  const d=dueOf(id),t=today();if(!n)return{k:"now",t:"Bộ mới · học ngay"};
  const diff=Math.round((new Date(d+"T00:00:00")-new Date(t+"T00:00:00"))/864e5);
  if(diff<0)return{k:"late",t:"Lỡ hẹn "+(-diff)+" ngày · ôn ngay"};
  if(diff===0)return{k:"now",t:"Đến hạn hôm nay · ôn ngay"};
- return{k:"wait",t:"Ôn tiếp ngày "+fmt(d)+" (còn "+diff+" ngày)"}}
+ return{k:"wait",t:"Ôn tiếp "+fmt(d)+" (còn "+diff+" ngày)"}}
+function startSet(id){P.started[id]=true;save();SET=SETS.find(x=>x.id===id);W=SET.words;S={q:W.map((_,i)=>i),must:[],hist:[]};study()}
 function home(){
  const order={late:0,now:1,wait:2,done:3};
- const L=SETS.map(s=>({s,st:stat(s.id)})).sort((a,b)=>order[a.st.k]-order[b.st.k]);
- app.innerHTML=`<h1>Từ Vựng Cambridge IELTS</h1><p class="sub">Xin chào, ${esc(P.name)} (${esc(P.en)}). Chọn bộ từ để học. Bộ cần ôn gấp nhất nằm trên cùng.</p>`+
- L.map(x=>`<button class="btn set ${x.st.k}" data-id="${x.s.id}"><b>${esc(x.s.title)}</b><span>Lần ${D(x.s.id).length}/7 · ${x.s.words.length} mục</span><span class="st">${x.st.t}</span></button>`).join("")+
- `<button class="link" id="sw2">Đổi người học</button>`;
- document.querySelectorAll(".set").forEach(b=>b.onclick=()=>setHome(b.dataset.id));
+ const mine=SETS.filter(x=>P.started[x.id]).map(x=>({s:x,st:stat(x.id)})).sort((a,b)=>order[a.st.k]-order[b.st.k]);
+ const lib=SETS.filter(x=>!P.started[x.id]);
+ const L=mine.length?mine.map(x=>`<button class="btn set ${x.st.k}" data-id="${x.s.id}"><b>${esc(x.s.title)}</b><span>${x.s.tag} · Lần ${D(x.s.id).length}/7</span><span class="st">${x.st.t}</span></button>`).join(""):`<p class="sub">Chưa có bộ nào. Chọn một bộ ở bên phải để bắt đầu học.</p>`;
+ const R=lib.length?lib.map(x=>`<div class="card lib"><b>${esc(x.title)}</b><span class="sub">${x.tag} · ${x.words.length} mục</span><button class="btn main" data-go="${x.id}">Bắt đầu học</button></div>`).join(""):`<p class="sub">Bạn đã bắt đầu tất cả các bộ hiện có.</p>`;
+ app.className="wide";app.innerHTML=`<h1>Từ Vựng Cambridge IELTS</h1><p class="sub">Xin chào, ${esc(P.name)} (${esc(P.en)})</p>
+ <div class="cols"><div>${L}</div><div><h2 class="coltitle">Bộ Từ Vựng</h2>${R}</div></div><button class="link" id="sw2">Đổi người học</button>`;
+ document.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>setHome(b.dataset.id));
+ document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>startSet(b.dataset.go));
  $("#sw2").onclick=()=>{setLS("vocab7:last","");login()};
 }
-function setHome(id){SET=SETS.find(s=>s.id===id);W=SET.words;
+function setHome(id){SET=SETS.find(x=>x.id===id);W=SET.words;
  const n=D(id).length,d=dueOf(id),t=today();let st;
- if(n>=7)st=`<p class="big">🎉 Bạn đã hoàn thành 7/7 lần review.</p><p class="sub">Chúc mừng, bộ từ này đã vào trí nhớ dài hạn.</p>`;
- else if(d>t)st=`<p class="big">Đã xong lần ${n}/7</p><p>Lần review tiếp theo (lần ${n+1}): <b>${fmt(d)}</b></p><button class="btn main" disabled>Chưa đến ngày ôn</button>`;
- else st=`<p class="big">${n?"Đến ngày ôn rồi":"Bắt đầu học bộ từ"}</p><p class="sub">Lần review ${n+1}/7 · ${W.length} mục</p><button class="btn main" id="st">Bắt đầu lần review ${n+1}</button>`;
- let chips="";for(let i=0;i<7;i++)chips+=`<div class="chip${D(SET.id)[i]?" on":""}">${D(SET.id)[i]?fmt(D(SET.id)[i]).slice(0,5):"Lần "+(i+1)}</div>`;
- app.innerHTML=`<button class="link" id="bk">← Tất cả bộ từ</button><h1>${esc(SET.title)}</h1><p class="sub">${SET.words.length} từ và cụm từ</p>
- <div class="chips">${chips}</div><div class="card">${st}</div>`;
- if($("#st"))$("#st").onclick=()=>{S={q:W.map((_,i)=>i),must:[],hist:[]};study()};
+ if(n>=7)st=`<p class="big">🎉 Đã hoàn thành 7/7 lần review.</p>`;
+ else if(d>t)st=`<p class="big">Đã xong lần ${n}/7</p><p>Lần ôn tiếp theo (lần ${n+1}): <b>${fmt(d)}</b></p>`;
+ else st=`<p class="big">${n?"Đến ngày ôn rồi":"Sẵn sàng học"}</p><p class="sub">Lần review ${n+1}/7 · ${W.length} mục</p>`;
+ let chips="";for(let i=0;i<7;i++)chips+=`<div class="chip${D(id)[i]?" on":""}">${D(id)[i]?fmt(D(id)[i]).slice(0,5):"Lần "+(i+1)}</div>`;
+ app.className="";app.innerHTML=`<button class="link" id="bk">← Về trang chính</button><h1>${esc(SET.title)}</h1><p class="sub">${SET.tag} · ${W.length} từ và cụm từ</p>
+ <div class="chips">${chips}</div><div class="card">${st}<div class="act" style="margin-top:12px"><button class="btn main" id="st" ${n<7&&d<=t?"":"disabled"}>Ôn tập</button><button class="btn" id="pr">Luyện tập</button></div>
+ <p class="hint" style="margin:10px 0 0">Ôn tập: lật thẻ, tính vào 7 lần review. Luyện tập: đọc câu tiếng Việt, gõ lại câu tiếng Anh, làm lúc nào cũng được và không tính lần review.</p></div>`;
  bindBack();
+ $("#st").onclick=()=>{S={q:W.map((_,i)=>i),must:[],hist:[]};study()};
+ $("#pr").onclick=practice;
 }
-
+const norm=t=>t.toLowerCase().replace(/[\u2019\u2018']/g,"").replace(/[^a-z0-9]+/g," ").trim();
+function lev(a,b){const m=a.length,n=b.length,d=[];for(let i=0;i<=m;i++)d[i]=[i];for(let j=1;j<=n;j++)d[0][j]=j;
+ for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
+const sim=(a,b)=>{a=norm(a);b=norm(b);return 1-lev(a,b)/(Math.max(a.length,b.length)||1)};
+const pm=a=>a[Math.random()*a.length|0];
+const M_OK=["Chuẩn không cần chỉnh! 🎉","Quá đỉnh, câu này bạn nắm chắc rồi!","Đúng rồi! Cambridge mà thấy chắc cũng gật đầu."];
+const M_NEAR=["Suýt đúng rồi! Cố lên nào, chỉ còn một xíu nữa thôi 😄","Gần đúng rồi đó! Não bạn chạy được 90%, thêm 10% nữa là tới đích.","Ối, trượt có tí xíu! Thử lại nhé, mình tin bạn."];
+const M_NO=["Không sao, câu này khó thật. Xem đáp án rồi nhớ lần sau nhé.","Chưa tới, nhưng sai là cách não ghi nhớ nhanh nhất mà 💪","Câu này hơi khó chịu, nhưng bạn sẽ gặp lại nó và trả thù thành công!"];
+function practice(){S={pq:shuf(W.map((_,i)=>i)).slice(0,10),pi:0,ps:0,pw:[]};askP()}
+function askP(){
+ if(S.pi>=S.pq.length)return finP();
+ const w=W[S.pq[S.pi]];let tries=0;
+ app.className="";app.innerHTML=`<button class="link" id="bk">← Về trang chính</button><div class="pt">Luyện tập · câu ${S.pi+1}/${S.pq.length}</div>
+ <div class="card"><p class="hint">Viết lại câu này bằng tiếng Anh:</p><p class="sent">${esc(w.v)}</p>
+ <textarea id="ans" rows="3" placeholder="Gõ câu tiếng Anh..." autocapitalize="none" autocomplete="off" spellcheck="false"></textarea>
+ <p class="fb" id="fb" aria-live="polite"></p><div class="act"><button class="btn main" id="ck">Kiểm tra</button><button class="btn" id="gv">Xem đáp án</button></div></div>`;
+ bindBack();
+ const reveal=ok=>{
+  if(ok)S.ps++;else S.pw.push(S.pq[S.pi]);
+  $("#ans").disabled=true;
+  $("#fb").innerHTML=pm(ok?M_OK:M_NO)+`<br><b>Đáp án:</b> ${hl(w)} <button class="spk" id="sp" aria-label="Nghe câu">🔊</button>`;
+  $("#sp").onclick=()=>say(w.e,$("#sp"));
+  $(".act").innerHTML=`<button class="btn main" id="nx">Câu tiếp</button>`;
+  $("#nx").onclick=()=>{S.pi++;askP()};$("#nx").focus();
+ };
+ $("#ck").onclick=()=>{
+  const v=$("#ans").value.trim();
+  if(!v){$("#fb").textContent="Hãy gõ câu trả lời trước nhé.";return}
+  if(norm(v)===norm(w.e))return reveal(true);
+  if(sim(v,w.e)>=.8&&tries<2){tries++;$("#fb").textContent=pm(M_NEAR);return}
+  reveal(false);
+ };
+ $("#gv").onclick=()=>reveal(false);
+}
+function finP(){
+ const wl=S.pw.map(i=>`<div class="li">${esc(W[i].v)}<br><b>${esc(W[i].e)}</b></div>`).join("");
+ app.className="";app.innerHTML=`<div class="card"><p class="big">Luyện tập xong: ${S.ps}/${S.pq.length} câu đúng</p><p class="sub">Bài luyện tập không tính vào 7 lần review.</p>${wl?`<p class="hint">Các câu cần xem lại:</p>${wl}`:`<p>Không sai câu nào, quá đỉnh! 🎉</p>`}</div><div class="act"><button class="btn main" id="again">Luyện tập lại</button><button class="btn" id="hm">Về bộ từ</button></div>`;
+ $("#again").onclick=practice;$("#hm").onclick=()=>setHome(SET.id);
+}
 function study(){
  if(!S.q.length)return test();
  const w=W[S.q[0]];
- app.innerHTML=`${back()}<div class="pt">Còn ${S.q.length} thẻ trong lượt này</div><button class="link" id="un" ${S.hist.length?"":"hidden"}>↶ Hoàn tác thẻ vừa chấm</button>
+ app.className="";app.innerHTML=`${back()}<div class="pt">Còn ${S.q.length} thẻ trong lượt này</div><button class="link" id="un" ${S.hist.length?"":"hidden"}>↶ Hoàn tác thẻ vừa chấm</button>
  <div class="card fcard" id="cd" tabindex="0" role="button" aria-label="Lật thẻ">
  <div id="fr"><p class="word" style="margin-bottom:12px">${esc(w.w)}</p><button class="spk" id="s1" aria-label="Nghe phát âm">🔊</button><p class="hint">Chạm vào thẻ để lật</p></div>
  <div id="bc" hidden><div class="top"><h2 class="word">${esc(w.w)}</h2><button class="spk" id="s2" aria-label="Nghe từ">🔊</button><span class="hint">(${w.p})</span></div>
@@ -207,7 +259,7 @@ function ask(){
  if(S.ti>=S.tq.length)return fin();
  const i=S.tq[S.ti],w=W[i];
  const opts=shuf([i,...shuf(W.map((_,k)=>k).filter(k=>k!==i)).slice(0,3)]);
- app.innerHTML=`${back()}<div class="pt">Kiểm tra nhanh · câu ${S.ti+1}/${S.tq.length}</div>
+ app.className="";app.innerHTML=`${back()}<div class="pt">Kiểm tra nhanh · câu ${S.ti+1}/${S.tq.length}</div>
  <div class="card"><p class="hint">Chọn nghĩa đúng của từ hoặc cụm từ:</p><div class="top"><h2 class="word">${esc(w.w)}</h2><button class="spk" id="sp" aria-label="Nghe từ">🔊</button></div></div>
  ${opts.map(k=>`<button class="btn opt" data-k="${k}">${esc(W[k].m)}</button>`).join("")}<button class="btn main" id="nx" hidden>Tiếp tục</button>`;
  bindBack();$("#sp").onclick=()=>say(w.w,$("#sp"));say(w.w,$("#sp"));
@@ -224,12 +276,12 @@ function fin(){
  if(ok){
   D(SET.id).push(today());save();
   const n=D(SET.id).length;
-  app.innerHTML=`<div class="card"><p class="big">✅ Tính 1 lần review!</p><p>Bạn đã hoàn thành <b>lần ${n}/7</b> (đúng ${S.score}/${total} câu kiểm tra).</p>
+  app.className="";app.innerHTML=`<div class="card"><p class="big">✅ Tính 1 lần review!</p><p>Bạn đã hoàn thành <b>lần ${n}/7</b> (đúng ${S.score}/${total} câu kiểm tra).</p>
   ${n<7?`<p>Ngày ôn tiếp theo: <b>${fmt(dueOf(SET.id))}</b>. Ôn đúng hẹn để nhớ lâu hơn nhé.</p>`:`<p class="big">🎉 Bạn đã hoàn thành đủ 7 lần review!</p>`}
   ${wl?`<p class="hint">Từ cần chú ý thêm:</p>${wl}`:""}</div><button class="btn main" id="hm">Về trang chính</button>`;
   $("#hm").onclick=home;
  }else{
-  app.innerHTML=`<div class="card"><p class="big">Chưa tính lần review này</p><p>Bạn đúng ${S.score}/${total} câu, cần ít nhất 8 câu. Học lại các từ sai rồi kiểm tra lại nhé.</p>${wl}</div><button class="btn main" id="re">Học lại các từ sai</button>`;
+  app.className="";app.innerHTML=`<div class="card"><p class="big">Chưa tính lần review này</p><p>Bạn đúng ${S.score}/${total} câu, cần ít nhất 8 câu. Học lại các từ sai rồi kiểm tra lại nhé.</p>${wl}</div><button class="btn main" id="re">Học lại các từ sai</button>`;
   $("#re").onclick=()=>{S.q=S.wrong.slice();S.must=S.wrong.slice();study()};
  }
 }
