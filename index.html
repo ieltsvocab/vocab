@@ -1,26 +1,43 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>IELTS Vocab</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6faf7;--ink:#1d2b2a;--mut:#667876;--pri:#0f9d8a;--pd:#0b7c6d;--line:#dfe9e6;--warn:#f0a020;--bad:#e5484d;--ok:#2fa84f}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito","Segoe UI",system-ui,sans-serif}
-header{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 18px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-nav{display:flex;gap:6px;flex-wrap:wrap}nav a,.lnk{cursor:pointer;padding:6px 12px;border-radius:99px;color:var(--mut);font-weight:700}nav a.on{background:#dff5f1;color:var(--pd)}
-main{max-width:760px;margin:0 auto;padding:20px 16px 60px}h1{font-size:26px;margin:.2em 0 .5em}h2{font-size:18px;margin:1.4em 0 .5em}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin:10px 0}
-.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-button{font:inherit;font-weight:800;border:0;border-radius:12px;padding:10px 16px;cursor:pointer;background:var(--pri);color:#fff;box-shadow:0 3px 0 var(--pd)}
-button:active{transform:translateY(2px);box-shadow:none}button.g{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-button.n{background:var(--bad);box-shadow:0 3px 0 #b8363a}button.p{background:var(--warn);box-shadow:0 3px 0 #c07d10}button.m{background:var(--ok);box-shadow:0 3px 0 #1f7d38}
-input,textarea{font:inherit;width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:#fff}input:focus,textarea:focus{outline:2px solid var(--pri);border-color:transparent}
-label{display:block;font-weight:700;margin:10px 0 4px}.mut{color:var(--mut);font-size:14px}.tag{font-size:13px;padding:2px 10px;border-radius:99px;background:#eef4f2;color:var(--mut)}
-.fc{text-align:center;padding:36px 16px;min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.fc .w{font-size:38px;font-weight:900}
-.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--pri)}
-table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:6px;border-bottom:1px solid var(--line);vertical-align:top}td input{padding:6px}.wrap{overflow-x:auto}
-.ok{color:var(--ok);font-weight:800}.bad{color:var(--bad);font-weight:800}#t{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;display:none;z-index:9}
-.big{font-size:34px;font-weight:900}
-</style></head><body>
-<header><b style="font-size:19px;color:var(--pd)">IELTS Vocab</b><nav id="nav"></nav></header>
+:root{--bg:#f4f5fd;--ink:#1f2347;--mut:#6c7194;--pri:#5848e5;--pd:#4337bd;--soft:#ecebff;--line:#e4e6f5;--sun:#ffb21a;--ok:#1fb26b;--bad:#ff5a6e;--sh:0 6px 20px rgba(60,60,140,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Nunito","Segoe UI",system-ui,sans-serif}
+h1,h2,.logo,.w,.big,.vi,.fire b{font-family:"Fredoka","Nunito",system-ui,sans-serif;font-weight:600}
+header{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 18px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.logo{font-size:20px;color:var(--pri)}#hx{display:flex;gap:6px}nav{display:flex;gap:4px;flex:1;justify-content:center}
+nav a{cursor:pointer;padding:7px 14px;border-radius:99px;color:var(--mut);font-weight:800;display:flex;gap:6px;align-items:center}nav a i{font-style:normal}nav a.on{background:var(--soft);color:var(--pri)}
+main{max-width:720px;margin:0 auto;padding:22px 16px 90px}h1{font-size:28px;margin:.2em 0 .4em}h2{font-size:19px;margin:1.6em 0 .5em}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;margin:12px 0;box-shadow:var(--sh)}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.top{margin-bottom:10px}
+button{font:inherit;font-weight:800;border:0;border-radius:14px;padding:11px 18px;cursor:pointer;background:var(--pri);color:#fff;box-shadow:0 4px 0 var(--pd);transition:transform .08s}
+button:active{transform:translateY(3px);box-shadow:none}button.g{background:#fff;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}button.g:active{background:var(--soft)}
+button.sm{padding:7px 12px;font-size:14px;border-radius:12px}button.wide{width:100%}button.n{background:var(--bad);box-shadow:0 4px 0 #cc3f50}button.p{background:var(--sun);color:#3b2a00;box-shadow:0 4px 0 #c88a0c}button.m{background:var(--ok);box-shadow:0 4px 0 #148a52}
+:focus-visible{outline:3px solid #9a90ff;outline-offset:2px}
+input,textarea{font:inherit;width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}input:focus,textarea:focus{outline:none;border-color:var(--pri)}
+label{display:block;font-weight:800;margin:12px 0 5px}.mut{color:var(--mut);font-size:14px}.tag{font-size:13px;font-weight:800;padding:2px 10px;border-radius:99px;background:var(--soft);color:var(--pri)}.tag.hot{background:#fff1d6;color:#a96a00}
+.bar{height:12px;background:var(--line);border-radius:9px;overflow:hidden;margin:6px 0 12px}.bar i{display:block;height:100%;background:var(--ok);border-radius:9px;transition:width .3s}.bar.sm{height:8px;margin:6px 0 4px}
+.hero{display:flex;gap:16px;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#5848e5,#8a63f2);color:#fff;border-radius:26px;padding:22px;box-shadow:var(--sh)}
+.hi{font:600 24px "Fredoka",sans-serif}.mut2{opacity:.88;font-size:14px;margin-top:4px}.fire{background:rgba(255,255,255,.18);border-radius:20px;padding:10px 16px;text-align:center;display:flex;flex-direction:column;line-height:1.1}.fire span{font-size:26px}.fire b{font-size:30px}.fire small{opacity:.85}
+.set{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}.set.due{border-left:6px solid var(--sun)}.empty{text-align:center;color:var(--mut);font-size:30px}.empty p{font-size:15px;margin:6px 0 0}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tile{cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;display:flex;flex-direction:column;gap:2px;box-shadow:var(--sh)}.tile span{font-size:30px}.tile b{font:600 18px "Fredoka",sans-serif}.tile small{color:var(--mut)}.tile:active{background:var(--soft)}
+.fc{text-align:center;padding:30px 16px;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;border-radius:28px}
+.fc .w{font-size:44px;line-height:1.15;overflow-wrap:anywhere}.ipa{color:var(--mut);font-size:18px}.hint{color:var(--mut);font-size:14px;margin:8px 0 0}
+.ans{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:6px;border-top:2px dashed var(--line);padding-top:16px;width:100%}.vi{font-size:28px;color:var(--pri)}.ex{font-size:17px;max-width:30em;margin:2px 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.three button{display:flex;flex-direction:column;align-items:center;font-size:26px;padding:12px 6px}.three small{font-size:13px}
+.nav2{margin-top:6px}.q{text-align:center;padding:26px 18px}.qh{color:var(--mut);font-weight:800;margin-bottom:10px}.q .big{font-size:34px;color:var(--pri)}.sent{font-size:21px;line-height:1.6}.q input{margin:16px 0;text-align:center;font-size:18px}.bigbtn{font-size:30px;padding:14px 26px;border-radius:50%}
+.fb{border-radius:16px;padding:12px;margin:0 0 14px;text-align:left}.fb.good{background:#e3f8ed;color:#0f6a40}.fb.miss{background:#ffe9ec;color:#a42a3b}.emo{font-size:52px}
+.login{max-width:420px;margin:0 auto;text-align:center}.login .card{text-align:left}.mascot{font-size:64px}.login summary{cursor:pointer;font-weight:800;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}td input{padding:7px}.wrap{overflow-x:auto}
+.ok{color:var(--ok);font-weight:800}.bad{color:var(--bad);font-weight:800}.big{font-size:34px}.lnk{cursor:pointer;color:var(--pri);font-weight:800}
+#t{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:14px;display:none;z-index:9;max-width:92vw;text-align:center}
+@media(max-width:700px){nav.st{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:6}
+nav.st a{flex-direction:column;gap:0;font-size:12px;padding:4px 12px;border-radius:14px}nav.st a i{font-size:22px}#t{bottom:90px}.hero{flex-direction:column;align-items:flex-start}.fc .w{font-size:36px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head></head><body>
+<header><div class="logo">📘 IELTS Vocab</div><nav id="nav"></nav><div id="hx"></div></header>
 <main id="app"></main><div id="t"></div>
 <script>
 const K='ielts_v1',TZ='Asia/Ho_Chi_Minh',DAYS=[1,3,7,12,18,24,30],D=864e5,REP={n:3,p:2,m:1};
@@ -28,23 +45,24 @@ let db=JSON.parse(localStorage.getItem(K)||'null')||{sets:[],students:{},teacher
 const $=s=>document.querySelector(s),save=()=>localStorage.setItem(K,JSON.stringify(db)),uid=()=>Math.random().toString(36).slice(2,10);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dk=d=>new Intl.DateTimeFormat('en-CA',{timeZone:TZ}).format(d),fd=t=>t?new Date(t).toLocaleString('vi-VN'):'—';
-const me=()=>db.students[db.me],P=sid=>me().prog[sid]??={first:Date.now(),pos:0,rev:0,pr:0},W=id=>me().words[id]??={st:'n',seen:0,c:0,w:0};
-const setOf=id=>id==='me'?{id:'me',book:'Từ vựng cá nhân',items:me().personal,status:'pub'}:db.sets.find(s=>s.id===id);
+const S=()=>db.role==='s'?(db.remote||db.sets):db.sets,me=()=>db.students[db.me],P=sid=>me().prog[sid]??={first:Date.now(),pos:0,rev:0,pr:0},W=id=>me().words[id]??={st:'n',seen:0,c:0,w:0};
+const setOf=id=>id==='me'?{id:'me',book:'Từ vựng cá nhân',items:me().personal,status:'pub'}:S().find(s=>s.id===id);
 const act=s=>s.items.filter(i=>!i.arch),title=s=>s.id==='me'?s.book:`${s.book}${s.test?' – Test '+s.test:''}${s.passage?' – Passage '+s.passage:''}`;
 const due=p=>p&&p.init&&p.next&&p.next<=Date.now(),lg=(t,sid,x={})=>me().log.push({t,sid,at:Date.now(),...x});
 function toast(m){const e=$('#t');e.textContent=m;e.style.display='block';clearTimeout(toast.h);toast.h=setTimeout(()=>e.style.display='none',2800)}
 function go(p,x={}){V={p,...x};render();scrollTo(0,0)}
 function streakNow(){const m=me();return(m.day===dk(new Date())||m.day===dk(new Date(Date.now()-D)))?m.streak:0}
 function bump(){const m=me(),t=dk(new Date());if(m.day===t)return;m.streak=m.day===dk(new Date(Date.now()-D))?m.streak+1:1;m.day=t}
-function speak(txt){if(!('speechSynthesis' in window))return toast('Trình duyệt không hỗ trợ âm thanh');const v=speechSynthesis.getVoices().find(v=>v.lang.replace('_','-')==='en-GB');
- if(!v)return toast('Thiết bị chưa có giọng Anh-Anh (en-GB). Hãy cài giọng này trong cài đặt hệ thống.');speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(txt);u.voice=v;u.lang='en-GB';speechSynthesis.speak(u)}
+function accent(){db.acc=db.acc==='en-US'?'en-GB':'en-US';save();render();toast('Đã chọn giọng '+(db.acc==='en-US'?'Mỹ':'Anh'))}
+function speak(txt){if(!('speechSynthesis' in window))return toast('Trình duyệt không hỗ trợ âm thanh');const L=db.acc||'en-GB',v=speechSynthesis.getVoices().find(v=>v.lang.replace('_','-')===L);
+ if(!v)return toast('Máy chưa có giọng '+(L==='en-GB'?'Anh':'Mỹ')+'. Bấm "Giọng" trên menu để đổi giọng khác.');speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(txt);u.voice=v;u.lang=L;speechSynthesis.speak(u)}
 speechSynthesis?.getVoices();
 async function hash(s){return[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(b=>b.toString(16).padStart(2,'0')).join('')}
-async function ai(words){if(!db.key)throw Error('Chưa nhập API key (menu Cài đặt AI)');
- const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'content-type':'application/json','x-api-key':db.key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
- body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:4000,messages:[{role:'user',content:`Return ONLY a JSON array (no markdown). For each English word give {"word","ipa":British English IPA in slashes,"vi":Vietnamese meaning (common/academic IELTS sense),"pos":part of speech in English,"ex":one short natural example sentence for IELTS learners that uses the word}. Words: ${JSON.stringify(words)}`}]})});
- const j=await r.json();if(!r.ok)throw Error(j.error?.message||'Lỗi AI');const a=JSON.parse(j.content[0].text.replace(/```json|```/g,'').trim());
- if(!Array.isArray(a)||a.some(x=>!x.word||!x.vi||!x.ex))throw Error('AI trả về dữ liệu không hợp lệ, thử lại');return a.map(x=>({id:uid(),word:x.word,ipa:x.ipa||'',vi:x.vi,pos:x.pos||'',ex:x.ex}))}
+async function freeGen(ws){const out=[];for(const w of ws){let ipa='',pos='',ex='',vi='';
+ try{const r=await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(w));if(r.ok){const e=(await r.json())[0];ipa=(e.phonetics||[]).map(p=>p.text).find(Boolean)||e.phonetic||'';pos=e.meanings?.[0]?.partOfSpeech||'';ex=(e.meanings||[]).flatMap(m=>m.definitions).map(d=>d.example).find(Boolean)||''}}catch{}
+ try{const j=await(await fetch('https://api.mymemory.translated.net/get?q='+encodeURIComponent(w)+'&langpair=en|vi')).json();const t=j.responseData?.translatedText||'';vi=/MYMEMORY|QUERY LENGTH/i.test(t)?'':t}catch{}
+ out.push({id:uid(),word:w,ipa,vi,pos,ex})}return out}
+const ai=ws=>freeGen(ws);
 /* ---------- auth ---------- */
 function login(){const n=$('#n').value.trim().replace(/\s+/g,' '),c=$('#c').value.trim().replace(/\s+/g,' ');if(!n||!c)return toast('Nhập đủ tên và lớp');
  const k=(n+'|'+c).toLowerCase();db.students[k]??={name:n,cls:c,first:Date.now(),prog:{},words:{},personal:[],log:[],streak:0,day:null};db.me=k;db.role='s';me().last=Date.now();save();go('home')}
@@ -54,12 +72,13 @@ function out(){db.role=null;db.me=null;save();go('login')}
 /* ---------- student ---------- */
 function btnFor(s){const p=me().prog[s.id];return !p?`<button onclick="openSet('${s.id}',1)">Start Learning</button>`:!p.init?`<button onclick="openSet('${s.id}',1)">Continue Learning</button>`:due(p)?`<button onclick="startReview('${s.id}')">Review Now</button>`:`<button class="g" onclick="go('set',{sid:'${s.id}'})">Mở bộ từ</button>`}
 function openSet(sid,learn){P(sid);save();go('fc',{sid,mode:'learn'})}
-function home(){const m=me(),dl=db.sets.filter(s=>s.status==='pub'&&due(m.prog[s.id])).sort((a,b)=>m.prog[a.id].next-m.prog[b.id].next);
- return`<h1>Xin chào, ${esc(m.name.split(' ')[0])}!</h1><div class="card row"><span class="big">🔥 ${streakNow()}</span><span class="mut">ngày liên tiếp (hoàn thành 1 Review hoặc Practice mỗi ngày)</span></div>
- <h2>Review Today</h2>${dl.length?dl.map(s=>`<div class="card row"><div><b>${esc(s.book)}</b><div class="mut">${esc(title(s).slice(s.book.length+3)||'')}</div></div><button onclick="startReview('${s.id}')">Review Now</button></div>`).join(''):'<div class="card mut">Hôm nay chưa có bộ từ nào đến hạn ôn. Bạn có thể luyện thêm trong Library 🎉</div>'}
- <h2>Vocabulary Library</h2><div class="row"><button onclick="go('lib')" style="flex:1">Cambridge Vocabulary</button><button class="g" onclick="go('mine')" style="flex:1">My Vocabulary</button></div>`}
-function lib(){const ss=db.sets.filter(s=>s.status==='pub'),bk=[...new Set(ss.map(s=>s.book))];
- return`<h1>Cambridge Vocabulary</h1>`+(bk.length?bk.map(b=>`<h2>${esc(b)}</h2>`+ss.filter(s=>s.book===b).map(s=>`<div class="card row"><div>${esc(title(s).slice(b.length+3)||'Bộ từ')}<div class="mut">${act(s).length} từ</div></div>${btnFor(s)}</div>`).join('')).join(''):'<div class="card mut">Thầy T chưa đăng bộ từ nào.</div>')}
+function home(){const m=me(),dl=S().filter(s=>s.status==='pub'&&due(m.prog[s.id])).sort((a,b)=>m.prog[a.id].next-m.prog[b.id].next),st=streakNow(),h=new Date().getHours();
+ return`<div class="hero"><div><div class="hi">${h<12?'Chào buổi sáng':h<18?'Chào buổi chiều':'Chào buổi tối'}, ${esc(m.name.split(' ')[0])}!</div><div class="mut2">${st?'Giữ lửa nhé, hôm nay học thêm một chút!':'Hoàn thành 1 Review hoặc Practice để bắt đầu chuỗi ngày học.'}</div></div><div class="fire"><span>🔥</span><b>${st}</b><small>ngày</small></div></div>
+ <h2>Review Today</h2>${dl.length?dl.map(s=>`<div class="card set due"><div><b>${esc(s.book)}</b><div class="mut">${esc(title(s).slice(s.book.length+3)||'')}</div></div><button onclick="startReview('${s.id}')">Review Now</button></div>`).join(''):'<div class="card empty">🎉<p>Hôm nay không có bộ từ nào đến hạn ôn.<br>Vào thư viện để học hoặc luyện thêm nhé.</p></div>'}
+ <h2>Vocabulary Library</h2><div class="tiles"><a class="tile" onclick="go('lib')"><span>📚</span><b>Cambridge</b><small>Bộ từ của thầy T</small></a><a class="tile" onclick="go('mine')"><span>⭐</span><b>My Vocabulary</b><small>${m.personal.filter(i=>!i.arch).length} từ</small></a></div>`}
+function lib(){const ss=S().filter(s=>s.status==='pub'),bk=[...new Set(ss.map(s=>s.book))],m=me();
+ return`<h1>Cambridge Vocabulary</h1>`+(bk.length?bk.map(b=>`<h2>${esc(b)}</h2>`+ss.filter(s=>s.book===b).map(s=>{const L=act(s),k=L.filter(i=>m.words[i.id]?.st==='m').length,p=m.prog[s.id],chip=!p?'Chưa học':!p.init?'Đang học':due(p)?'Đến hạn ôn':'Đã học xong';
+ return`<div class="card set"><div style="flex:1;min-width:150px"><b>${esc(title(s).slice(b.length+3)||'Bộ từ')}</b> <span class="tag ${due(p)?'hot':''}">${chip}</span><div class="bar sm"><i style="width:${L.length?k/L.length*100:0}%"></i></div><div class="mut">${k}/${L.length} từ đã thuộc</div></div>${btnFor(s)}</div>`}).join('')).join(''):'<div class="card empty">📭<p>Thầy T chưa đăng bộ từ nào.</p></div>')}
 function setPage(){const s=setOf(V.sid),p=P(s.id);return`<h1>${esc(title(s))}</h1><div class="card"><p class="mut">${act(s).length} từ · ${p.init?'Đã học xong lần đầu · Review '+p.rev+' · Lần ôn tới: '+fd(p.next):'Đang học lần đầu'}</p>
  <div class="row" style="justify-content:flex-start"><button onclick="openSet('${s.id}')">Flashcards</button>${due(p)?`<button onclick="startReview('${s.id}')">Review Now</button>`:''}<button class="p" onclick="startPractice('${s.id}')">Practice</button></div></div>`}
 function mine(){const s=setOf('me'),items=act(s);return`<h1>My Vocabulary</h1><div class="card"><label>Thêm một từ tiếng Anh</label><input id="pw1" placeholder="vd: overwhelming">
@@ -74,12 +93,12 @@ function savePers(){const x=V.pv;if(!x.word||!x.vi||!x.ex)return toast('Cần c�
  me().personal.push({id:uid(),...x});V.pv=null;save();toast('Đã lưu');render()}
 /* ---------- flashcards + review ---------- */
 function cur(){const s=setOf(V.sid),p=P(s.id),L=act(s);if(V.mode==='review'){const id=p.open.q[p.open.i];return{s,p,len:p.open.q.length,i:p.open.i,it:L.find(x=>x.id===id)}}return{s,p,len:L.length,i:Math.min(p.pos,L.length-1),it:L[Math.min(p.pos,L.length-1)]}}
-function fc(){const{s,len,i,it}=cur();if(!it)return`<div class="card">Bộ từ chưa có từ nào. <button onclick="go('home')">Về trang chủ</button></div>`;const w=W(it.id);
- return`<div class="row"><b>${esc(title(s))}${V.mode==='review'?' · Review':''}</b><span class="mut">${i+1}/${len}</span></div><div class="bar"><i style="width:${(i+1)/len*100}%"></i></div>
- <div class="card fc"><div class="w">${esc(it.word)}</div><div class="mut">${esc(it.ipa)}</div><button class="g" onclick="speak('${esc(it.word).replace(/'/g,'')}')">🔊 Nghe</button>
- ${V.flip?`<div style="font-size:22px;font-weight:800">${esc(it.vi)}</div><span class="tag">${esc(it.pos)}</span><p><i>${esc(it.ex)}</i></p><button class="g" onclick="speakEx()">🔊 Nghe câu ví dụ</button>`:`<button onclick="V.flip=1;render()">Hiện đáp án</button>`}</div>
- ${V.flip?`<div class="row"><button class="n" onclick="mark('n')">Chưa thuộc</button><button class="p" onclick="mark('p')">Hơi nhớ</button><button class="m" onclick="mark('m')">Đã thuộc</button></div>`:''}
- <div class="row" style="margin-top:14px"><button class="g" onclick="step(-1)">← Trước</button><span class="mut">Đang chọn: ${{n:'Chưa thuộc',p:'Hơi nhớ',m:'Đã thuộc'}[w.st]}${w.seen?'':' (mới)'}</span><button class="g" onclick="step(1)">Sau →</button></div>`}
+function fc(){const{s,len,i,it}=cur();if(!it)return`<div class="card">Bộ từ chưa có từ nào.<p><button onclick="go('home')">Về trang chủ</button></p></div>`;const w=W(it.id),sp=esc(it.word).replace(/'/g,'');
+ return`<div class="row top"><button class="g sm" onclick="go('${V.mode==='review'?'home':'set'}',{sid:'${s.id}'})">← Thoát</button><b>${V.mode==='review'?'Review':'Flashcards'}</b><span class="mut">${i+1}/${len}</span></div><div class="bar"><i style="width:${(i+1)/len*100}%"></i></div>
+ <div class="card fc" onclick="if(!V.flip){V.flip=1;render()}"><div class="w">${esc(it.word)}</div><div class="ipa">${esc(it.ipa)}</div><button class="g" onclick="event.stopPropagation();speak('${sp}')">🔊 Nghe từ</button>
+ ${V.flip?`<div class="ans"><div class="vi">${esc(it.vi)}</div><span class="tag">${esc(it.pos)}</span><p class="ex">“${esc(it.ex)}”</p><button class="g" onclick="event.stopPropagation();speakEx()">🔊 Nghe câu</button></div>`:`<p class="hint">Chạm vào thẻ hoặc nhấn Space để xem nghĩa</p>`}</div>
+ ${V.flip?`<div class="three"><button class="n" onclick="mark('n')">😕<small>Chưa thuộc</small></button><button class="p" onclick="mark('p')">🤔<small>Hơi nhớ</small></button><button class="m" onclick="mark('m')">😎<small>Đã thuộc</small></button></div>`:''}
+ <div class="row nav2"><button class="g sm" onclick="step(-1)">← Trước</button><span class="mut">${{n:'Chưa thuộc',p:'Hơi nhớ',m:'Đã thuộc'}[w.st]}${w.seen?'':' · từ mới'}</span><button class="g sm" onclick="step(1)">Sau →</button></div>`}
 function speakEx(){speak(cur().it.ex)}
 function mark(st){const{it}=cur(),w=W(it.id);w.st=st;w.seen=1;save();step(1)}
 function step(d){const c=cur(),n=c.i+d;if(n<0)return;V.flip=0;if(V.mode==='review')c.p.open.i=n;else c.p.pos=Math.max(0,n);
@@ -99,39 +118,45 @@ function startPractice(sid){const s=setOf(sid),L=act(s);if(L.length<1)return toa
  go('pr',{sid,qs,i:0,res:[],done:0,started:Date.now()})}
 const norm=s=>s.toLowerCase().replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
 function lcs(a,b){const t=Array.from({length:a.length+1},()=>Array(b.length+1).fill(0));for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)t[i][j]=a[i-1]===b[j-1]?t[i-1][j-1]+1:Math.max(t[i-1][j],t[i][j-1]);return t[a.length][b.length]}
-function pr(){if(V.i>=V.qs.length)return prDone();const{it,t}=V.qs[V.i];
- const prompt={vi:`<div class="mut">Gõ từ tiếng Anh có nghĩa:</div><div class="big">${esc(it.vi)}</div>`,blank:`<div class="mut">Điền từ còn thiếu:</div><div style="font-size:20px">${esc(it.ex.replace(new RegExp(it.word,'i'),'________'))}</div>`,
- lw:`<div class="mut">Nghe và gõ từ bạn nghe được</div><button class="g" onclick="speak('${esc(it.word).replace(/'/g,'')}')">🔊 Nghe</button>`,ls:`<div class="mut">Nghe và chép lại cả câu</div><button class="g" onclick="speak(V.qs[V.i].it.ex)">🔊 Nghe câu</button>`}[t];
- return`<div class="row"><b>Practice</b><span class="mut">${V.i+1}/${V.qs.length}</span></div><div class="bar"><i style="width:${V.i/V.qs.length*100}%"></i></div>
- <div class="card" style="text-align:center">${prompt}<input id="ans" ${V.done?'disabled':''} autocomplete="off" autocapitalize="off" style="margin-top:14px" onkeydown="if(event.key==='Enter')submitA()">
- ${V.done?`<p>${V.ok?'<span class="ok">Đúng rồi!</span>':'<span class="bad">Chưa đúng</span>'}<br>Đáp án: <b>${esc(t==='ls'?it.ex:it.word)}</b>${V.note?'<br><span class="mut">'+V.note+'</span>':''}</p><button onclick="nextQ()">Tiếp tục</button>`:`<p><button onclick="submitA()">Kiểm tra</button></p>`}</div>`}
+function pr(){if(V.i>=V.qs.length)return prDone();const{it,t}=V.qs[V.i],sp=esc(it.word).replace(/'/g,'');
+ const q={vi:`<div class="qh">Gõ từ tiếng Anh có nghĩa</div><div class="big">${esc(it.vi)}</div>`,blank:`<div class="qh">Điền từ còn thiếu</div><div class="sent">${esc(it.ex.replace(new RegExp(it.word,'i'),'________'))}</div>`,lw:`<div class="qh">Nghe và gõ từ bạn nghe được</div><button class="g bigbtn" onclick="speak('${sp}')">🔊</button>`,ls:`<div class="qh">Nghe và chép lại cả câu</div><button class="g bigbtn" onclick="speak(V.qs[V.i].it.ex)">🔊</button>`}[t];
+ return`<div class="row top"><button class="g sm" onclick="go('set',{sid:'${V.sid}'})">← Thoát</button><b>Practice</b><span class="mut">${V.i+1}/${V.qs.length}</span></div><div class="bar"><i style="width:${V.i/V.qs.length*100}%"></i></div>
+ <div class="card q">${q}<input id="ans" ${V.done?'disabled':''} value="${V.done?esc(V.given||''):''}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ câu trả lời…" onkeydown="if(event.key==='Enter')submitA()">
+ ${V.done?`<div class="fb ${V.ok?'good':'miss'}"><b>${V.ok?'Chính xác! 🎉':'Chưa đúng'}</b><div>Đáp án: <b>${esc(t==='ls'?it.ex:it.word)}</b></div>${V.note?`<div class="mut">${V.note}</div>`:''}</div><button onclick="nextQ()">Tiếp tục</button>`:`<button onclick="submitA()">Kiểm tra</button>`}</div>`}
 function submitA(){const{it,t}=V.qs[V.i],a=$('#ans').value.trim();if(!a)return;let ok;V.note='';
  if(t==='ls'){const A=norm(a),B=norm(it.ex);ok=lcs(A,B)/B.length>=.85;if(ok&&a.trim()!==it.ex)V.note='Lưu ý viết hoa/dấu câu: '+esc(it.ex)}else ok=a.toLowerCase()===it.word.toLowerCase();
- const w=W(it.id);ok?w.c++:w.w++;V.res.push({id:it.id,ok,t});V.ok=ok;V.done=1;save();render()}
+ const w=W(it.id);ok?w.c++:w.w++;V.res.push({id:it.id,ok,t});V.ok=ok;V.given=a;V.done=1;save();render()}
 function nextQ(){V.i++;V.done=0;render()}
 function prDone(){if(!V.fin){V.fin=1;const p=P(V.sid),c=V.res.filter(r=>r.ok).length;p.pr++;bump();lg('Hoàn thành Practice',V.sid,{q:V.res.length,c});save()}
  const c=V.res.filter(r=>r.ok).length,s=setOf(V.sid),bad=[...new Set(V.res.filter(r=>!r.ok).map(r=>s.items.find(i=>i.id===r.id)?.word))];
- return`<h1>Kết quả Practice</h1><div class="card"><div class="big">${Math.round(c/V.res.length*100)}%</div><p>${V.res.length} câu · ${c} đúng · ${V.res.length-c} sai</p><p class="mut">${bad.length?'Cần chú ý: <b>'+bad.map(esc).join(', ')+'</b>':'Không có từ nào sai 👏'}</p></div>
+ return`<h1>Kết quả Practice</h1><div class="card"><div class="emo">${c/V.res.length>=.8?"🏆":c/V.res.length>=.5?"👍":"💪"}</div><div class="big">${Math.round(c/V.res.length*100)}%</div><p>${V.res.length} câu · ${c} đúng · ${V.res.length-c} sai</p><p class="mut">${bad.length?'Cần chú ý: <b>'+bad.map(esc).join(', ')+'</b>':'Không có từ nào sai 👏'}</p></div>
  <div class="row" style="justify-content:flex-start"><button onclick="startPractice('${V.sid}')">Luyện tiếp</button><button class="g" onclick="go('home')">Trang chủ</button></div>`}
 /* ---------- teacher ---------- */
-function tsets(){return`<div class="row"><h1>Bộ từ vựng</h1><button onclick="newSet()">+ Tạo bộ từ</button></div>`+(db.sets.length?db.sets.map(s=>`<div class="card row"><div><b>${esc(title(s))}</b> <span class="tag">${s.status==='pub'?'Đã đăng':'Nháp'}</span><div class="mut">${act(s).length} từ</div></div>
+function tsets(){return`<div class="row"><h1>Bộ từ vựng</h1><button onclick="newSet()">+ Tạo bộ từ</button></div><div class="card"><b>Cập nhật cho học viên</b><p class="mut">Sau khi tạo hoặc sửa bộ từ: bấm "Tải sets.json", vào GitHub → Add file → Upload files → tải file này lên (ghi đè sets.json) → Commit. Sau 1–2 phút, học viên mở lại trang sẽ tự thấy bản mới, tiến độ học được giữ nguyên.</p><button onclick="exportSets()">Tải sets.json</button></div>`+(db.sets.length?db.sets.map(s=>`<div class="card row"><div><b>${esc(title(s))}</b> <span class="tag">${s.status==='pub'?'Đã đăng':'Nháp'}</span><div class="mut">${act(s).length} từ</div></div>
  <div><button class="g" onclick="go('tstat',{sid:'${s.id}'})">Học sinh</button> <button class="g" onclick="editSet('${s.id}')">Sửa</button></div></div>`).join(''):'<div class="card mut">Chưa có bộ từ nào. Bấm "Tạo bộ từ" để bắt đầu.</div>')}
 function newSet(){go('tnew',{d:{id:uid(),book:'',test:'',passage:'',status:'draft',items:[],isNew:1},raw:''})}
 function editSet(id){const s=JSON.parse(JSON.stringify(db.sets.find(x=>x.id===id)));go('tnew',{d:s,raw:''})}
 function tnew(){const d=V.d;return`<h1>${d.isNew?'Tạo bộ từ vựng':'Sửa bộ từ vựng'}</h1><div class="card"><label>Cambridge Book</label><input value="${esc(d.book)}" placeholder="Cambridge IELTS 18" oninput="V.d.book=this.value">
  <div class="row"><div style="flex:1"><label>Test</label><input value="${esc(d.test)}" oninput="V.d.test=this.value"></div><div style="flex:1"><label>Reading Passage</label><input value="${esc(d.passage)}" oninput="V.d.passage=this.value"></div></div>
- <label>Danh sách từ (mỗi dòng một từ)</label><textarea rows="5" oninput="V.raw=this.value">${esc(V.raw)}</textarea><p class="mut" id="cnt"></p>
- <div class="row" style="justify-content:flex-start"><button onclick="genSet()">Generate Vocabulary (AI)</button><button class="g" onclick="addRows()">Thêm từ để nhập tay</button></div></div>
- ${d.items.length?`<div class="card wrap"><table><tr><th>Từ</th><th>IPA</th><th>Nghĩa</th><th>Loại</th><th>Ví dụ</th><th></th></tr>${d.items.map((x,i)=>x.arch?'':`<tr>${['word','ipa','vi','pos','ex'].map(k=>`<td><input value="${esc(x[k])}" oninput="V.d.items[${i}].${k}=this.value"></td>`).join('')}<td><button class="g" onclick="regen(${i})">↻</button><button class="g" onclick="rm(${i})">✕</button></td></tr>`).join('')}</table></div>
+ <label>Danh sách từ (mỗi dòng một từ)</label><textarea rows="5" oninput="V.raw=this.value;cnt()" placeholder="enchanting&#10;capacity&#10;hoặc đã có sẵn: word | IPA | nghĩa | loại từ | ví dụ">${esc(V.raw)}</textarea><p class="mut" id="cnt"></p><p class="bad" id="msg"></p>
+ <div class="row" style="justify-content:flex-start"><button onclick="genSet()">Generate Vocabulary</button><button class="g" onclick="addRows()">Thêm từ để nhập tay</button></div></div>
+ ${d.items.length?`<div class="card wrap"><table><tr><th>Từ</th><th>IPA</th><th>Nghĩa</th><th>Loại</th><th>Ví dụ</th><th></th></tr>${d.items.map((x,i)=>x.arch?'':`<tr>${['word','ipa','vi','pos','ex'].map(k=>`<td><input value="${esc(x[k])}" oninput="V.d.items[${i}].${k}=this.value"></td>`).join('')}<td><button class="g" onclick="speak(V.d.items[${i}].word)">🔊</button><button class="g" onclick="regen(${i})">↻</button><button class="g" onclick="rm(${i})">✕</button></td></tr>`).join('')}</table></div>
  <div class="row" style="justify-content:flex-start"><button class="g" onclick="saveSet('draft')">Lưu nháp</button><button onclick="saveSet('pub')">Publish</button></div>`:''}`}
 function words(){const seen=new Set(),out=[];(V.raw||'').split('\n').map(w=>w.trim()).filter(Boolean).forEach(w=>{const k=w.toLowerCase();if(!/^[A-Za-z][A-Za-z '-]*$/.test(w)||seen.has(k)||V.d.items.some(i=>!i.arch&&i.word.toLowerCase()===k))return;seen.add(k);out.push(w)});return out}
 function addRows(){words().forEach(w=>V.d.items.push({id:uid(),word:w,ipa:'',vi:'',pos:'',ex:''}));V.raw='';render()}
-async function genSet(){const w=words();if(!w.length)return toast('Không có từ mới hợp lệ (đã loại dòng trống/trùng)');
- try{toast('AI đang tạo '+w.length+' từ…');(await ai(w)).forEach(x=>V.d.items.push(x));V.raw='';render();toast('Xem lại rồi Publish')}catch(e){toast(e.message)}}
+const msg=t=>{const e=$('#msg');if(e)e.textContent=t};
+function piped(){const seen=new Set();return(V.raw||'').split('\n').filter(l=>l.includes('|')).map(l=>l.split('|').map(x=>x.trim())).filter(a=>a[0]&&/^[A-Za-z][A-Za-z '-]*$/.test(a[0])&&a[2]).filter(a=>{const k=a[0].toLowerCase();if(seen.has(k)||V.d.items.some(i=>!i.arch&&i.word.toLowerCase()===k))return false;seen.add(k);return true}).map(a=>({id:uid(),word:a[0],ipa:a[1]||'',vi:a[2],pos:a[3]||'',ex:a[4]||''}))}
+function cnt(){const e=$('#cnt');if(e)e.textContent=(words().length+piped().length)+' từ hợp lệ'}
+async function genSet(){const w=words(),pp=piped();if(!w.length&&!pp.length)return msg('Không có từ mới hợp lệ (dòng trống hoặc từ trùng đã bị loại).');
+ try{msg('');pp.forEach(x=>V.d.items.push(x));let r=[];if(w.length){toast('Đang tạo '+w.length+' từ…');r=await ai(w);r.forEach(x=>V.d.items.push(x))}V.raw='';render();
+ const miss=r.filter(x=>!x.ipa||!x.vi||!x.pos||!x.ex).length;if(miss)msg(miss+' từ còn thiếu thông tin (IPA, nghĩa, loại từ hoặc ví dụ). Hãy điền tay vào ô trống rồi mới Publish.');else toast('Xem lại rồi Publish')}
+ catch(e){msg('Lỗi: '+(e.message==='Failed to fetch'?'không kết nối được, kiểm tra mạng.':e.message))}}
+function exportSets(){const b=new Blob([JSON.stringify(db.sets)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='sets.json';a.click()}
+async function pull(){try{const r=await fetch('sets.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(!Array.isArray(j))return;db.remote=j;if(db.role==='t'&&!db.sets.length)db.sets=JSON.parse(JSON.stringify(j));save();if(['home','lib','set','tsets'].includes(V.p))render()}catch{}}
 async function regen(i){try{const x=(await ai([V.d.items[i].word]))[0];V.d.items[i]={...x,id:V.d.items[i].id};render()}catch(e){toast(e.message)}}
 function rm(i){const x=V.d.items[i];if(!confirm('Xóa từ "'+x.word+'"?'))return;V.d.isNew?V.d.items.splice(i,1):x.arch=true;render()}
 function saveSet(st){const d=V.d;if(!d.book.trim())return toast('Nhập tên Cambridge book');if(st==='pub'&&act(d).some(i=>!i.word||!i.vi||!i.ex))return toast('Mỗi từ cần có nghĩa và câu ví dụ');
- d.status=st;delete d.isNew;const k=db.sets.findIndex(s=>s.id===d.id);k<0?db.sets.push(d):db.sets[k]=d;save();toast(st==='pub'?'Published':'Đã lưu nháp');go('tsets')}
+ if(st==='pub'&&!confirm('Bạn đã kiểm tra '+act(d).length+' từ chưa? Sau khi Publish, học sinh sẽ thấy ngay.'))return;d.status=st;delete d.isNew;const k=db.sets.findIndex(s=>s.id===d.id);k<0?db.sets.push(d):db.sets[k]=d;save();toast(st==='pub'?'Published':'Đã lưu nháp');go('tsets')}
 function tstud(){const q=(V.q||'').toLowerCase(),L=Object.entries(db.students).filter(([k,s])=>!q||k.includes(q));
  return`<h1>Học sinh</h1><input placeholder="Tìm theo tên hoặc lớp" value="${esc(V.q||'')}" oninput="V.q=this.value;render();$('main input').focus()"><div class="card wrap"><table><tr><th>Tên</th><th>Lớp</th><th>Đăng nhập đầu</th><th>Hoạt động cuối</th><th>Số bộ</th></tr>
  ${L.map(([k,s])=>`<tr><td><a class="lnk" onclick="go('tone',{k:'${esc(k).replace(/'/g,'')}'})">${esc(s.name)}</a></td><td>${esc(s.cls)}</td><td>${fd(s.first)}</td><td>${fd(s.log.at(-1)?.at||s.last)}</td><td>${Object.keys(s.prog).filter(x=>x!=='me').length}</td></tr>`).join('')||'<tr><td colspan=5 class="mut">Chưa có học sinh (chỉ thấy học sinh đã đăng nhập trên thiết bị này)</td></tr>'}</table></div>`}
@@ -141,15 +166,19 @@ function tone(){const s=db.students[V.k];return`<h1>${esc(s.name)} <span class="
  <h2>Từ vựng cá nhân (${s.personal.length})</h2><div class="card">${s.personal.map(i=>`<div>${esc(i.word)} — <span class="mut">${esc(i.vi)}</span></div>`).join('')||'<span class="mut">Chưa có</span>'}</div>`}
 function tstat(){const s=db.sets.find(x=>x.id===V.sid);return`<h1>${esc(title(s))}</h1><div class="card wrap"><table><tr><th>Học sinh</th><th>Học lần đầu</th><th>Review</th><th>Practice</th><th>Tương tác đầu</th><th>Gần nhất</th><th>Ôn tới</th></tr>
  ${Object.values(db.students).map(st=>{const p=st.prog[s.id];return`<tr><td>${esc(st.name)} (${esc(st.cls)})</td><td>${!p?'Chưa học':p.init?'Hoàn thành':'Đang học'}</td><td>${p?.rev||0}</td><td>${p?.pr||0}</td><td>${fd(p?.first)}</td><td>${fd(st.log.filter(l=>l.sid===s.id).at(-1)?.at)}</td><td>${fd(p?.next)}</td></tr>`}).join('')||'<tr><td colspan=7 class="mut">Chưa có học sinh</td></tr>'}</table></div>`}
-function tcfg(){return`<h1>Cài đặt AI</h1><div class="card"><label>Anthropic API key</label><input type="password" value="${esc(db.key)}" placeholder="sk-ant-…" oninput="db.key=this.value;save()"><p class="mut">Key chỉ lưu trong trình duyệt này. Không chia sẻ máy đã nhập key.</p></div>`}
 /* ---------- shell ---------- */
-function render(){const t=db.role==='t',s=db.role==='s',on=p=>V.p===p?'on':'';
- $('#nav').innerHTML=s?`<a class="${on('home')}" onclick="go('home')">Home</a><a class="${on('lib')}" onclick="go('lib')">Library</a><a class="${on('mine')}" onclick="go('mine')">My Vocabulary</a><a onclick="out()">Thoát</a>`:t?`<a class="${on('tsets')}" onclick="go('tsets')">Bộ từ</a><a class="${on('tstud')}" onclick="go('tstud')">Học sinh</a><a class="${on('tcfg')}" onclick="go('tcfg')">Cài đặt AI</a><a onclick="out()">Thoát</a>`:'';
+function render(){const t=db.role==='t',s=db.role==='s',on=(...p)=>p.includes(V.p)?'on':'',nav=$('#nav');nav.className=s?'st':'';
+ nav.innerHTML=s?`<a class="${on('home','set','fc','pr')}" onclick="go('home')"><i>🏠</i>Home</a><a class="${on('lib')}" onclick="go('lib')"><i>📚</i>Library</a><a class="${on('mine')}" onclick="go('mine')"><i>⭐</i>My Vocabulary</a>`:t?`<a class="${on('tsets','tnew','tstat')}" onclick="go('tsets')">Bộ từ</a><a class="${on('tstud','tone')}" onclick="go('tstud')">Học sinh</a>`:'';
+ $('#hx').innerHTML=db.role?`<button class="g sm" onclick="accent()">🔊 ${db.acc==='en-US'?'Mỹ':'Anh'}</button><button class="g sm" onclick="out()">Thoát</button>`:'';
  const guard=(r,f)=>db.role===r?f():loginView();
  const v={login:loginView,home:()=>guard('s',home),lib:()=>guard('s',lib),set:()=>guard('s',setPage),mine:()=>guard('s',mine),fc:()=>guard('s',fc),pr:()=>guard('s',pr),
- tsets:()=>guard('t',tsets),tnew:()=>guard('t',tnew),tstud:()=>guard('t',tstud),tone:()=>guard('t',tone),tstat:()=>guard('t',tstat),tcfg:()=>guard('t',tcfg)}[V.p];
- $('#app').innerHTML=v();const c=$('#cnt');if(c)c.textContent=words().length+' từ hợp lệ'}
-function loginView(){return`<h1>Chào mừng 👋</h1><div class="card"><b>Học sinh</b><label>English Full Name</label><input id="n" placeholder="Alex Nguyen"><label>Class Name</label><input id="c" placeholder="IELTS Foundation 01" onkeydown="if(event.key==='Enter')login()"><p><button onclick="login()">Start Learning</button></p></div>
- <div class="card"><b>Mr. T</b><label>Mật khẩu${db.teacher?'':' (lần đầu: tự đặt, tối thiểu 6 ký tự)'}</label><input id="pw" type="password" onkeydown="if(event.key==='Enter')tlogin()"><p><button class="g" onclick="tlogin()">Đăng nhập</button></p></div>`}
-if(db.role==='s'&&!me())db.role=null;V.p=db.role==='s'?'home':db.role==='t'?'tsets':'login';render();
+ tsets:()=>guard('t',tsets),tnew:()=>guard('t',tnew),tstud:()=>guard('t',tstud),tone:()=>guard('t',tone),tstat:()=>guard('t',tstat)}[V.p];
+ $('#app').innerHTML=v();cnt();const a=$('#ans');if(a&&!a.disabled)a.focus()}
+function loginView(){return`<div class="login"><div class="mascot">📘</div><h1>IELTS Vocab</h1><p class="mut">Học từ vựng IELTS mỗi ngày: flashcard, luyện tập và lịch ôn thông minh giúp bạn nhớ lâu hơn.</p>
+ <div class="card"><label>Tên tiếng Anh đầy đủ</label><input id="n" placeholder="Alex Nguyen" autocomplete="off"><label>Lớp</label><input id="c" placeholder="IELTS Foundation 01" onkeydown="if(event.key==='Enter')login()"><p><button class="wide" onclick="login()">Start Learning</button></p></div>
+ <details class="card"><summary>Dành cho giáo viên (Mr. T)</summary><label>Mật khẩu${db.teacher?'':' (lần đầu: tự đặt, tối thiểu 6 ký tự)'}</label><input id="pw" type="password" onkeydown="if(event.key==='Enter')tlogin()"><p><button class="g wide" onclick="tlogin()">Đăng nhập</button></p></details></div>`}
+document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA/.test(e.target.tagName))return;
+ if(V.p==='fc'){if(e.key===' '||e.key==='Enter'){e.preventDefault();if(!V.flip){V.flip=1;render()}}else if(V.flip&&'123'.includes(e.key)&&e.key)mark('npm'[e.key-1]);else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1)}
+ else if(V.p==='pr'&&V.done&&e.key==='Enter'){e.preventDefault();nextQ()}});
+if(db.role==='s'&&!me())db.role=null;V.p=db.role==='s'?'home':db.role==='t'?'tsets':'login';render();pull();document.addEventListener('visibilitychange',()=>{if(!document.hidden)pull()});
 </script></body></html>
