@@ -77,33 +77,57 @@ async function tlogin(){const p=$('#pw').value;if(p.length<6)return toast('Mật
 function out(){db.role=null;db.me=null;save();go('login')}
 /* ---------- student ---------- */
 function btnFor(s){const p=me().prog[s.id];return !p?`<button onclick="openSet('${s.id}',1)">Start Learning</button>`:!p.init?`<button onclick="openSet('${s.id}',1)">Continue Learning</button>`:due(p)?`<button onclick="startReview('${s.id}')">Review Now</button>`:`<button class="g" onclick="go('set',{sid:'${s.id}'})">Mở bộ từ</button>`}
-function openSet(sid){const L=act(setOf(sid)),p=P(sid);if(p.pos>=L.length)p.pos=0;save();go('fc',{sid,mode:'learn',pend:[],mainDone:0,show:L[p.pos]?.id,rep:0,flip:0,rv:0})}
+function openSet(sid){begin(sid,'learn')}
+function saveHard(s,p){act(s).forEach(i=>{W(i.id).hd=p.ses.hard[i.id]||''})}
+function begin(sid,mode){const s=setOf(sid),p=P(sid),L=act(s),t=dk(new Date()),n=p.rev+1;let z=p.ses;
+ if(!z||z.k!==mode||z.d!==t||(mode==='review'&&z.n!==n)){
+  const hr={n:0,p:1};let order=L.map(x=>x.id);
+  if(mode==='review')order=[...L].sort((a,b)=>(hr[W(a.id).hd]??2)-(hr[W(b.id).hd]??2)).map(x=>x.id);
+  z=p.ses={k:mode,d:t,n,ok:[],hard:{},order};
+  if(mode==='learn'&&!p.init)L.forEach(x=>{const w=W(x.id);w.st='n';w.seen=0;w.hd=''})}
+ const q=z.order.filter(id=>!z.ok.includes(id)&&L.some(x=>x.id===id));
+ V={p:'fc',sid,mode,q,pend:[],show:null,hist:[],total:L.length,rep:0,flip:0,rv:0};scrollTo(0,0);advance()}
 function home(){const m=me(),dl=S().filter(s=>s.status==='pub'&&due(m.prog[s.id])).sort((a,b)=>m.prog[a.id].next-m.prog[b.id].next),st=streakNow(),h=new Date().getHours();
- return`<div class="hero"><div><div class="hi">${h<12?'Chào buổi sáng':h<18?'Chào buổi chiều':'Chào buổi tối'}, ${esc(m.name.split(' ')[0])}!</div><div class="mut2">${st?'Giữ lửa nhé, hôm nay học thêm một chút!':'Hoàn thành 1 Review hoặc Practice để bắt đầu chuỗi ngày học.'}</div></div><div class="fire"><span>🔥</span><b>${st}</b><small>ngày</small></div></div>
+ return`<div class="hero"><div><div class="hi">${h<12?'Chào buổi sáng':h<18?'Chào buổi chiều':'Chào buổi tối'}, ${esc(m.name.split(' ')[0])}!</div><div class="mut2">${st?'Giữ lửa nhé, hôm nay học thêm một chút!':'Hoàn thành 1 lượt Flashcards, Review hoặc Practice để bắt đầu chuỗi ngày học.'}</div></div><div class="fire"><span>🔥</span><b>${st}</b><small>ngày</small></div></div>
  <h2>Review Today</h2>${dl.length?dl.map(s=>`<div class="card set due"><div><b>${esc(s.book)}</b><div class="mut">${esc(title(s).slice(s.book.length+3)||'')}</div></div><button onclick="startReview('${s.id}')">Review Now</button></div>`).join(''):'<div class="card empty">🎉<p>Hôm nay không có bộ từ nào đến hạn ôn.<br>Vào thư viện để học hoặc luyện thêm nhé.</p></div>'}
- <h2>Vocabulary Library</h2><div class="tiles"><a class="tile" onclick="go('lib')"><span>📚</span><b>Cambridge</b><small>Bộ từ của thầy T</small></a><a class="tile" onclick="go('mine')"><span>⭐</span><b>My Vocabulary</b><small>${m.personal.filter(i=>!i.arch).length} từ</small></a></div>`}
+ ${pdueCard()}<h2>Vocabulary Library</h2><div class="tiles"><a class="tile" onclick="go('lib')"><span>📚</span><b>Cambridge</b><small>Bộ từ của Mr. T</small></a><a class="tile" onclick="go('mine')"><span>⭐</span><b>My Vocabulary</b><small>${m.personal.filter(i=>!i.arch).length} từ</small></a></div>`}
 function lib(){const ss=S().filter(s=>s.status==='pub'),bk=[...new Set(ss.map(s=>s.book))],m=me();
  return`<h1>Cambridge Vocabulary</h1>`+(bk.length?bk.map(b=>`<h2>${esc(b)}</h2>`+ss.filter(s=>s.book===b).map(s=>{const L=act(s),k=L.filter(i=>m.words[i.id]?.st==='m').length,p=m.prog[s.id],chip=!p?'Chưa học':!p.init?'Đang học':due(p)?'Đến hạn ôn':'Đã học xong';
- return`<div class="card set"><div style="flex:1;min-width:150px"><b>${esc(title(s).slice(b.length+3)||'Bộ từ')}</b> <span class="tag ${due(p)?'hot':''}">${chip}</span><div class="bar sm"><i style="width:${L.length?k/L.length*100:0}%"></i></div><div class="mut">${k}/${L.length} từ đã thuộc</div></div>${btnFor(s)}</div>`}).join('')).join(''):'<div class="card empty">📭<p>Thầy T chưa đăng bộ từ nào.</p></div>')}
+ return`<div class="card set"><div style="flex:1;min-width:150px"><b>${esc(title(s).slice(b.length+3)||'Bộ từ')}</b> <span class="tag ${due(p)?'hot':''}">${chip}</span><div class="bar sm"><i style="width:${L.length?k/L.length*100:0}%"></i></div><div class="mut">${k}/${L.length} từ đã thuộc</div></div>${btnFor(s)}</div>`}).join('')).join(''):'<div class="card empty">📭<p>Mr. T chưa đăng bộ từ nào.</p></div>')}
 function setPage(){const s=setOf(V.sid),p=P(s.id);return`<h1>${esc(title(s))}</h1><div class="card"><p class="mut">${act(s).length} từ · ${p.init?'Đã học xong lần đầu · Review '+p.rev+' · Lần ôn tới: '+fd(p.next):'Đang học lần đầu'}</p>
  <div class="row" style="justify-content:flex-start"><button onclick="openSet('${s.id}')">Flashcards</button>${due(p)?`<button onclick="startReview('${s.id}')">Review Now</button>`:''}<button class="p" onclick="startPractice('${s.id}')">Practice</button></div></div>`}
-function mine(){const s=setOf('me'),items=act(s);return`<h1>My Vocabulary</h1><div class="card"><label>Thêm một từ tiếng Anh</label><input id="pw1" placeholder="vd: overwhelming">
- <div class="row" style="margin-top:10px;justify-content:flex-start"><button onclick="genPers()">Generate Vocabulary</button><button class="g" onclick="V.pv={word:$('#pw1').value.trim(),ipa:'',vi:'',pos:'',ex:''};render()">Nhập tay</button></div></div>
- ${V.pv?`<div class="card"><b>Xem lại trước khi lưu</b>${['word','ipa','vi','pos','ex'].map(k=>`<label>${{word:'Từ',ipa:'IPA',vi:'Nghĩa tiếng Việt',pos:'Từ loại',ex:'Câu ví dụ'}[k]}</label><input value="${esc(V.pv[k])}" oninput="V.pv.${k}=this.value">`).join('')}
- <div class="row" style="margin-top:12px;justify-content:flex-start"><button onclick="savePers()">Xác nhận &amp; lưu</button><button class="g" onclick="genPers(1)">Tạo lại</button><button class="g" onclick="V.pv=null;render()">Hủy</button></div></div>`:''}
- ${items.length?`<div class="row"><button onclick="openSet('me')">Flashcards</button><button class="p" onclick="startPractice('me')">Practice</button></div>`:''}
- ${items.map(i=>`<div class="card row"><div><b>${esc(i.word)}</b> <span class="mut">${esc(i.ipa)}</span><div class="mut">${esc(i.vi)}</div></div><button class="g" onclick="speak('${esc(i.word).replace(/'/g,'')}')">🔊</button></div>`).join('')}`}
+const PD=[1,3,7,12,18,24,30],gap=n=>n<=1?1:n<=7?PD[n-1]-PD[n-2]:30;
+const pf=c=>c.front??c.word,pb=c=>c.back??[c.vi,c.pos,c.ex].filter(Boolean).join(' · '),isVi=t=>/[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđ]/i.test(t);
+const pdueN=()=>me().personal.filter(c=>!c.arch&&(c.next||0)<=Date.now()).length,curPC=()=>me().personal.find(x=>x.id===V.q[0]);
+function pdueCard(){const n=pdueN();return n?`<div class="card set due"><div><b>Từ vựng riêng</b><div class="mut">${n} thẻ đến hạn</div></div><button onclick="startPR()">Review Now</button></div>`:''}
+function mine(){const L=me().personal.filter(c=>!c.arch),n=pdueN();
+ return`<h1>My Vocabulary</h1><div class="card"><label>Mặt trước</label><textarea id="pf" rows="2" placeholder="vd: overwhelming"></textarea><label>Mặt sau</label><textarea id="pb" rows="2" placeholder="vd: quá sức, choáng ngợp"></textarea><p class="mut">Nút 🔊 chỉ đọc phần tiếng Anh. Bạn tự chọn nội dung mỗi mặt.</p><button onclick="addCard()">Lưu thẻ</button></div>
+ ${L.length?`<div class="card row"><div><b>${n}</b> thẻ đến hạn ôn<div class="mut">${L.length} thẻ</div></div>${n?`<button onclick="startPR()">Review Now</button>`:''}</div>`:''}
+ ${L.map(c=>`<div class="card row"><div style="flex:1;min-width:0"><b>${esc(pf(c))}</b><div class="mut">${esc(pb(c))}</div><div class="mut">${c.n?'Ôn tới: '+fd(c.next):'Chưa học'}</div></div><button class="g sm" aria-label="Xóa thẻ" onclick="delCard('${c.id}')">✕</button></div>`).join('')}`}
+function addCard(){const f=$('#pf').value.trim(),b=$('#pb').value.trim();if(!f||!b)return toast('Cần có cả mặt trước và mặt sau');me().personal.push({id:uid(),front:f,back:b,n:0,next:Date.now()});save();toast('Đã lưu thẻ');render()}
+function delCard(id){if(!confirm('Xóa thẻ này?'))return;me().personal.find(c=>c.id===id).arch=true;save();render()}
+function startPR(){const q=me().personal.filter(c=>!c.arch&&(c.next||0)<=Date.now()).map(c=>c.id);if(!q.length)return toast('Chưa có thẻ nào đến hạn');go('pcr',{q,rq:{},flip:0,rv:0})}
+function sayC(k){const c=curPC();if(c)speak(k==='f'?pf(c):pb(c))}
+function pcr(){const c=curPC();if(!c)return`<div class="card empty">🎉<p>Xong lượt ôn từ vựng riêng!</p><button onclick="go('mine')">Về My Vocabulary</button></div>`;
+ const sp=k=>isVi(k==='f'?pf(c):pb(c))?'':`<button class="spk" aria-label="Nghe" onclick="event.stopPropagation();sayC('${k}')">🔊</button>`;
+ return`<div class="row top"><button class="g sm" onclick="go('mine')">← Thoát</button><b>Từ vựng riêng</b><span class="mut">Còn ${V.q.length}</span></div>
+ <div class="flip" onclick="flipCard()"><div class="flipin ${V.flip?'on':''}" id="fi"><div class="face front"><div class="vi" style="color:var(--ink);font-size:26px;overflow-wrap:anywhere">${esc(pf(c))}</div>${sp('f')}<p class="hint">Chạm vào thẻ để lật</p></div><div class="face back"><div class="vi" style="font-size:24px;overflow-wrap:anywhere">${esc(pb(c))}</div>${sp('b')}<p class="hint">Chạm để lật lại</p></div></div></div>
+ <div class="three" id="rate" style="visibility:${V.rv?'visible':'hidden'}"><button class="n" onclick="rateP('n')">😕<small>Chưa thuộc</small></button><button class="p" onclick="rateP('p')">🤔<small>Hơi nhớ</small></button><button class="m" onclick="rateP('m')">😎<small>Đã thuộc</small></button></div>`}
+function rateP(st){const c=curPC();if(!c||!V.rv)return;V.q.shift();
+ if(st==='m'){c.n=(c.n||0)+1;c.next=Date.now()+gap(c.n)*D}
+ else if(st==='p')c.next=Date.now()+gap(Math.max(1,c.n||0))*D;
+ else{c.n=0;c.next=Date.now()+D;if(!V.rq[c.id]){V.rq[c.id]=1;V.q.splice(Math.min(3,V.q.length),0,c.id)}}
+ V.flip=0;V.rv=0;save();render()}
 async function genPers(again){const w=again?V.pv.word:$('#pw1').value.trim();if(!/^[A-Za-z][A-Za-z '-]*$/.test(w))return toast('Nhập một từ tiếng Anh hợp lệ');
  try{toast('Đang tạo…');V.pv=(await ai([w]))[0];render()}catch(e){toast(e.message)}}
 function savePers(){const x=V.pv;if(!x.word||!x.vi||!x.ex)return toast('Cần có từ, nghĩa và câu ví dụ');if(me().personal.some(i=>!i.arch&&i.word.toLowerCase()===x.word.toLowerCase()))return toast('Từ này đã có');
  me().personal.push({id:uid(),...x});V.pv=null;save();toast('Đã lưu');render()}
 /* ---------- flashcards + review ---------- */
-function cur(){const s=setOf(V.sid),p=P(s.id),L=act(s);if(V.mode==='review'){const id=p.open.q[p.open.i];return{s,p,len:p.open.q.length,i:p.open.i,it:L.find(x=>x.id===id)}}
- return{s,p,len:L.length,i:Math.min(p.pos,L.length-1),it:L.find(x=>x.id===V.show)}}
+function cur(){const s=setOf(V.sid),p=P(s.id),L=act(s);return{s,p,len:V.total,i:p.ses?p.ses.ok.length:0,it:L.find(x=>x.id===V.show)}}
 function fc(){const{s,p,len,i,it}=cur(),rv=V.mode==='review';
- if(!it){if(!rv&&V.show===null&&V.pend.length)return waitView(s,len);return`<div class="card">Bộ từ chưa có từ nào.<p><button onclick="go('home')">Về trang chủ</button></p></div>`}
- const w=W(it.id),sp=esc(it.word).replace(/'/g,''),pos=rv?i+1:(V.mainDone?len:p.pos+1);
- return`<div class="row top"><button class="g sm" onclick="go('${rv?'home':'set'}',{sid:'${s.id}'})">← Thoát</button><b>${rv?'Review':'Flashcards'}</b><span class="mut">${pos}/${len}</span></div><div class="bar"><i style="width:${pos/len*100}%"></i></div>
+ if(!it){if(V.show===null&&V.pend.length)return waitView(s,len);return`<div class="card">Bộ từ chưa có từ nào.<p><button onclick="go('home')">Về trang chủ</button></p></div>`}
+ const w=W(it.id),sp=esc(it.word).replace(/'/g,''),pos=i;
+ return`<div class="row top"><button class="g sm" onclick="go('${rv?'home':'set'}',{sid:'${s.id}'})">← Thoát</button><b>${rv?'Review':'Flashcards'}</b><span class="mut">${pos}/${len} đã thuộc</span></div><div class="bar"><i style="width:${pos/len*100}%"></i></div>
  ${V.rep?'<div class="repchip">🔁 Ôn lại từ này</div>':''}
  <div class="flip" onclick="flipCard()"><div class="flipin ${V.flip?'on':''}" id="fi">
  <div class="face front"><div class="w">${esc(it.word)}</div><div class="ipa">${esc(it.ipa)}</div><button class="spk" aria-label="Nghe từ" onclick="event.stopPropagation();speak('${sp}')">🔊</button><p class="hint">Chạm vào thẻ để lật</p></div>
@@ -112,24 +136,27 @@ function fc(){const{s,p,len,i,it}=cur(),rv=V.mode==='review';
  <div class="row nav2"><button class="g sm" onclick="step(-1)">← Trước</button><span class="mut">${{n:'Chưa thuộc',p:'Hơi nhớ',m:'Đã thuộc'}[w.st]}${w.seen?'':' · từ mới'}</span><button class="g sm" onclick="step(1)">Sau →</button></div>`}
 function flipCard(){const f=$('#fi');if(!f)return;V.flip=!V.flip;if(V.flip)V.rv=1;f.classList.toggle('on',V.flip);$('#rate').style.visibility=V.rv?'visible':'hidden'}
 function waitView(s,len){const n=Math.max(0,Math.ceil((Math.min(...V.pend.map(x=>x.at))-Date.now())/1000));
- return`<div class="row top"><button class="g sm" onclick="go('set',{sid:'${s.id}'})">← Thoát</button><b>Flashcards</b><span class="mut">${len}/${len}</span></div><div class="bar"><i style="width:100%"></i></div>
+ return`<div class="row top"><button class="g sm" onclick="go('set',{sid:'${s.id}'})">← Thoát</button><b>Flashcards</b><span class="mut">${P(s.id).ses.ok.length}/${len} đã thuộc</span></div><div class="bar"><i style="width:${P(s.id).ses.ok.length/len*100}%"></i></div>
  <div class="card empty"><div>⏳</div><p><b>Còn ${V.pend.length} từ cần ôn lại</b><br>Từ tiếp theo sẽ hiện sau ${n} giây…</p><button onclick="V.pend.forEach(x=>x.at=0);advance()">Ôn ngay</button></div>`}
 function wait(){clearInterval(V.tm);V.tm=setInterval(()=>{if(V.p!=='fc'||V.show!==null){clearInterval(V.tm);return}if(V.pend.some(x=>x.at<=Date.now())){clearInterval(V.tm);advance()}else render()},500)}
-function advance(){const s=setOf(V.sid),p=P(s.id),L=act(s),now=Date.now();V.flip=0;V.rv=0;V.rep=0;
+function advance(){const s=setOf(V.sid),p=P(s.id),now=Date.now();V.flip=0;V.rv=0;V.rep=0;
+ if(V.show)V.hist.push(V.show);
  const d=V.pend.filter(x=>x.at<=now).sort((a,b)=>a.at-b.at)[0];
- if(d){V.show=d.id;V.rep=1}
- else if(!V.mainDone&&p.pos<L.length-1){p.pos++;V.show=L[p.pos].id}
- else{V.mainDone=1;if(V.pend.length){V.show=null;wait()}else{save();return finishLearn({s,p})}}
+ if(d){V.pend=V.pend.filter(x=>x!==d);V.show=d.id;V.rep=1}
+ else if(V.q.length)V.show=V.q.shift();
+ else if(V.pend.length){V.show=null;save();render();return wait()}
+ else{V.show=null;save();return V.mode==='review'?finishReview({s,p}):finishLearn({s,p})}
  save();render()}
 function speakEx(){speak(cur().it.ex)}
-function mark(st){const{it}=cur();if(!it)return;const w=W(it.id);w.st=st;w.seen=1;
- if(V.mode==='learn'){V.pend=V.pend.filter(x=>x.id!==it.id);if(st!=='m')V.pend.push({id:it.id,at:Date.now()+(st==='n'?5000:15000)})}
- save();step(1)}
-function step(d){const c=cur();V.flip=0;V.rv=0;
- if(V.mode==='review'){const n=c.i+d;if(n<0)return;c.p.open.i=n;if(n>=c.len){finishReview(c);return}save();render();return}
- if(d<0){if(c.p.pos<=0)return;const L=act(c.s);c.p.pos--;V.show=L[c.p.pos].id;V.rep=0;save();render();return}
- advance()}
-function finishLearn({s,p}){const L=act(s);p.pos=0;const ok=L.every(i=>W(i.id).seen&&W(i.id).st==='m');
+function mark(st){const{it,p}=cur();if(!it)return;const w=W(it.id),z=p.ses;w.st=st;w.seen=1;
+ V.pend=V.pend.filter(x=>x.id!==it.id);V.q=V.q.filter(id=>id!==it.id);
+ if(st==='m'){if(!z.ok.includes(it.id))z.ok.push(it.id)}
+ else{z.ok=z.ok.filter(id=>id!==it.id);if(st==='n'||z.hard[it.id]!=='n')z.hard[it.id]=st;V.pend.push({id:it.id,at:Date.now()+(st==='n'?5000:15000)})}
+ save();advance()}
+function step(d){V.flip=0;V.rv=0;
+ if(d<0){const id=V.hist.pop();if(!id)return;if(V.show)V.q.unshift(V.show);V.show=id;V.q=V.q.filter(x=>x!==id);V.pend=V.pend.filter(x=>x.id!==id);V.rep=0;render();return}
+ if(V.show)V.q.push(V.show);advance()}
+function finishLearn({s,p}){const L=act(s);if(s.id!=='me')bump();if(p.ses&&p.ses.k==='learn'){if(!p.init)saveHard(s,p);p.ses=null}p.pos=0;const ok=L.every(i=>W(i.id).seen&&W(i.id).st==='m');
  if(ok&&!p.init){p.init=Date.now();p.cycle=p.init;p.next=p.init+DAYS[0]*D;lg('Hoàn thành học lần đầu',s.id,{n:L.length})}
  save();if(ok&&s.id!=='me'){go('done',{sid:s.id});return}
  toast(ok?'Hoàn thành bộ từ! 🎉':'Còn từ chưa thuộc, bạn có thể học lại từ đầu');go('set',{sid:s.id})}
@@ -138,28 +165,36 @@ function doneView(){const s=setOf(V.sid),p=P(s.id),dt=t=>new Date(t).toLocaleDat
  <div class="hero2">Lần ôn tiếp theo<b>${dt(p.next)}</b></div><div class="mut">Lịch ôn dự kiến</div>
  <div class="sched">${DAYS.map((d,k)=>`<div><span>Review ${k+1}</span><b>${dt(p.init+d*D)}</b></div>`).join('')}</div><p class="mut">Nếu bạn ôn trễ, các mốc sau sẽ dời lại tương ứng.</p>
  <button class="wide" onclick="go('home')">Về trang chủ</button></div>`}
-function startReview(sid){const s=setOf(sid),p=P(sid),L=act(s);if(!p.open){const o={n:0,p:1,m:2},srt=[...L].sort((a,b)=>o[W(a.id).st]-o[W(b.id).st]),q=[];
- for(let r=0;r<3;r++)srt.forEach(i=>{if(r<REP[W(i.id).st])q.push(i.id)});p.open={q,i:0,at:Date.now(),num:p.rev+1};save()}go('fc',{sid,mode:'review'})}
-function finishReview({s,p}){const o=p.open;p.open=null;if(!o)return;p.rev++;p.lastRev=Date.now();
- p.next=p.lastRev+((p.rev<DAYS.length?DAYS[p.rev]-DAYS[p.rev-1]:30)*D);bump();lg('Hoàn thành Review '+p.rev,s.id,{n:act(s).length});save();toast('Hoàn thành Review '+p.rev+' ✅');go('set',{sid:s.id})}
+function startReview(sid){begin(sid,'review')}
+function finishReview({s,p}){if(!p.ses||p.ses.k!=='review')return;saveHard(s,p);p.ses=null;p.rev++;p.lastRev=Date.now();
+ p.next=p.lastRev+((p.rev<DAYS.length?DAYS[p.rev]-DAYS[p.rev-1]:30)*D);if(s.id!=='me')bump();lg('Hoàn thành Review '+p.rev,s.id,{n:act(s).length});save();toast('Hoàn thành Review '+p.rev+' ✅');go('set',{sid:s.id})}
 /* ---------- practice ---------- */
 function startPractice(sid){const s=setOf(sid),L=act(s);if(L.length<1)return toast('Bộ từ chưa có từ');
  const wt=i=>{const w=W(i.id);return({n:4,p:2,m:1}[w.st])+(w.c+w.w===0?2:0)+w.w},pool=[...L],qs=[],n=Math.min(L.length,Math.max(5,Math.round(L.length*.6)),15);
  while(qs.length<n&&pool.length){let r=Math.random()*pool.reduce((a,i)=>a+wt(i),0),k=0;for(;k<pool.length-1&&(r-=wt(pool[k]))>0;k++);const it=pool.splice(k,1)[0];
  const T=['vi','blank','lw','ls'];let t=T[Math.floor(Math.random()*4)];if(t==='blank'&&!new RegExp(it.word,'i').test(it.ex))t='vi';qs.push({it,t})}
- go('pr',{sid,qs,i:0,res:[],done:0,started:Date.now()})}
+ go('pr',{sid,qs,i:0,st:[],started:Date.now()})}
 const norm=s=>s.toLowerCase().replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
 function lcs(a,b){const t=Array.from({length:a.length+1},()=>Array(b.length+1).fill(0));for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)t[i][j]=a[i-1]===b[j-1]?t[i-1][j-1]+1:Math.max(t[i-1][j],t[i][j-1]);return t[a.length][b.length]}
-function pr(){if(V.i>=V.qs.length)return prDone();const{it,t}=V.qs[V.i],sp=esc(it.word).replace(/'/g,'');
- const q={vi:`<div class="qh">Gõ từ tiếng Anh có nghĩa</div><div class="big">${esc(it.vi)}</div>`,blank:`<div class="qh">Điền từ còn thiếu</div><div class="sent">${esc(it.ex.replace(new RegExp(it.word,'i'),'________'))}</div>`,lw:`<div class="qh">Nghe và gõ từ bạn nghe được</div><button class="g bigbtn" onclick="speak('${sp}')">🔊</button>`,ls:`<div class="qh">Nghe và chép lại cả câu</div><button class="g bigbtn" onclick="speak(V.qs[V.i].it.ex)">🔊</button>`}[t];
+const MSG_BAD=['Gần rồi, cố lên! Não bạn đang khởi động đó 😄','Chưa đúng, nhưng sai là một bước gần hơn tới đúng 💪','Ối, chưa trúng! Thử lại nhé, mình tin bạn.','Hơi lệch một chút thôi, bình tĩnh nào!'];
+const mask=(t,n)=>{let k=0;return[...t].map(c=>/[A-Za-z]/.test(c)?(k++<n?c:'_'):c).join('')},tgt=q=>q.t==='ls'?q.it.ex:q.it.word,nlet=t=>(t.match(/[A-Za-z]/g)||[]).length;
+function pr(){if(V.i>=V.qs.length)return prDone();const q=V.qs[V.i],{it,t}=q,S1=V.st[V.i]??={tries:0,hint:0,done:0,ok:0,given:'',msg:'',draft:''},T=tgt(q),sp=esc(it.word).replace(/'/g,'');
+ const qh={vi:`<div class="qh">Gõ từ tiếng Anh có nghĩa</div><div class="big">${esc(it.vi)}</div>`,blank:`<div class="qh">Điền từ còn thiếu</div><div class="sent">${esc(it.ex.replace(new RegExp(it.word,'i'),'________'))}</div>`,lw:`<div class="qh">Nghe và gõ từ bạn nghe được</div><button class="g bigbtn" onclick="speak('${sp}')">🔊</button>`,ls:`<div class="qh">Nghe và chép lại cả câu</div><button class="g bigbtn" onclick="speak(V.qs[V.i].it.ex)">🔊</button>`}[t];
  return`<div class="row top"><button class="g sm" onclick="go('set',{sid:'${V.sid}'})">← Thoát</button><b>Practice</b><span class="mut">${V.i+1}/${V.qs.length}</span></div><div class="bar"><i style="width:${V.i/V.qs.length*100}%"></i></div>
- <div class="card q">${q}<input id="ans" ${V.done?'disabled':''} value="${V.done?esc(V.given||''):''}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ câu trả lời…" onkeydown="if(event.key==='Enter')submitA()">
- ${V.done?`<div class="fb ${V.ok?'good':'miss'}"><b>${V.ok?'Chính xác! 🎉':'Chưa đúng'}</b><div>Đáp án: <b>${esc(t==='ls'?it.ex:it.word)}</b></div>${V.note?`<div class="mut">${V.note}</div>`:''}</div><button onclick="nextQ()">Tiếp tục</button>`:`<button onclick="submitA()">Kiểm tra</button>`}</div>`}
-function submitA(){const{it,t}=V.qs[V.i],a=$('#ans').value.trim();if(!a)return;let ok;V.note='';
- if(t==='ls'){const A=norm(a),B=norm(it.ex);ok=lcs(A,B)/B.length>=.85;if(ok&&a.trim()!==it.ex)V.note='Lưu ý viết hoa/dấu câu: '+esc(it.ex)}else ok=a.toLowerCase()===it.word.toLowerCase();
- const w=W(it.id);ok?w.c++:w.w++;V.res.push({id:it.id,ok,t});V.ok=ok;V.given=a;V.done=1;save();render()}
-function nextQ(){V.i++;V.done=0;render()}
-function prDone(){if(!V.fin){V.fin=1;const p=P(V.sid),c=V.res.filter(r=>r.ok).length;p.pr++;bump();lg('Hoàn thành Practice',V.sid,{q:V.res.length,c});save()}
+ <div class="card q">${qh}<input id="ans" ${S1.done?'disabled':''} value="${esc(S1.done?S1.given:S1.draft)}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ câu trả lời…" oninput="V.st[V.i].draft=this.value" onkeydown="if(event.key==='Enter')submitA()">
+ ${S1.hint&&!S1.done?`<div class="mut" style="letter-spacing:.12em;margin:-6px 0 12px;overflow-wrap:anywhere">Gợi ý: <b>${esc(mask(T,S1.hint))}</b></div>`:''}
+ ${S1.msg?`<div class="fb ${S1.done&&S1.ok?'good':'miss'}">${S1.msg}</div>`:''}
+ ${S1.done?`<div class="row" style="justify-content:center">${V.i>0?`<button class="g" onclick="prGo(-1)">← Câu trước</button>`:''}<button onclick="prGo(1)">${V.i+1>=V.qs.length?'Xem kết quả':'Câu tiếp theo →'}</button></div>`
+ :`<button onclick="submitA()">Kiểm tra</button>${S1.tries>=3?` <button class="p" onclick="hintA()">💡 Gợi ý</button>`:''}${S1.hint>=nlet(T)?` <button class="g" onclick="giveUp()">Xem đáp án</button>`:''}`}</div>`}
+function submitA(){const q=V.qs[V.i],S1=V.st[V.i],a=$('#ans').value.trim();if(!a||S1.done)return;
+ const ok=q.t==='ls'?lcs(norm(a),norm(q.it.ex))/norm(q.it.ex).length>=.85:a.toLowerCase()===q.it.word.toLowerCase();
+ if(ok)return prFin(true,a);S1.tries++;S1.draft=a;S1.msg=MSG_BAD[Math.random()*MSG_BAD.length|0]+(S1.tries>=3?' Bạn có thể bấm Gợi ý nhé.':'');render()}
+function prFin(ok,a){const q=V.qs[V.i],S1=V.st[V.i],w=W(q.it.id);S1.done=1;S1.ok=ok;S1.given=a;ok&&!S1.tries&&!S1.hint?w.c++:w.w++;
+ S1.msg=(ok?'<b>Chính xác! 🎉</b>':'<b>Chưa đúng</b>')+`<div>Đáp án: <b>${esc(tgt(q))}</b></div>`;save();render()}
+function hintA(){const S1=V.st[V.i];S1.hint=Math.min(S1.hint+1,nlet(tgt(V.qs[V.i])));render()}
+function giveUp(){prFin(false,'')}
+function prGo(d){V.i+=d;render()}
+function prDone(){V.res=V.qs.map((q,i)=>({id:q.it.id,ok:!!V.st[i]?.ok,t:q.t}));if(!V.fin){V.fin=1;const p=P(V.sid),c=V.res.filter(r=>r.ok).length;p.pr++;if(V.sid!=='me')bump();lg('Hoàn thành Practice',V.sid,{q:V.res.length,c});save()}
  const c=V.res.filter(r=>r.ok).length,s=setOf(V.sid),bad=[...new Set(V.res.filter(r=>!r.ok).map(r=>s.items.find(i=>i.id===r.id)?.word))];
  return`<h1>Kết quả Practice</h1><div class="card"><div class="emo">${c/V.res.length>=.8?"🏆":c/V.res.length>=.5?"👍":"💪"}</div><div class="big">${Math.round(c/V.res.length*100)}%</div><p>${V.res.length} câu · ${c} đúng · ${V.res.length-c} sai</p><p class="mut">${bad.length?'Cần chú ý: <b>'+bad.map(esc).join(', ')+'</b>':'Không có từ nào sai 👏'}</p></div>
  <div class="row" style="justify-content:flex-start"><button onclick="startPractice('${V.sid}')">Luyện tiếp</button><button class="g" onclick="go('home')">Trang chủ</button></div>`}
@@ -203,14 +238,14 @@ function render(){const t=db.role==='t',s=db.role==='s',on=(...p)=>p.includes(V.
  nav.innerHTML=s?`<a class="${on('home','set','fc','pr','done')}" onclick="go('home')"><i>🏠</i>Home</a><a class="${on('lib')}" onclick="go('lib')"><i>📚</i>Library</a><a class="${on('mine')}" onclick="go('mine')"><i>⭐</i>My Vocabulary</a>`:t?`<a class="${on('tsets','tnew','tstat')}" onclick="go('tsets')">Bộ từ</a><a class="${on('tstud','tone')}" onclick="go('tstud')">Học sinh</a>`:'';
  $('#hx').innerHTML=db.role?`<button class="g sm" onclick="accent()">🔊 ${db.acc==='en-US'?'Mỹ':'Anh'}</button><button class="g sm" onclick="out()">Thoát</button>`:'';
  const guard=(r,f)=>db.role===r?f():loginView();
- const v={login:loginView,home:()=>guard('s',home),lib:()=>guard('s',lib),set:()=>guard('s',setPage),mine:()=>guard('s',mine),fc:()=>guard('s',fc),done:()=>guard('s',doneView),pr:()=>guard('s',pr),
+ const v={login:loginView,home:()=>guard('s',home),lib:()=>guard('s',lib),set:()=>guard('s',setPage),mine:()=>guard('s',mine),fc:()=>guard('s',fc),done:()=>guard('s',doneView),pr:()=>guard('s',pr),pcr:()=>guard('s',pcr),
  tsets:()=>guard('t',tsets),tnew:()=>guard('t',tnew),tstud:()=>guard('t',tstud),tone:()=>guard('t',tone),tstat:()=>guard('t',tstat)}[V.p];
  $('#app').innerHTML=v();cnt();const a=$('#ans');if(a&&!a.disabled)a.focus()}
 function loginView(){return`<div class="login"><div class="mascot">📘</div><h1>IELTS Vocab</h1><p class="mut">Học từ vựng IELTS mỗi ngày: flashcard, luyện tập và lịch ôn thông minh giúp bạn nhớ lâu hơn.</p>
  <div class="card"><label>Tên tiếng Anh đầy đủ</label><input id="n" placeholder="Alex Nguyen" autocomplete="off"><label>Lớp</label><input id="c" placeholder="IELTS Foundation 01" onkeydown="if(event.key==='Enter')login()"><p><button class="wide" onclick="login()">Start Learning</button></p></div>
- <details class="card"><summary>Dành cho giáo viên (Mr. T)</summary><label>Mật khẩu${db.teacher?'':' (lần đầu: tự đặt, tối thiểu 6 ký tự)'}</label><input id="pw" type="password" onkeydown="if(event.key==='Enter')tlogin()"><p><button class="g wide" onclick="tlogin()">Đăng nhập</button></p></details></div>`}
+ </div>`}
 document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA/.test(e.target.tagName))return;
  if(V.p==='fc'){if(e.key===' '||e.key==='Enter'){e.preventDefault();flipCard()}else if(V.rv&&'123'.includes(e.key)&&e.key)mark('npm'[e.key-1]);else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1)}
- else if(V.p==='pr'&&V.done&&e.key==='Enter'){e.preventDefault();nextQ()}});
-if(db.role==='s'&&!me())db.role=null;V.p=db.role==='s'?'home':db.role==='t'?'tsets':'login';render();pull();document.addEventListener('visibilitychange',()=>{if(!document.hidden)pull()});
+ else if(V.p==='pr'&&V.st[V.i]?.done&&e.key==='Enter'){e.preventDefault();prGo(1)}});
+if(db.role==='t')db.role=null;if(db.role==='s'&&!me())db.role=null;V.p=db.role==='s'?'home':db.role==='t'?'tsets':'login';render();pull();document.addEventListener('visibilitychange',()=>{if(!document.hidden)pull()});
 </script></body></html>
