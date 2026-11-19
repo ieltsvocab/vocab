@@ -496,5 +496,278 @@
     "ex": "The shop keeps a large stock of books."
    }
   ]
+ },
+ {
+  "id": "c14-t3-p1",
+  "book": "Cambridge 14",
+  "test": "3",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c14t3p1-01",
+    "word": "notion",
+    "ipa": "/ˈnəʊʃn/",
+    "vi": "quan niệm, khái niệm",
+    "pos": "noun",
+    "ex": "Many people have a romantic notion of life in the countryside."
+   },
+   {
+    "id": "c14t3p1-02",
+    "word": "implicit",
+    "ipa": "/ɪmˈplɪsɪt/",
+    "vi": "ngầm, không nói ra trực tiếp",
+    "pos": "adjective",
+    "ex": "There was an implicit agreement between the two sides."
+   },
+   {
+    "id": "c14t3p1-03",
+    "word": "perceive",
+    "ipa": "/pəˈsiːv/",
+    "vi": "nhận thức, nhìn nhận",
+    "pos": "verb",
+    "ex": "Many people perceive the exam as unfair."
+   },
+   {
+    "id": "c14t3p1-04",
+    "word": "determine",
+    "ipa": "/dɪˈtɜːmɪn/",
+    "vi": "quyết định; xác định",
+    "pos": "verb",
+    "ex": "Your diet can determine how healthy you are."
+   },
+   {
+    "id": "c14t3p1-05",
+    "word": "cognitive",
+    "ipa": "/ˈkɒɡnətɪv/",
+    "vi": "thuộc nhận thức, tư duy",
+    "pos": "adjective",
+    "ex": "Reading improves children's cognitive development."
+   },
+   {
+    "id": "c14t3p1-06",
+    "word": "in sum",
+    "ipa": "/ɪn ˈsʌm/",
+    "vi": "tóm lại",
+    "pos": "adverb phrase",
+    "ex": "In sum, the project was a great success."
+   },
+   {
+    "id": "c14t3p1-07",
+    "word": "scope",
+    "ipa": "/skəʊp/",
+    "vi": "phạm vi",
+    "pos": "noun",
+    "ex": "The scope of the study is limited to young adults."
+   },
+   {
+    "id": "c14t3p1-08",
+    "word": "phenomenon",
+    "ipa": "/fəˈnɒmɪnən/",
+    "vi": "hiện tượng",
+    "pos": "noun",
+    "ex": "Climate change is a global phenomenon."
+   },
+   {
+    "id": "c14t3p1-09",
+    "word": "misleading",
+    "ipa": "/ˌmɪsˈliːdɪŋ/",
+    "vi": "gây hiểu lầm, dễ gây nhầm lẫn",
+    "pos": "adjective",
+    "ex": "The advertisement was misleading."
+   },
+   {
+    "id": "c14t3p1-10",
+    "word": "reveal",
+    "ipa": "/rɪˈviːl/",
+    "vi": "cho thấy, tiết lộ",
+    "pos": "verb",
+    "ex": "The survey revealed a sharp rise in unemployment."
+   },
+   {
+    "id": "c14t3p1-11",
+    "word": "correspondence",
+    "ipa": "/ˌkɒrəˈspɒndəns/",
+    "vi": "sự tương ứng, sự phù hợp",
+    "pos": "noun",
+    "ex": "There is little correspondence between the two sets of results."
+   },
+   {
+    "id": "c14t3p1-12",
+    "word": "take into account",
+    "ipa": "/teɪk ˌɪntu əˈkaʊnt/",
+    "vi": "tính đến, xem xét đến",
+    "pos": "verb phrase",
+    "ex": "You must take the cost into account."
+   },
+   {
+    "id": "c14t3p1-13",
+    "word": "supplementation",
+    "ipa": "/ˌsʌplɪmenˈteɪʃn/",
+    "vi": "sự bổ sung",
+    "pos": "noun",
+    "ex": "The theory needs supplementation with new evidence."
+   },
+   {
+    "id": "c14t3p1-14",
+    "word": "elucidate",
+    "ipa": "/ɪˈluːsɪdeɪt/",
+    "vi": "làm sáng tỏ, giải thích rõ",
+    "pos": "verb",
+    "ex": "The study helps elucidate how memory works."
+   },
+   {
+    "id": "c14t3p1-15",
+    "word": "cross-cultural difference",
+    "ipa": "/ˌkrɒs ˈkʌltʃərəl ˈdɪfrəns/",
+    "vi": "sự khác biệt giữa các nền văn hóa",
+    "pos": "noun phrase",
+    "ex": "Managers must understand cross-cultural differences in communication."
+   },
+   {
+    "id": "c14t3p1-16",
+    "word": "function",
+    "ipa": "/ˈfʌŋkʃn/",
+    "vi": "hàm số; sự phụ thuộc vào (a function of)",
+    "pos": "noun",
+    "ex": "A child's progress is partly a function of the teaching method."
+   },
+   {
+    "id": "c14t3p1-17",
+    "word": "loosely",
+    "ipa": "/ˈluːsli/",
+    "vi": "một cách lỏng lẻo, không chặt chẽ",
+    "pos": "adverb",
+    "ex": "The film is loosely based on a true story."
+   },
+   {
+    "id": "c14t3p1-18",
+    "word": "emergence",
+    "ipa": "/ɪˈmɜːdʒəns/",
+    "vi": "sự xuất hiện, sự nổi lên",
+    "pos": "noun",
+    "ex": "The emergence of the internet changed how we work."
+   },
+   {
+    "id": "c14t3p1-19",
+    "word": "elite",
+    "ipa": "/eɪˈliːt/",
+    "vi": "tầng lớp tinh hoa, giới ưu tú",
+    "pos": "noun",
+    "ex": "Higher education was once reserved for a small elite."
+   },
+   {
+    "id": "c14t3p1-20",
+    "word": "non-elite",
+    "ipa": "/ˌnɒn eɪˈliːt/",
+    "vi": "người không thuộc tầng lớp tinh hoa",
+    "pos": "noun / adjective",
+    "ex": "Non-elite groups had little say in political decisions."
+   },
+   {
+    "id": "c14t3p1-21",
+    "word": "chaos",
+    "ipa": "/ˈkeɪɒs/",
+    "vi": "sự hỗn loạn",
+    "pos": "noun",
+    "ex": "The storm caused chaos at the airport."
+   },
+   {
+    "id": "c14t3p1-22",
+    "word": "avail",
+    "ipa": "/əˈveɪl/",
+    "vi": "tận dụng (avail oneself of)",
+    "pos": "verb",
+    "ex": "Students should avail themselves of the library's resources."
+   },
+   {
+    "id": "c14t3p1-23",
+    "word": "reward",
+    "ipa": "/rɪˈwɔːd/",
+    "vi": "thưởng, đền đáp",
+    "pos": "verb",
+    "ex": "The company rewards employees for hard work."
+   },
+   {
+    "id": "c14t3p1-24",
+    "word": "accomplish",
+    "ipa": "/əˈkʌmplɪʃ/",
+    "vi": "hoàn thành, đạt được",
+    "pos": "verb",
+    "ex": "She accomplished everything she planned to do."
+   },
+   {
+    "id": "c14t3p1-25",
+    "word": "foster",
+    "ipa": "/ˈfɒstə/",
+    "vi": "nuôi dưỡng, thúc đẩy",
+    "pos": "verb",
+    "ex": "Good teachers foster a love of learning."
+   },
+   {
+    "id": "c14t3p1-26",
+    "word": "competency",
+    "ipa": "/ˈkɒmpɪtənsi/",
+    "vi": "năng lực, khả năng",
+    "pos": "noun",
+    "ex": "Language competency is required for this job."
+   },
+   {
+    "id": "c14t3p1-27",
+    "word": "democracy",
+    "ipa": "/dɪˈmɒkrəsi/",
+    "vi": "nền dân chủ",
+    "pos": "noun",
+    "ex": "Free elections are essential to democracy."
+   },
+   {
+    "id": "c14t3p1-28",
+    "word": "institution",
+    "ipa": "/ˌɪnstɪˈtjuːʃn/",
+    "vi": "thể chế, tổ chức, định chế",
+    "pos": "noun",
+    "ex": "Schools are important social institutions."
+   },
+   {
+    "id": "c14t3p1-29",
+    "word": "underlying",
+    "ipa": "/ˌʌndəˈlaɪɪŋ/",
+    "vi": "cơ bản, nền tảng, tiềm ẩn",
+    "pos": "adjective",
+    "ex": "We need to find the underlying cause of the problem."
+   },
+   {
+    "id": "c14t3p1-30",
+    "word": "presupposition",
+    "ipa": "/ˌpriːsʌpəˈzɪʃn/",
+    "vi": "tiền giả định, điều được mặc nhiên coi là đúng",
+    "pos": "noun",
+    "ex": "The argument rests on a false presupposition."
+   },
+   {
+    "id": "c14t3p1-31",
+    "word": "assumption",
+    "ipa": "/əˈsʌmpʃn/",
+    "vi": "giả định, sự cho rằng",
+    "pos": "noun",
+    "ex": "You should not make assumptions without evidence."
+   },
+   {
+    "id": "c14t3p1-32",
+    "word": "contribution",
+    "ipa": "/ˌkɒntrɪˈbjuːʃn/",
+    "vi": "sự đóng góp; công trình đóng góp",
+    "pos": "noun",
+    "ex": "His research made a major contribution to medicine."
+   },
+   {
+    "id": "c14t3p1-33",
+    "word": "scholar",
+    "ipa": "/ˈskɒlə/",
+    "vi": "học giả",
+    "pos": "noun",
+    "ex": "She is a respected scholar of ancient history."
+   }
+  ]
  }
 ]
