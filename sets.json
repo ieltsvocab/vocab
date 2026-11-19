@@ -1,0 +1,251 @@
+[
+ {
+  "id": "c14-t1-p1",
+  "book": "Cambridge 14",
+  "test": "1",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c14t1p1-01",
+    "word": "enchanting",
+    "ipa": "/ɪnˈtʃɑːntɪŋ/",
+    "vi": "quyến rũ, mê hoặc",
+    "pos": "adjective",
+    "ex": "The village looked enchanting in the evening light."
+   },
+   {
+    "id": "c14t1p1-02",
+    "word": "aware of",
+    "ipa": "/əˈweə əv/",
+    "vi": "nhận thức được, biết về",
+    "pos": "adjective phrase",
+    "ex": "Many students are not aware of the risks."
+   },
+   {
+    "id": "c14t1p1-03",
+    "word": "capacity",
+    "ipa": "/kəˈpæsəti/",
+    "vi": "sức chứa; khả năng",
+    "pos": "noun",
+    "ex": "The stadium has a capacity of 50,000."
+   },
+   {
+    "id": "c14t1p1-04",
+    "word": "abandon",
+    "ipa": "/əˈbændən/",
+    "vi": "từ bỏ; bỏ rơi",
+    "pos": "verb",
+    "ex": "They had to abandon the project due to lack of money."
+   },
+   {
+    "id": "c14t1p1-05",
+    "word": "in favour of",
+    "ipa": "/ɪn ˈfeɪvər əv/",
+    "vi": "ủng hộ; thiên về",
+    "pos": "preposition phrase",
+    "ex": "Most people voted in favour of the new law."
+   },
+   {
+    "id": "c14t1p1-06",
+    "word": "regulate",
+    "ipa": "/ˈreɡjuleɪt/",
+    "vi": "điều chỉnh, quản lý",
+    "pos": "verb",
+    "ex": "Governments regulate the price of water."
+   },
+   {
+    "id": "c14t1p1-07",
+    "word": "pretence",
+    "ipa": "/prɪˈtens/",
+    "vi": "sự giả vờ, giả bộ",
+    "pos": "noun",
+    "ex": "She kept up the pretence of being happy."
+   },
+   {
+    "id": "c14t1p1-08",
+    "word": "settle down",
+    "ipa": "/ˌsetl ˈdaʊn/",
+    "vi": "ổn định cuộc sống; bình tĩnh lại",
+    "pos": "phrasal verb",
+    "ex": "He wants to settle down and start a family."
+   },
+   {
+    "id": "c14t1p1-09",
+    "word": "take turns",
+    "ipa": "/teɪk ˈtɜːnz/",
+    "vi": "thay phiên nhau",
+    "pos": "verb phrase",
+    "ex": "The children take turns to use the computer."
+   },
+   {
+    "id": "c14t1p1-10",
+    "word": "crucial",
+    "ipa": "/ˈkruːʃl/",
+    "vi": "cực kỳ quan trọng",
+    "pos": "adjective",
+    "ex": "Sleep is crucial for good health."
+   },
+   {
+    "id": "c14t1p1-11",
+    "word": "adaptable",
+    "ipa": "/əˈdæptəbl/",
+    "vi": "dễ thích nghi",
+    "pos": "adjective",
+    "ex": "Young children are usually very adaptable."
+   },
+   {
+    "id": "c14t1p1-12",
+    "word": "extol",
+    "ipa": "/ɪkˈstəʊl/",
+    "vi": "ca ngợi, tán dương",
+    "pos": "verb",
+    "ex": "Writers often extol the benefits of walking."
+   },
+   {
+    "id": "c14t1p1-13",
+    "word": "virtue",
+    "ipa": "/ˈvɜːtʃuː/",
+    "vi": "đức tính tốt; ưu điểm",
+    "pos": "noun",
+    "ex": "Patience is a great virtue."
+   },
+   {
+    "id": "c14t1p1-14",
+    "word": "decline",
+    "ipa": "/dɪˈklaɪn/",
+    "vi": "suy giảm, giảm sút",
+    "pos": "verb",
+    "ex": "The number of visitors will decline sharply."
+   },
+   {
+    "id": "c14t1p1-15",
+    "word": "scarce",
+    "ipa": "/skeəs/",
+    "vi": "khan hiếm",
+    "pos": "adjective",
+    "ex": "Fresh water is scarce in many regions."
+   },
+   {
+    "id": "c14t1p1-16",
+    "word": "curtail",
+    "ipa": "/kɜːˈteɪl/",
+    "vi": "cắt giảm, hạn chế",
+    "pos": "verb",
+    "ex": "The company had to curtail its spending."
+   },
+   {
+    "id": "c14t1p1-17",
+    "word": "perception",
+    "ipa": "/pəˈsepʃn/",
+    "vi": "nhận thức, cách nhìn nhận",
+    "pos": "noun",
+    "ex": "Public perception of the city has improved."
+   },
+   {
+    "id": "c14t1p1-18",
+    "word": "emphasis on",
+    "ipa": "/ˈemfəsɪs ɒn/",
+    "vi": "sự nhấn mạnh vào",
+    "pos": "noun phrase",
+    "ex": "The school puts great emphasis on reading."
+   },
+   {
+    "id": "c14t1p1-19",
+    "word": "implication",
+    "ipa": "/ˌɪmplɪˈkeɪʃn/",
+    "vi": "hệ quả; hàm ý",
+    "pos": "noun",
+    "ex": "The findings have an important implication for health."
+   },
+   {
+    "id": "c14t1p1-20",
+    "word": "spontaneous",
+    "ipa": "/spɒnˈteɪniəs/",
+    "vi": "tự phát, tự nhiên",
+    "pos": "adjective",
+    "ex": "Their laughter was spontaneous."
+   },
+   {
+    "id": "c14t1p1-21",
+    "word": "intervene",
+    "ipa": "/ˌɪntəˈviːn/",
+    "vi": "can thiệp",
+    "pos": "verb",
+    "ex": "Teachers should not intervene too quickly."
+   },
+   {
+    "id": "c14t1p1-22",
+    "word": "undertake",
+    "ipa": "/ˌʌndəˈteɪk/",
+    "vi": "đảm nhận; tiến hành",
+    "pos": "verb",
+    "ex": "She agreed to undertake the research."
+   },
+   {
+    "id": "c14t1p1-23",
+    "word": "carry out",
+    "ipa": "/ˌkæri ˈaʊt/",
+    "vi": "thực hiện, tiến hành",
+    "pos": "phrasal verb",
+    "ex": "Scientists will carry out a series of experiments."
+   },
+   {
+    "id": "c14t1p1-24",
+    "word": "facilitate",
+    "ipa": "/fəˈsɪlɪteɪt/",
+    "vi": "tạo điều kiện, làm cho dễ dàng",
+    "pos": "verb",
+    "ex": "Technology can facilitate learning."
+   },
+   {
+    "id": "c14t1p1-25",
+    "word": "diagnosis",
+    "ipa": "/ˌdaɪəɡˈnəʊsɪs/",
+    "vi": "chẩn đoán",
+    "pos": "noun",
+    "ex": "Early diagnosis can save lives."
+   },
+   {
+    "id": "c14t1p1-26",
+    "word": "disorder",
+    "ipa": "/dɪsˈɔːdə/",
+    "vi": "rối loạn (bệnh lý)",
+    "pos": "noun",
+    "ex": "He suffers from a sleep disorder."
+   },
+   {
+    "id": "c14t1p1-27",
+    "word": "represent",
+    "ipa": "/ˌreprɪˈzent/",
+    "vi": "đại diện; thể hiện",
+    "pos": "verb",
+    "ex": "These figures represent changes in population."
+   },
+   {
+    "id": "c14t1p1-28",
+    "word": "controversy",
+    "ipa": "/ˈkɒntrəvɜːsi/",
+    "vi": "sự tranh cãi",
+    "pos": "noun",
+    "ex": "The plan caused great controversy."
+   },
+   {
+    "id": "c14t1p1-29",
+    "word": "contribution",
+    "ipa": "/ˌkɒntrɪˈbjuːʃn/",
+    "vi": "sự đóng góp",
+    "pos": "noun",
+    "ex": "Her contribution to the project was valuable."
+   },
+   {
+    "id": "c14t1p1-30",
+    "word": "unpredictable",
+    "ipa": "/ˌʌnprɪˈdɪktəbl/",
+    "vi": "không thể đoán trước",
+    "pos": "adjective",
+    "ex": "The weather here is highly unpredictable."
+   }
+  ]
+ }
+]
