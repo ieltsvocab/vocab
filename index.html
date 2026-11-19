@@ -189,7 +189,7 @@ const vOk=(a,vi)=>{const A=nv(a);if(!A)return false;const c=vi.replace(/\([^)]*\
 function pe(c){if(c.word)return{id:c.id,word:c.word,ipa:c.ipa||'',vi:c.vi||'',pos:c.pos||'',ex:c.ex||''};const f=c.front||'',b=c.back||'',sw=isVi(f)&&!isVi(b);return{id:c.id,word:sw?b:f,vi:sw?f:b,ipa:'',pos:'',ex:c.ex||''}}
 const pitems=sid=>sid==='me'?me().personal.filter(c=>!c.arch).map(pe):act(setOf(sid));
 function mkQ(it,t,L){const q={it,t};
- if(t==='mcq'){q.rev=Math.random()<.5;q.ans=q.rev?it.word:it.vi;const o=new Set([q.ans]);shuf(L.filter(x=>x.id!==it.id)).forEach(x=>{const v=q.rev?x.word:x.vi;if(o.size<4&&v&&!o.has(v))o.add(v)});q.opts=shuf([...o]);if(q.opts.length<2)q.t='vi'}
+ if(t==='mcq'){q.rev=false;q.ans=q.rev?it.word:it.vi;const o=new Set([q.ans]);shuf(L.filter(x=>x.id!==it.id)).forEach(x=>{const v=q.rev?x.word:x.vi;if(o.size<4&&v&&!o.has(v))o.add(v)});q.opts=shuf([...o]);if(q.opts.length<2)q.t='ev'}
  if(t==='order'){let k=0,tk=it.ex.split(/\s+/).filter(Boolean);q.toks=shuf(tk);while(k++<5&&q.toks.join(' ')===tk.join(' '))q.toks=shuf(tk)}
  if(t==='match'){const ps=[it,...shuf(L.filter(x=>x.id!==it.id)).slice(0,4)];q.pairs=ps;q.cards=shuf(ps.flatMap(p=>[{k:p.id,t:'en',text:p.word},{k:p.id,t:'vi',text:p.vi}]))}
  return q}
@@ -197,7 +197,7 @@ function startPractice(sid){const L=pitems(sid);if(L.length<1)return toast('Chư
  const wt=i=>{const w=W(i.id);return({n:4,p:2,m:1}[w.st])+(w.c+w.w===0?2:0)+w.w},pool=[...L],qs=[],n=Math.min(L.length,Math.max(5,Math.round(L.length*.6)),15);
  while(qs.length<n&&pool.length){let r=Math.random()*pool.reduce((a,i)=>a+wt(i),0),k=0;for(;k<pool.length-1&&(r-=wt(pool[k]))>0;k++);const it=pool.splice(k,1)[0];
   const ok=t=>t==='blank'?hasW(it):t==='order'?hasW(it)&&it.ex.split(/\s+/).length>=3:t==='mcq'?L.length>=2:t==='match'?L.length>=3:true;
-  const T=['vi','blank','lw','ev','mcq','order','match'].filter(ok);qs.push(mkQ(it,T[Math.random()*T.length|0],L))}
+  const T=['mcq','ev'].filter(ok);qs.push(mkQ(it,T[Math.random()*T.length|0],L))}
  go('pr',{sid,qs,i:0,st:[],started:Date.now()});clearInterval(PT);PT=setInterval(ptick,100)}
 const norm=s=>s.toLowerCase().replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
 const MSG_BAD=['Gần rồi, cố lên! Não bạn đang khởi động đó 😄','Chưa đúng, nhưng sai là một bước gần hơn tới đúng 💪','Ối, chưa trúng! Thử lại nhé, mình tin bạn.','Hơi lệch một chút thôi, bình tĩnh nào!'];
