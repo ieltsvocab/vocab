@@ -247,5 +247,254 @@
     "ex": "The weather here is highly unpredictable."
    }
   ]
+ },
+ {
+  "id": "c14-t2-p1",
+  "book": "Cambridge 14",
+  "test": "2",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c14t2p1-01",
+    "word": "merchant",
+    "ipa": "/ˈmɜːtʃənt/",
+    "vi": "thương nhân, nhà buôn",
+    "pos": "noun",
+    "ex": "His father was a wine merchant."
+   },
+   {
+    "id": "c14t2p1-02",
+    "word": "landholding",
+    "ipa": "/ˈlændhəʊldɪŋ/",
+    "vi": "đất đai sở hữu, điền sản",
+    "pos": "noun",
+    "ex": "The family had large landholdings in the north."
+   },
+   {
+    "id": "c14t2p1-03",
+    "word": "residence",
+    "ipa": "/ˈrezɪdəns/",
+    "vi": "nơi ở, nhà ở (trang trọng)",
+    "pos": "noun",
+    "ex": "The president's official residence is in the capital."
+   },
+   {
+    "id": "c14t2p1-04",
+    "word": "mansion",
+    "ipa": "/ˈmænʃn/",
+    "vi": "dinh thự, biệt thự lớn",
+    "pos": "noun",
+    "ex": "They live in a huge mansion with a garden."
+   },
+   {
+    "id": "c14t2p1-05",
+    "word": "property",
+    "ipa": "/ˈprɒpəti/",
+    "vi": "bất động sản; khu đất",
+    "pos": "noun",
+    "ex": "The family owns a large property in the countryside."
+   },
+   {
+    "id": "c14t2p1-06",
+    "word": "outskirts",
+    "ipa": "/ˈaʊtskɜːts/",
+    "vi": "vùng ngoại ô",
+    "pos": "noun (plural)",
+    "ex": "We live on the outskirts of the city."
+   },
+   {
+    "id": "c14t2p1-07",
+    "word": "apprenticeship",
+    "ipa": "/əˈprentɪʃɪp/",
+    "vi": "thời gian học việc, học nghề",
+    "pos": "noun",
+    "ex": "He did a three-year apprenticeship as a carpenter."
+   },
+   {
+    "id": "c14t2p1-08",
+    "word": "prospect",
+    "ipa": "/ˈprɒspekt/",
+    "vi": "viễn cảnh, triển vọng",
+    "pos": "noun",
+    "ex": "She didn't like the prospect of moving abroad."
+   },
+   {
+    "id": "c14t2p1-09",
+    "word": "emigrate",
+    "ipa": "/ˈemɪɡreɪt/",
+    "vi": "di cư (sang nước khác)",
+    "pos": "verb",
+    "ex": "Many people emigrated to Australia in the 1950s."
+   },
+   {
+    "id": "c14t2p1-10",
+    "word": "settle in",
+    "ipa": "/ˈsetl ɪn/",
+    "vi": "định cư, ổn định chỗ ở",
+    "pos": "phrasal verb",
+    "ex": "They settled in Canada after the war."
+   },
+   {
+    "id": "c14t2p1-11",
+    "word": "amateur",
+    "ipa": "/ˈæmətə/",
+    "vi": "người nghiệp dư; nghiệp dư",
+    "pos": "noun / adjective",
+    "ex": "He is an amateur photographer."
+   },
+   {
+    "id": "c14t2p1-12",
+    "word": "excursion",
+    "ipa": "/ɪkˈskɜːʃn/",
+    "vi": "chuyến đi chơi, chuyến tham quan ngắn",
+    "pos": "noun",
+    "ex": "We went on an excursion to the mountains."
+   },
+   {
+    "id": "c14t2p1-13",
+    "word": "cooperate",
+    "ipa": "/kəʊˈɒpəreɪt/",
+    "vi": "hợp tác",
+    "pos": "verb",
+    "ex": "The two companies cooperate on research."
+   },
+   {
+    "id": "c14t2p1-14",
+    "word": "be noted for",
+    "ipa": "/bi ˈnəʊtɪd fɔː/",
+    "vi": "nổi tiếng về, được biết đến vì",
+    "pos": "verb phrase",
+    "ex": "The region is noted for its wine."
+   },
+   {
+    "id": "c14t2p1-15",
+    "word": "bold",
+    "ipa": "/bəʊld/",
+    "vi": "mạnh mẽ, táo bạo; rõ nét",
+    "pos": "adjective",
+    "ex": "She made a bold decision to quit her job."
+   },
+   {
+    "id": "c14t2p1-16",
+    "word": "portrait",
+    "ipa": "/ˈpɔːtreɪt/",
+    "vi": "chân dung, ảnh/tranh chân dung",
+    "pos": "noun",
+    "ex": "He painted a portrait of his mother."
+   },
+   {
+    "id": "c14t2p1-17",
+    "word": "compose",
+    "ipa": "/kəmˈpəʊz/",
+    "vi": "bố cục (ảnh, tranh); sáng tác",
+    "pos": "verb",
+    "ex": "She composed the photo with the lake in the centre."
+   },
+   {
+    "id": "c14t2p1-18",
+    "word": "sufficient",
+    "ipa": "/səˈfɪʃnt/",
+    "vi": "đủ, đầy đủ",
+    "pos": "adjective",
+    "ex": "We don't have sufficient time."
+   },
+   {
+    "id": "c14t2p1-19",
+    "word": "depict",
+    "ipa": "/dɪˈpɪkt/",
+    "vi": "miêu tả, khắc họa",
+    "pos": "verb",
+    "ex": "The painting depicts a busy village market."
+   },
+   {
+    "id": "c14t2p1-20",
+    "word": "cater",
+    "ipa": "/ˈkeɪtə/",
+    "vi": "phục vụ, đáp ứng nhu cầu (cater to/for)",
+    "pos": "verb",
+    "ex": "The shop caters to tourists."
+   },
+   {
+    "id": "c14t2p1-21",
+    "word": "exhibit",
+    "ipa": "/ɪɡˈzɪbɪt/",
+    "vi": "trưng bày, triển lãm",
+    "pos": "verb",
+    "ex": "She exhibited her paintings in Paris."
+   },
+   {
+    "id": "c14t2p1-22",
+    "word": "wilderness",
+    "ipa": "/ˈwɪldənəs/",
+    "vi": "vùng hoang dã",
+    "pos": "noun",
+    "ex": "They spent a week in the wilderness."
+   },
+   {
+    "id": "c14t2p1-23",
+    "word": "yacht",
+    "ipa": "/jɒt/",
+    "vi": "du thuyền",
+    "pos": "noun",
+    "ex": "They sailed across the bay in a yacht."
+   },
+   {
+    "id": "c14t2p1-24",
+    "word": "shore",
+    "ipa": "/ʃɔː/",
+    "vi": "bờ (biển, hồ, sông lớn)",
+    "pos": "noun",
+    "ex": "We walked along the shore."
+   },
+   {
+    "id": "c14t2p1-25",
+    "word": "undertaking",
+    "ipa": "/ˌʌndəˈteɪkɪŋ/",
+    "vi": "công trình, dự án lớn",
+    "pos": "noun",
+    "ex": "Building the bridge was a huge undertaking."
+   },
+   {
+    "id": "c14t2p1-26",
+    "word": "commission",
+    "ipa": "/kəˈmɪʃn/",
+    "vi": "đơn đặt hàng, việc được giao thực hiện",
+    "pos": "noun",
+    "ex": "The artist received a commission to paint the mayor."
+   },
+   {
+    "id": "c14t2p1-27",
+    "word": "work",
+    "ipa": "/wɜːk/",
+    "vi": "tác phẩm, công trình",
+    "pos": "noun",
+    "ex": "Her work is displayed in the museum."
+   },
+   {
+    "id": "c14t2p1-28",
+    "word": "pursuit",
+    "ipa": "/pəˈsjuːt/",
+    "vi": "hoạt động, thú vui (việc người ta theo đuổi)",
+    "pos": "noun",
+    "ex": "Fishing is his favourite outdoor pursuit."
+   },
+   {
+    "id": "c14t2p1-29",
+    "word": "specialize in",
+    "ipa": "/ˈspeʃəlaɪz ɪn/",
+    "vi": "chuyên về, chuyên môn hóa vào",
+    "pos": "verb phrase",
+    "ex": "She specializes in children's books."
+   },
+   {
+    "id": "c14t2p1-30",
+    "word": "stock",
+    "ipa": "/stɒk/",
+    "vi": "hàng có sẵn, hàng tồn kho",
+    "pos": "noun",
+    "ex": "The shop keeps a large stock of books."
+   }
+  ]
  }
 ]
