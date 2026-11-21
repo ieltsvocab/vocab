@@ -1307,5 +1307,864 @@
     "ex": "They returned the islands to the Dutch in 1817, but not before transplanting hundreds of nutmeg seedlings to plantations in several locations across southern Asia."
    }
   ]
+ },
+ {
+  "id": "c15-t2-p1",
+  "book": "Cambridge 15",
+  "test": "2",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c15t2p1-01",
+    "word": "sustainable",
+    "ipa": "/səˈsteɪnəbl/",
+    "vi": "bền vững",
+    "pos": "adjective",
+    "ex": "The way we travel around cities has a major impact on whether they are sustainable."
+   },
+   {
+    "id": "c15t2p1-02",
+    "word": "impact on",
+    "ipa": "/ˈɪmpækt ɒn/",
+    "vi": "tác động đến, ảnh hưởng đến",
+    "pos": "noun phrase",
+    "ex": "The way we travel around cities has a major impact on whether they are sustainable."
+   },
+   {
+    "id": "c15t2p1-03",
+    "word": "transportation",
+    "ipa": "/ˌtrænspɔːˈteɪʃn/",
+    "vi": "giao thông vận tải, sự vận chuyển",
+    "pos": "noun",
+    "ex": "Transportation is estimated to account for 30% of energy consumption in most of the world’s most developed nations, so lowering the need for energy-using vehicles is essential for decreasing the environmental impact of mobility."
+   },
+   {
+    "id": "c15t2p1-04",
+    "word": "account for",
+    "ipa": "/əˈkaʊnt fɔː/",
+    "vi": "chiếm (một tỷ lệ); giải thích",
+    "pos": "phrasal verb",
+    "ex": "Transportation is estimated to account for 30% of energy consumption in most of the world’s most developed nations, so lowering the need for energy-using vehicles is essential for decreasing the environmental impact of mobility."
+   },
+   {
+    "id": "c15t2p1-05",
+    "word": "consumption",
+    "ipa": "/kənˈsʌmpʃn/",
+    "vi": "sự tiêu thụ",
+    "pos": "noun",
+    "ex": "Transportation is estimated to account for 30% of energy consumption in most of the world’s most developed nations, so lowering the need for energy-using vehicles is essential for decreasing the environmental impact of mobility."
+   },
+   {
+    "id": "c15t2p1-06",
+    "word": "essential",
+    "ipa": "/ɪˈsenʃl/",
+    "vi": "thiết yếu, cần thiết",
+    "pos": "adjective",
+    "ex": "Transportation is estimated to account for 30% of energy consumption in most of the world’s most developed nations, so lowering the need for energy-using vehicles is essential for decreasing the environmental impact of mobility."
+   },
+   {
+    "id": "c15t2p1-07",
+    "word": "mobility",
+    "ipa": "/məʊˈbɪləti/",
+    "vi": "tính di động, khả năng di chuyển",
+    "pos": "noun",
+    "ex": "Transportation is estimated to account for 30% of energy consumption in most of the world’s most developed nations, so lowering the need for energy-using vehicles is essential for decreasing the environmental impact of mobility."
+   },
+   {
+    "id": "c15t2p1-08",
+    "word": "access",
+    "ipa": "/ˈækses/",
+    "vi": "sự tiếp cận, quyền tiếp cận",
+    "pos": "noun",
+    "ex": "The ways we travel affect our physical and mental health, our social lives, our access to work and culture, and the air we breathe."
+   },
+   {
+    "id": "c15t2p1-09",
+    "word": "assumption",
+    "ipa": "/əˈsʌmpʃn/",
+    "vi": "giả định, giả thiết",
+    "pos": "noun",
+    "ex": "Engineers are tasked with changing how we travel round cities through urban design, but the engineering industry still works on the assumptions that led to the creation of the energy-consuming transport systems we have now: the emphasis placed solely on efficiency, speed, and quantitative data."
+   },
+   {
+    "id": "c15t2p1-10",
+    "word": "solely",
+    "ipa": "/ˈsəʊlli/",
+    "vi": "chỉ, duy nhất",
+    "pos": "adverb",
+    "ex": "Engineers are tasked with changing how we travel round cities through urban design, but the engineering industry still works on the assumptions that led to the creation of the energy-consuming transport systems we have now: the emphasis placed solely on efficiency, speed, and quantitative data."
+   },
+   {
+    "id": "c15t2p1-11",
+    "word": "efficiency",
+    "ipa": "/ɪˈfɪʃnsi/",
+    "vi": "hiệu quả, hiệu suất",
+    "pos": "noun",
+    "ex": "Engineers are tasked with changing how we travel round cities through urban design, but the engineering industry still works on the assumptions that led to the creation of the energy-consuming transport systems we have now: the emphasis placed solely on efficiency, speed, and quantitative data."
+   },
+   {
+    "id": "c15t2p1-12",
+    "word": "quantitative",
+    "ipa": "/ˈkwɒntɪtətɪv/",
+    "vi": "thuộc về số lượng, định lượng",
+    "pos": "adjective",
+    "ex": "Engineers are tasked with changing how we travel round cities through urban design, but the engineering industry still works on the assumptions that led to the creation of the energy-consuming transport systems we have now: the emphasis placed solely on efficiency, speed, and quantitative data."
+   },
+   {
+    "id": "c15t2p1-13",
+    "word": "radical",
+    "ipa": "/ˈrædɪkl/",
+    "vi": "triệt để, căn bản, cấp tiến",
+    "pos": "adjective",
+    "ex": "We need radical changes, to make it healthier, more enjoyable, and less environmentally damaging to travel around cities."
+   },
+   {
+    "id": "c15t2p1-14",
+    "word": "choreographer",
+    "ipa": "/ˌkɒriˈɒɡrəfə/",
+    "vi": "biên đạo múa",
+    "pos": "noun",
+    "ex": "That is not to suggest everyone should dance their way to work, however healthy and happy it might make us, but rather that the techniques used by choreographers to experiment with and design movement in dance could provide engineers with tools to stimulate new ideas in city-making."
+   },
+   {
+    "id": "c15t2p1-15",
+    "word": "experiment",
+    "ipa": "/ɪkˈsperɪment/",
+    "vi": "thử nghiệm, thí nghiệm (experiment with)",
+    "pos": "verb",
+    "ex": "That is not to suggest everyone should dance their way to work, however healthy and happy it might make us, but rather that the techniques used by choreographers to experiment with and design movement in dance could provide engineers with tools to stimulate new ideas in city-making."
+   },
+   {
+    "id": "c15t2p1-16",
+    "word": "stimulate",
+    "ipa": "/ˈstɪmjuleɪt/",
+    "vi": "kích thích, thúc đẩy",
+    "pos": "verb",
+    "ex": "That is not to suggest everyone should dance their way to work, however healthy and happy it might make us, but rather that the techniques used by choreographers to experiment with and design movement in dance could provide engineers with tools to stimulate new ideas in city-making."
+   },
+   {
+    "id": "c15t2p1-17",
+    "word": "separation",
+    "ipa": "/ˌsepəˈreɪʃn/",
+    "vi": "sự tách biệt, sự phân tách",
+    "pos": "noun",
+    "ex": "Richard Sennett, an influential urbanist and sociologist who has transformed ideas about the way cities are made, argues that urban design has suffered from a separation between mind and body since the introduction of the architectural blueprint."
+   },
+   {
+    "id": "c15t2p1-18",
+    "word": "blueprint",
+    "ipa": "/ˈbluːprɪnt/",
+    "vi": "bản thiết kế, bản vẽ kỹ thuật",
+    "pos": "noun",
+    "ex": "Richard Sennett, an influential urbanist and sociologist who has transformed ideas about the way cities are made, argues that urban design has suffered from a separation between mind and body since the introduction of the architectural blueprint."
+   },
+   {
+    "id": "c15t2p1-19",
+    "word": "medieval",
+    "ipa": "/ˌmediˈiːvl/",
+    "vi": "thuộc thời Trung cổ",
+    "pos": "adjective",
+    "ex": "Whereas medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of the conditions on a site, building designs are now conceived and stored in media technologies that detach the designer from the physical and social realities they are creating."
+   },
+   {
+    "id": "c15t2p1-20",
+    "word": "intimate",
+    "ipa": "/ˈɪntɪmət/",
+    "vi": "sâu sắc, tường tận; thân mật",
+    "pos": "adjective",
+    "ex": "Whereas medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of the conditions on a site, building designs are now conceived and stored in media technologies that detach the designer from the physical and social realities they are creating."
+   },
+   {
+    "id": "c15t2p1-21",
+    "word": "conceive",
+    "ipa": "/kənˈsiːv/",
+    "vi": "hình thành ý tưởng, nghĩ ra, hình dung",
+    "pos": "verb",
+    "ex": "Whereas medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of the conditions on a site, building designs are now conceived and stored in media technologies that detach the designer from the physical and social realities they are creating."
+   },
+   {
+    "id": "c15t2p1-22",
+    "word": "detach",
+    "ipa": "/dɪˈtætʃ/",
+    "vi": "tách rời, làm cho tách biệt",
+    "pos": "verb",
+    "ex": "Whereas medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of the conditions on a site, building designs are now conceived and stored in media technologies that detach the designer from the physical and social realities they are creating."
+   },
+   {
+    "id": "c15t2p1-23",
+    "word": "prevalent",
+    "ipa": "/ˈprevələnt/",
+    "vi": "phổ biến, thịnh hành",
+    "pos": "adjective",
+    "ex": "To illustrate, Sennett discusses the Peachtree Center in Atlanta, USA, a development typical of the modernist approach to urban planning prevalent in the 1970s."
+   },
+   {
+    "id": "c15t2p1-24",
+    "word": "grid",
+    "ipa": "/ɡrɪd/",
+    "vi": "mạng lưới ô vuông, lưới",
+    "pos": "noun",
+    "ex": "Peachtree created a grid of streets and towers intended as a new pedestrian-friendly downtown for Atlanta."
+   },
+   {
+    "id": "c15t2p1-25",
+    "word": "computer-aided",
+    "ipa": "/kəmˌpjuːtər ˈeɪdɪd/",
+    "vi": "có sự hỗ trợ của máy tính",
+    "pos": "adjective",
+    "ex": "According to Sennett, this failed because its designers had invested too much faith in computer-aided design to tell them how it would operate."
+   },
+   {
+    "id": "c15t2p1-26",
+    "word": "awning",
+    "ipa": "/ˈɔːnɪŋ/",
+    "vi": "mái hiên che nắng, tấm bạt che",
+    "pos": "noun",
+    "ex": "They failed to take into account that purpose-built street cafés could not operate in the hot sun without the protective awnings common in older buildings, and would need energy-consuming air conditioning instead, or that its giant car park would feel so unwelcoming that it would put people off getting out of their cars."
+   },
+   {
+    "id": "c15t2p1-27",
+    "word": "counter-intuitive",
+    "ipa": "/ˌkaʊntər ɪnˈtjuːɪtɪv/",
+    "vi": "phản trực giác",
+    "pos": "adjective",
+    "ex": "Designs that seem logical in models appear counter-intuitive in the actual experience of their users."
+   },
+   {
+    "id": "c15t2p1-28",
+    "word": "rail",
+    "ipa": "/reɪl/",
+    "vi": "thanh chắn, lan can (guard rail)",
+    "pos": "noun",
+    "ex": "The guard rails that will be familiar to anyone who has attempted to cross a British road, for example, were an engineering solution to pedestrian safety based on models that prioritise the smooth flow of traffic."
+   },
+   {
+    "id": "c15t2p1-29",
+    "word": "prioritise",
+    "ipa": "/praɪˈɒrətaɪz/",
+    "vi": "ưu tiên",
+    "pos": "verb",
+    "ex": "The guard rails that will be familiar to anyone who has attempted to cross a British road, for example, were an engineering solution to pedestrian safety based on models that prioritise the smooth flow of traffic."
+   },
+   {
+    "id": "c15t2p1-30",
+    "word": "disruption",
+    "ipa": "/dɪsˈrʌpʃn/",
+    "vi": "sự gián đoạn, sự xáo trộn",
+    "pos": "noun",
+    "ex": "As a result, many are now being removed, causing disruption, cost, and waste."
+   },
+   {
+    "id": "c15t2p1-31",
+    "word": "tackle",
+    "ipa": "/ˈtækl/",
+    "vi": "giải quyết, xử lý (vấn đề)",
+    "pos": "verb",
+    "ex": "Choreography may not seem an obvious choice for tackling this problem."
+   },
+   {
+    "id": "c15t2p1-32",
+    "word": "aesthetic",
+    "ipa": "/iːsˈθetɪk/",
+    "vi": "thuộc thẩm mỹ, mang tính thẩm mỹ",
+    "pos": "adjective",
+    "ex": "Choreographers have deep understanding of the psychological, aesthetic, and physical implications of different ways of moving."
+   },
+   {
+    "id": "c15t2p1-33",
+    "word": "implication",
+    "ipa": "/ˌɪmplɪˈkeɪʃn/",
+    "vi": "hệ quả, tác động; hàm ý",
+    "pos": "noun",
+    "ex": "Choreographers have deep understanding of the psychological, aesthetic, and physical implications of different ways of moving."
+   },
+   {
+    "id": "c15t2p1-34",
+    "word": "cognitive",
+    "ipa": "/ˈkɒɡnətɪv/",
+    "vi": "thuộc nhận thức",
+    "pos": "adjective",
+    "ex": "Observing the choreographer Wayne McGregor, cognitive scientist David Kirsh described how he ‘thinks with the body’, Kirsh argues that by using the body to simulate outcomes, McGregor is able to imagine solutions that would not be possible using purely abstract thought."
+   },
+   {
+    "id": "c15t2p1-35",
+    "word": "simulate",
+    "ipa": "/ˈsɪmjuleɪt/",
+    "vi": "mô phỏng, giả lập",
+    "pos": "verb",
+    "ex": "Observing the choreographer Wayne McGregor, cognitive scientist David Kirsh described how he ‘thinks with the body’, Kirsh argues that by using the body to simulate outcomes, McGregor is able to imagine solutions that would not be possible using purely abstract thought."
+   },
+   {
+    "id": "c15t2p1-36",
+    "word": "functional effect",
+    "ipa": "/ˈfʌŋkʃnəl ɪˈfekt/",
+    "vi": "hiệu quả về mặt chức năng",
+    "pos": "noun phrase",
+    "ex": "Above all, perhaps, they might learn to design for emotional as well as functional effects."
+   }
+  ]
+ },
+ {
+  "id": "c15-t3-p1",
+  "book": "Cambridge 15",
+  "test": "3",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c15t3p1-01",
+    "word": "sculptor",
+    "ipa": "/ˈskʌlptə/",
+    "vi": "nhà điêu khắc",
+    "pos": "noun",
+    "ex": "After leaving school, Moore hoped to become a sculptor, but instead he complied with his father’s wish that he train as a schoolteacher."
+   },
+   {
+    "id": "c15t3p1-02",
+    "word": "comply with",
+    "ipa": "/kəmˈplaɪ wɪð/",
+    "vi": "tuân theo, làm theo",
+    "pos": "verb phrase",
+    "ex": "After leaving school, Moore hoped to become a sculptor, but instead he complied with his father’s wish that he train as a schoolteacher."
+   },
+   {
+    "id": "c15t3p1-03",
+    "word": "enrol",
+    "ipa": "/ɪnˈrəʊl/",
+    "vi": "đăng ký nhập học, ghi danh",
+    "pos": "verb",
+    "ex": "After the war, Moore enrolled at the Leeds School of Art, where he studied for two years."
+   },
+   {
+    "id": "c15t3p1-04",
+    "word": "sculpture",
+    "ipa": "/ˈskʌlptʃə/",
+    "vi": "nghệ thuật điêu khắc; tác phẩm điêu khắc",
+    "pos": "noun",
+    "ex": "Although he wanted to study sculpture, no teacher was appointed until his second year."
+   },
+   {
+    "id": "c15t3p1-05",
+    "word": "appoint",
+    "ipa": "/əˈpɔɪnt/",
+    "vi": "bổ nhiệm, chỉ định",
+    "pos": "verb",
+    "ex": "Although he wanted to study sculpture, no teacher was appointed until his second year."
+   },
+   {
+    "id": "c15t3p1-06",
+    "word": "award",
+    "ipa": "/əˈwɔːd/",
+    "vi": "trao, cấp (giải thưởng, học bổng)",
+    "pos": "verb",
+    "ex": "At the end of that year, he passed the sculpture examination and was awarded a scholarship to the Royal College of Art in London."
+   },
+   {
+    "id": "c15t3p1-07",
+    "word": "alongside",
+    "ipa": "/əˌlɒŋˈsaɪd/",
+    "vi": "song song với, cùng với",
+    "pos": "preposition",
+    "ex": "Alongside the instruction he received at the Royal College, Moore visited many of the London museums, particularly the British Museum, which had a wide-ranging collection of ancient sculpture."
+   },
+   {
+    "id": "c15t3p1-08",
+    "word": "wide-ranging",
+    "ipa": "/ˌwaɪd ˈreɪndʒɪŋ/",
+    "vi": "đa dạng, bao quát nhiều lĩnh vực",
+    "pos": "adjective",
+    "ex": "Alongside the instruction he received at the Royal College, Moore visited many of the London museums, particularly the British Museum, which had a wide-ranging collection of ancient sculpture."
+   },
+   {
+    "id": "c15t3p1-09",
+    "word": "primitive",
+    "ipa": "/ˈprɪmətɪv/",
+    "vi": "nguyên thủy, sơ khai",
+    "pos": "adjective",
+    "ex": "As he became increasingly interested in these ‘primitive’ forms of art, he turned away from European sculptural traditions."
+   },
+   {
+    "id": "c15t3p1-10",
+    "word": "impress",
+    "ipa": "/ɪmˈpres/",
+    "vi": "gây ấn tượng (be impressed by)",
+    "pos": "verb",
+    "ex": "When he visited the Trocadero Museum in Paris, he was impressed by a cast of a Mayan sculpture of the rain spirit."
+   },
+   {
+    "id": "c15t3p1-11",
+    "word": "reclining",
+    "ipa": "/rɪˈklaɪnɪŋ/",
+    "vi": "nằm tựa, ngả lưng",
+    "pos": "adjective",
+    "ex": "It was a male reclining figure with its knees drawn up together, and its head at a right angle to its body."
+   },
+   {
+    "id": "c15t3p1-12",
+    "word": "angle",
+    "ipa": "/ˈæŋɡl/",
+    "vi": "góc",
+    "pos": "noun",
+    "ex": "It was a male reclining figure with its knees drawn up together, and its head at a right angle to its body."
+   },
+   {
+    "id": "c15t3p1-13",
+    "word": "carve",
+    "ipa": "/kɑːv/",
+    "vi": "chạm khắc, tạc",
+    "pos": "verb",
+    "ex": "He himself started carving a variety of subjects in stone, including depiction of reclining women, mother-and-child groups, and masks."
+   },
+   {
+    "id": "c15t3p1-14",
+    "word": "depiction",
+    "ipa": "/dɪˈpɪkʃn/",
+    "vi": "sự miêu tả, hình ảnh miêu tả",
+    "pos": "noun",
+    "ex": "He himself started carving a variety of subjects in stone, including depiction of reclining women, mother-and-child groups, and masks."
+   },
+   {
+    "id": "c15t3p1-15",
+    "word": "exceptional",
+    "ipa": "/ɪkˈsepʃənl/",
+    "vi": "xuất sắc, đặc biệt",
+    "pos": "adjective",
+    "ex": "Moore’s exceptional talent soon gained recognition, and in 1926 he started work as a sculpture instructor at the Royal College."
+   },
+   {
+    "id": "c15t3p1-16",
+    "word": "merit",
+    "ipa": "/ˈmerɪt/",
+    "vi": "giá trị, ưu điểm",
+    "pos": "noun",
+    "ex": "The aim of the group was to convince the English public of the merits of the emerging international movement in modern art and architecture."
+   },
+   {
+    "id": "c15t3p1-17",
+    "word": "enthusiastically",
+    "ipa": "/ɪnˌθjuːziˈæstɪkli/",
+    "vi": "một cách nhiệt tình, hào hứng",
+    "pos": "adverb",
+    "ex": "His work was enthusiastically welcomed by fellow sculptors, but the reviews in the press were extremely negative and turned Moore into a notorious figure."
+   },
+   {
+    "id": "c15t3p1-18",
+    "word": "fellow",
+    "ipa": "/ˈfeləʊ/",
+    "vi": "cùng (nghề, hoàn cảnh), đồng nghiệp",
+    "pos": "adjective",
+    "ex": "His work was enthusiastically welcomed by fellow sculptors, but the reviews in the press were extremely negative and turned Moore into a notorious figure."
+   },
+   {
+    "id": "c15t3p1-19",
+    "word": "notorious",
+    "ipa": "/nəʊˈtɔːriəs/",
+    "vi": "khét tiếng, tai tiếng",
+    "pos": "adjective",
+    "ex": "His work was enthusiastically welcomed by fellow sculptors, but the reviews in the press were extremely negative and turned Moore into a notorious figure."
+   },
+   {
+    "id": "c15t3p1-20",
+    "word": "resignation",
+    "ipa": "/ˌrezɪɡˈneɪʃn/",
+    "vi": "sự từ chức, đơn từ chức",
+    "pos": "noun",
+    "ex": "There were calls for his resignation from the Royal College, and the following year, when his contract expired, he left to start a sculpture department at the Chelsea School of Art in London."
+   },
+   {
+    "id": "c15t3p1-21",
+    "word": "expire",
+    "ipa": "/ɪkˈspaɪə/",
+    "vi": "hết hạn",
+    "pos": "verb",
+    "ex": "There were calls for his resignation from the Royal College, and the following year, when his contract expired, he left to start a sculpture department at the Chelsea School of Art in London."
+   },
+   {
+    "id": "c15t3p1-22",
+    "word": "inclination",
+    "ipa": "/ˌɪnklɪˈneɪʃn/",
+    "vi": "khuynh hướng, thiên hướng",
+    "pos": "noun",
+    "ex": "Throughout the 1930s, Moore did not show any inclination to please the British public."
+   },
+   {
+    "id": "c15t3p1-23",
+    "word": "distort",
+    "ipa": "/dɪˈstɔːt/",
+    "vi": "bóp méo, làm biến dạng",
+    "pos": "verb",
+    "ex": "He became interested in the paintings of the Spanish artist Pablo Picasso, whose work inspired him to distort the human body in a radical way."
+   },
+   {
+    "id": "c15t3p1-24",
+    "word": "radical way",
+    "ipa": "/ˈrædɪkl weɪ/",
+    "vi": "cách thức triệt để, mạnh mẽ (in a radical way)",
+    "pos": "noun phrase",
+    "ex": "He became interested in the paintings of the Spanish artist Pablo Picasso, whose work inspired him to distort the human body in a radical way."
+   },
+   {
+    "id": "c15t3p1-25",
+    "word": "resemblance",
+    "ipa": "/rɪˈzembləns/",
+    "vi": "sự giống nhau",
+    "pos": "noun",
+    "ex": "The pages of his sketchbooks from this period show his ideas for abstract sculptures that bore little resemblance to the human form."
+   },
+   {
+    "id": "c15t3p1-26",
+    "word": "miner",
+    "ipa": "/ˈmaɪnə/",
+    "vi": "thợ mỏ",
+    "pos": "noun",
+    "ex": "In 1942, he returned to Castleford to make a series of sketches of the miners who worked there."
+   },
+   {
+    "id": "c15t3p1-27",
+    "word": "commission",
+    "ipa": "/kəˈmɪʃn/",
+    "vi": "đơn đặt hàng, việc được giao thực hiện",
+    "pos": "noun",
+    "ex": "In 1944, Harlow, a town near London, offered Moore a commission for a sculpture depicting a family."
+   },
+   {
+    "id": "c15t3p1-28",
+    "word": "signify",
+    "ipa": "/ˈsɪɡnɪfaɪ/",
+    "vi": "biểu thị, cho thấy",
+    "pos": "verb",
+    "ex": "The resulting work signifies a dramatic change in Moore’s style, away from the experimentation of the 1930s towards a more natural and humanistic subject matter."
+   },
+   {
+    "id": "c15t3p1-29",
+    "word": "bronze",
+    "ipa": "/brɒnz/",
+    "vi": "đồng thiếc, đồng (tượng đồng)",
+    "pos": "noun",
+    "ex": "He did dozens of studies in clay for the sculpture, and these were cast in bronze and issued in editions of seven to nine copies each."
+   },
+   {
+    "id": "c15t3p1-30",
+    "word": "ambitious",
+    "ipa": "/æmˈbɪʃəs/",
+    "vi": "đầy tham vọng, quy mô lớn",
+    "pos": "adjective",
+    "ex": "The boost to his income enabled him to take on ambitious projects and start working on the scale he felt his sculpture demanded."
+   },
+   {
+    "id": "c15t3p1-31",
+    "word": "revolutionary",
+    "ipa": "/ˌrevəˈluːʃənəri/",
+    "vi": "mang tính cách mạng, đột phá",
+    "pos": "adjective",
+    "ex": "Critics who had begun to think that Moore had become less revolutionary were proven wrong by the appearance, in 1950, of the first of Moore’s series of standing figures in bronze, with their harsh and angular pierced forms and distinct impression of menace."
+   },
+   {
+    "id": "c15t3p1-32",
+    "word": "harsh",
+    "ipa": "/hɑːʃ/",
+    "vi": "khắc nghiệt, thô ráp",
+    "pos": "adjective",
+    "ex": "Critics who had begun to think that Moore had become less revolutionary were proven wrong by the appearance, in 1950, of the first of Moore’s series of standing figures in bronze, with their harsh and angular pierced forms and distinct impression of menace."
+   },
+   {
+    "id": "c15t3p1-33",
+    "word": "angular",
+    "ipa": "/ˈæŋɡjələ/",
+    "vi": "góc cạnh",
+    "pos": "adjective",
+    "ex": "Critics who had begun to think that Moore had become less revolutionary were proven wrong by the appearance, in 1950, of the first of Moore’s series of standing figures in bronze, with their harsh and angular pierced forms and distinct impression of menace."
+   },
+   {
+    "id": "c15t3p1-34",
+    "word": "menace",
+    "ipa": "/ˈmenəs/",
+    "vi": "sự đe dọa, vẻ đe dọa",
+    "pos": "noun",
+    "ex": "Critics who had begun to think that Moore had become less revolutionary were proven wrong by the appearance, in 1950, of the first of Moore’s series of standing figures in bronze, with their harsh and angular pierced forms and distinct impression of menace."
+   },
+   {
+    "id": "c15t3p1-35",
+    "word": "figure",
+    "ipa": "/ˈfɪɡjə/",
+    "vi": "hình tượng, hình dáng người",
+    "pos": "noun",
+    "ex": "These were rare examples of Moore’s use of the male figure and owe something to his visit to Greece in 1951, when he had the opportunity to study ancient works of art."
+   },
+   {
+    "id": "c15t3p1-36",
+    "word": "acclaim",
+    "ipa": "/əˈkleɪm/",
+    "vi": "sự ca ngợi, sự tán dương",
+    "pos": "noun",
+    "ex": "Moore was the first modern English sculptor to achieve international critical acclaim and he is still regarded as one of the most important sculptors of the 20th century."
+   }
+  ]
+ },
+ {
+  "id": "c15-t4-p1",
+  "book": "Cambridge 15",
+  "test": "4",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c15t4p1-01",
+    "word": "fragile",
+    "ipa": "/ˈfrædʒaɪl/",
+    "vi": "mong manh, dễ tổn thương",
+    "pos": "adjective",
+    "ex": "It is also one of the most fragile ecosystems on Earth."
+   },
+   {
+    "id": "c15t4p1-02",
+    "word": "ecosystem",
+    "ipa": "/ˈiːkəʊsɪstəm/",
+    "vi": "hệ sinh thái",
+    "pos": "noun",
+    "ex": "It is also one of the most fragile ecosystems on Earth."
+   },
+   {
+    "id": "c15t4p1-03",
+    "word": "surface",
+    "ipa": "/ˈsɜːfɪs/",
+    "vi": "bề mặt",
+    "pos": "noun",
+    "ex": "It hardly ever rains there, and the only year-round source of water is located tens of metres below the surface."
+   },
+   {
+    "id": "c15t4p1-04",
+    "word": "stretch down",
+    "ipa": "/stretʃ ˈdaʊn/",
+    "vi": "vươn xuống, kéo dài xuống",
+    "pos": "phrasal verb",
+    "ex": "They stretch down 50-80 metres and, as well as sucking up water for the tree, they bring it into the higher subsoil, creating a water source for other plant life."
+   },
+   {
+    "id": "c15t4p1-05",
+    "word": "suck up",
+    "ipa": "/sʌk ˈʌp/",
+    "vi": "hút lên, hút vào",
+    "pos": "phrasal verb",
+    "ex": "They stretch down 50-80 metres and, as well as sucking up water for the tree, they bring it into the higher subsoil, creating a water source for other plant life."
+   },
+   {
+    "id": "c15t4p1-06",
+    "word": "subsoil",
+    "ipa": "/ˈsʌbsɔɪl/",
+    "vi": "lớp đất cái, tầng đất dưới bề mặt",
+    "pos": "noun",
+    "ex": "They stretch down 50-80 metres and, as well as sucking up water for the tree, they bring it into the higher subsoil, creating a water source for other plant life."
+   },
+   {
+    "id": "c15t4p1-07",
+    "word": "archaeobotanist",
+    "ipa": "/ˌɑːkiəʊˈbɒtənɪst/",
+    "vi": "nhà khảo cổ thực vật học",
+    "pos": "noun",
+    "ex": "Dr David Beresford-Jones, archaeobotanist at Cambridge University, has been studying the role of the huarango tree in landscape change in the Lower Ica Valley in southern Peru."
+   },
+   {
+    "id": "c15t4p1-08",
+    "word": "withstand",
+    "ipa": "/wɪðˈstænd/",
+    "vi": "chịu đựng, chống chọi",
+    "pos": "verb",
+    "ex": "He believes the huarango was key to the ancient people’s diet and, because it could reach deep water sources, it allowed local people to withstand years of drought when their other crops failed."
+   },
+   {
+    "id": "c15t4p1-09",
+    "word": "erosion",
+    "ipa": "/ɪˈrəʊʒn/",
+    "vi": "sự xói mòn",
+    "pos": "noun",
+    "ex": "Cutting down native woodland leads to erosion, as there is nothing to keep the soil in place."
+   },
+   {
+    "id": "c15t4p1-10",
+    "word": "pod",
+    "ipa": "/pɒd/",
+    "vi": "quả đậu, vỏ quả",
+    "pos": "noun",
+    "ex": "They grew vegetables under it and ate products made from its seed pods."
+   },
+   {
+    "id": "c15t4p1-11",
+    "word": "bark",
+    "ipa": "/bɑːk/",
+    "vi": "vỏ cây",
+    "pos": "noun",
+    "ex": "Its leaves and bark were used for herbal remedies, while its branches were used for charcoal for cooking and heating, and its trunk was used to build houses."
+   },
+   {
+    "id": "c15t4p1-12",
+    "word": "herbal remedy",
+    "ipa": "/ˌhɜːbl ˈremədi/",
+    "vi": "thuốc thảo dược",
+    "pos": "noun phrase",
+    "ex": "Its leaves and bark were used for herbal remedies, while its branches were used for charcoal for cooking and heating, and its trunk was used to build houses."
+   },
+   {
+    "id": "c15t4p1-13",
+    "word": "charcoal",
+    "ipa": "/ˈtʃɑːkəʊl/",
+    "vi": "than củi",
+    "pos": "noun",
+    "ex": "Its leaves and bark were used for herbal remedies, while its branches were used for charcoal for cooking and heating, and its trunk was used to build houses."
+   },
+   {
+    "id": "c15t4p1-14",
+    "word": "trunk",
+    "ipa": "/trʌŋk/",
+    "vi": "thân cây",
+    "pos": "noun",
+    "ex": "Its leaves and bark were used for herbal remedies, while its branches were used for charcoal for cooking and heating, and its trunk was used to build houses."
+   },
+   {
+    "id": "c15t4p1-15",
+    "word": "valley",
+    "ipa": "/ˈvæli/",
+    "vi": "thung lũng",
+    "pos": "noun",
+    "ex": "For centuries the huarango tree was vital to the people of the neighbouring Middle Ica Valley too."
+   },
+   {
+    "id": "c15t4p1-16",
+    "word": "smallholding",
+    "ipa": "/ˈsmɔːlhəʊldɪŋ/",
+    "vi": "trang trại nhỏ, mảnh đất canh tác nhỏ",
+    "pos": "noun",
+    "ex": "The majority of the huarango forests in the valley have already been cleared for fuel and agriculture – initially, these were smallholdings, but now they’re huge farms producing crops for the international market."
+   },
+   {
+    "id": "c15t4p1-17",
+    "word": "ethnobotanist",
+    "ipa": "/ˌeθnəʊˈbɒtənɪst/",
+    "vi": "nhà dân tộc thực vật học",
+    "pos": "noun",
+    "ex": "‘Of the forests that were here 1,000 years ago, 99 per cent have already gone,’ says botanist Oliver Whaley from Kew Gardens in London, who, together with ethnobotanist Dr William Milliken, is running a pioneering project to protect and restore the rapidly disappearing habitat."
+   },
+   {
+    "id": "c15t4p1-18",
+    "word": "pioneering",
+    "ipa": "/ˌpaɪəˈnɪərɪŋ/",
+    "vi": "tiên phong",
+    "pos": "adjective",
+    "ex": "‘Of the forests that were here 1,000 years ago, 99 per cent have already gone,’ says botanist Oliver Whaley from Kew Gardens in London, who, together with ethnobotanist Dr William Milliken, is running a pioneering project to protect and restore the rapidly disappearing habitat."
+   },
+   {
+    "id": "c15t4p1-19",
+    "word": "rapidly",
+    "ipa": "/ˈræpɪdli/",
+    "vi": "nhanh chóng",
+    "pos": "adverb",
+    "ex": "But now it is disappearing rapidly."
+   },
+   {
+    "id": "c15t4p1-20",
+    "word": "prejudice",
+    "ipa": "/ˈpredʒudɪs/",
+    "vi": "định kiến, thành kiến",
+    "pos": "noun",
+    "ex": "In order to succeed, Whaley needs to get the local people on board, and that has meant overcoming local prejudices."
+   },
+   {
+    "id": "c15t4p1-21",
+    "word": "aspirational",
+    "ipa": "/ˌæspəˈreɪʃənl/",
+    "vi": "có khát vọng, hướng tới sự vươn lên",
+    "pos": "adjective",
+    "ex": "‘Increasingly aspirational communities think that if you plant food trees in your home or street, it shows you are poor, and still need to grow your own food,’ he says."
+   },
+   {
+    "id": "c15t4p1-22",
+    "word": "resuscitation",
+    "ipa": "/rɪˌsʌsɪˈteɪʃn/",
+    "vi": "sự hồi sinh, sự làm sống lại",
+    "pos": "noun",
+    "ex": "‘It’s a process of cultural resuscitation,’ he says."
+   },
+   {
+    "id": "c15t4p1-23",
+    "word": "pride",
+    "ipa": "/praɪd/",
+    "vi": "niềm tự hào",
+    "pos": "noun",
+    "ex": "He has already set up a huarango festival to reinstate a sense of pride in their eco-heritage, and has helped local schoolchildren plant thousands of trees."
+   },
+   {
+    "id": "c15t4p1-24",
+    "word": "restoration",
+    "ipa": "/ˌrestəˈreɪʃn/",
+    "vi": "sự phục hồi, sự khôi phục",
+    "pos": "noun",
+    "ex": "‘In order to get people interested in habitat restoration, you need to plant a tree that is useful to them,’ says Whaley."
+   },
+   {
+    "id": "c15t4p1-25",
+    "word": "foodstuff",
+    "ipa": "/ˈfuːdstʌf/",
+    "vi": "thực phẩm, nguyên liệu thực phẩm",
+    "pos": "noun",
+    "ex": "So, he has been working with local families to attempt to create a sustainable income from the huarangos by turning their products into foodstuffs."
+   },
+   {
+    "id": "c15t4p1-26",
+    "word": "mineral",
+    "ipa": "/ˈmɪnərəl/",
+    "vi": "khoáng chất",
+    "pos": "noun",
+    "ex": "‘It’s packed full of vitamins and minerals,’ Whaley says."
+   },
+   {
+    "id": "c15t4p1-27",
+    "word": "corridor",
+    "ipa": "/ˈkɒrɪdɔː/",
+    "vi": "hành lang (sinh thái), dải kết nối",
+    "pos": "noun",
+    "ex": "Some of these cut across the forests and break up the corridors that allow the essential movement of mammals, birds and pollen up and down the narrow forest strip."
+   },
+   {
+    "id": "c15t4p1-28",
+    "word": "mammal",
+    "ipa": "/ˈmæml/",
+    "vi": "động vật có vú",
+    "pos": "noun",
+    "ex": "Some of these cut across the forests and break up the corridors that allow the essential movement of mammals, birds and pollen up and down the narrow forest strip."
+   },
+   {
+    "id": "c15t4p1-29",
+    "word": "forest strip",
+    "ipa": "/ˈfɒrɪst strɪp/",
+    "vi": "dải rừng hẹp",
+    "pos": "noun phrase",
+    "ex": "Some of these cut across the forests and break up the corridors that allow the essential movement of mammals, birds and pollen up and down the narrow forest strip."
+   },
+   {
+    "id": "c15t4p1-30",
+    "word": "evaporation",
+    "ipa": "/ɪˌvæpəˈreɪʃn/",
+    "vi": "sự bay hơi",
+    "pos": "noun",
+    "ex": "He believes the extra woodland will also benefit the farms by reducing their water usage through a lowering of evaporation and providing a refuge for bio-control insects."
+   },
+   {
+    "id": "c15t4p1-31",
+    "word": "refuge",
+    "ipa": "/ˈrefjuːdʒ/",
+    "vi": "nơi ẩn náu, nơi trú ẩn",
+    "pos": "noun",
+    "ex": "He believes the extra woodland will also benefit the farms by reducing their water usage through a lowering of evaporation and providing a refuge for bio-control insects."
+   },
+   {
+    "id": "c15t4p1-32",
+    "word": "confine",
+    "ipa": "/kənˈfaɪn/",
+    "vi": "giới hạn, hạn chế (be confined to)",
+    "pos": "verb",
+    "ex": "Life has always been confined to corridors and islands here."
+   }
+  ]
  }
 ]
