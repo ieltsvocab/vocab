@@ -44,12 +44,12 @@ button:disabled{opacity:.5;cursor:default}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.opt{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:none;text-align:left;padding:14px;font-weight:700}.opt:active{background:var(--soft)}.opt.bad{background:#ffe9ec;border-color:var(--bad);color:#a42a3b}.opt.right{background:#e3f8ed;border-color:var(--ok);color:#0f6a40;opacity:1}
 .ordans{min-height:58px;border:2px dashed var(--line);border-radius:16px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin:14px 0 10px}.ordpool{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px}
 .chip{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:0 3px 0 var(--line);padding:8px 14px;border-radius:12px}.chip.on{background:var(--soft);border-color:var(--pri);color:var(--pri);box-shadow:0 3px 0 #c9c4ff}
-.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.mc{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:none;padding:12px 8px;min-height:56px;font-size:15px}.mc.sel{border-color:var(--pri);background:var(--soft)}.mc.ok{background:#e3f8ed;border-color:var(--ok);color:#0f6a40;opacity:.8}.mc.bad{background:#ffe9ec;border-color:var(--bad)}
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}.mcols>div{display:flex;flex-direction:column;gap:8px}.mc{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:none;padding:12px 8px;min-height:56px;font-size:15px}.mc.sel{border-color:var(--pri);background:var(--soft)}.mc.ok{background:#e3f8ed;border-color:var(--ok);color:#0f6a40;opacity:.8}.mc.bad{background:#ffe9ec;border-color:var(--bad)}
 @media(max-width:700px){.opts{grid-template-columns:1fr}}
 @media(max-width:700px){nav.st{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:6}
 nav.st a{flex-direction:column;gap:0;font-size:12px;padding:4px 12px;border-radius:14px}nav.st a i{font-size:22px}#t{bottom:90px}.hero{flex-direction:column;align-items:flex-start}.face .w{font-size:34px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head></head><body>
+</style></head><body>
 <header><div class="logo">📘 IELTS Vocab</div><nav id="nav"></nav><div id="hx"></div></header>
 <main id="app"></main><div id="t"></div>
 <script>
@@ -108,7 +108,7 @@ const pf=c=>c.front??c.word,pb=c=>c.back??[c.vi,c.pos,c.ex].filter(Boolean).join
 const pdueN=()=>me().personal.filter(c=>!c.arch&&(c.next||0)<=Date.now()).length,curPC=()=>me().personal.find(x=>x.id===V.q[0]);
 function pdueCard(){const n=pdueN();return n?`<div class="card set due"><div><b>Từ vựng riêng</b><div class="mut">${n} thẻ đến hạn</div></div><button onclick="startPR()">Review Now</button></div>`:''}
 function mine(){const L=me().personal.filter(c=>!c.arch),n=pdueN(),e=V.ed;
- return`<h1>My Vocabulary</h1><div class="card"><label>Mặt trước</label><textarea id="pf" rows="2" placeholder="vd: overwhelming"></textarea><label>Mặt sau</label><textarea id="pb" rows="2" placeholder="vd: quá sức, choáng ngợp"></textarea><label>Câu ví dụ tiếng Anh <span class="mut">(không bắt buộc)</span></label><textarea id="px" rows="2" placeholder="vd: The workload was overwhelming."></textarea><p class="mut">Nút 🔊 chỉ đọc phần tiếng Anh. Có câu ví dụ thì Practice mới có thêm bài sắp xếp câu và điền từ.</p><button onclick="addCard()">Lưu thẻ</button></div>
+ return`<h1>My Vocabulary</h1><div class="card"><label>Mặt trước</label><textarea id="pf" rows="2" placeholder="vd: overwhelming"></textarea><label>Mặt sau</label><textarea id="pb" rows="2" placeholder="vd: quá sức, choáng ngợp"></textarea><label>Câu ví dụ tiếng Anh <span class="mut">(không bắt buộc)</span></label><textarea id="px" rows="2" placeholder="vd: The workload was overwhelming."></textarea><p class="mut">Nút 🔊 chỉ đọc phần tiếng Anh.</p><button onclick="addCard()">Lưu thẻ</button></div>
  ${L.length?`<div class="card row"><div><b>Review</b><div class="mut">${n?n+' thẻ đến hạn ôn':'Chưa có thẻ nào đến hạn'}</div></div>${n?`<button onclick="startPR()">Review Now</button>`:'<span class="tag">Đã ôn xong</span>'}</div>
  <div class="card row"><div><b>Practice</b><div class="mut">${L.length} thẻ · làm bài bất cứ lúc nào</div></div><button class="p" onclick="startPractice('me')">Practice</button></div>`:''}
  ${L.map(c=>e&&e.id===c.id?`<div class="card"><b>Sửa thẻ</b><label>Mặt trước</label><textarea rows="2" oninput="V.ed.f=this.value">${esc(e.f)}</textarea><label>Mặt sau</label><textarea rows="2" oninput="V.ed.b=this.value">${esc(e.b)}</textarea><label>Câu ví dụ tiếng Anh <span class="mut">(không bắt buộc)</span></label><textarea rows="2" oninput="V.ed.x=this.value">${esc(e.x)}</textarea><div class="row" style="justify-content:flex-start;margin-top:10px"><button onclick="saveEdit()">Lưu thay đổi</button><button class="g" onclick="V.ed=null;render()">Hủy</button></div></div>`
@@ -181,64 +181,49 @@ function startReview(sid){begin(sid,'review')}
 function finishReview({s,p}){if(!p.ses||p.ses.k!=='review')return;saveHard(s,p);p.ses=null;p.rev++;p.lastRev=Date.now();
  p.next=p.lastRev+((p.rev<DAYS.length?DAYS[p.rev]-DAYS[p.rev-1]:30)*D);if(s.id!=='me')bump();lg('Hoàn thành Review '+p.rev,s.id,{n:act(s).length});save();toast('Hoàn thành Review '+p.rev+' ✅');go('set',{sid:s.id})}
 /* ---------- practice ---------- */
-const TLIM=10000,TO='q';let PT; /* TO: 'q' = hết giờ thì làm lại câu đó; 's' = hết giờ thì quay lại câu đầu tiên */
+const TLIM=10000;let PT; /* 10 giây mỗi câu */
 const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
-const rx=w=>new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),hasW=it=>!!it.ex&&rx(it.word).test(it.ex);
-const nv=t=>t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
-const vOk=(a,vi)=>{const A=nv(a);if(!A)return false;const c=vi.replace(/\([^)]*\)/g,'');return[vi,c,...c.split(/[,;\/]/)].some(p=>nv(p)===A)};
 function pe(c){if(c.word)return{id:c.id,word:c.word,ipa:c.ipa||'',vi:c.vi||'',pos:c.pos||'',ex:c.ex||''};const f=c.front||'',b=c.back||'',sw=isVi(f)&&!isVi(b);return{id:c.id,word:sw?b:f,vi:sw?f:b,ipa:'',pos:'',ex:c.ex||''}}
 const pitems=sid=>sid==='me'?me().personal.filter(c=>!c.arch).map(pe):act(setOf(sid));
+/* Dạng 1: mcq = trắc nghiệm 4 đáp án · Dạng 2: match = nối 5 từ Anh (trái) với nghĩa Việt (phải, xáo trộn) */
 function mkQ(it,t,L){const q={it,t};
- if(t==='mcq'){q.rev=false;q.ans=q.rev?it.word:it.vi;const o=new Set([q.ans]);shuf(L.filter(x=>x.id!==it.id)).forEach(x=>{const v=q.rev?x.word:x.vi;if(o.size<4&&v&&!o.has(v))o.add(v)});q.opts=shuf([...o]);if(q.opts.length<2)q.t='ev'}
- if(t==='order'){let k=0,tk=it.ex.split(/\s+/).filter(Boolean);q.toks=shuf(tk);while(k++<5&&q.toks.join(' ')===tk.join(' '))q.toks=shuf(tk)}
- if(t==='match'){const ps=[it,...shuf(L.filter(x=>x.id!==it.id)).slice(0,4)];q.pairs=ps;q.cards=shuf(ps.flatMap(p=>[{k:p.id,t:'en',text:p.word},{k:p.id,t:'vi',text:p.vi}]))}
+ if(t==='mcq'){q.ans=it.vi;const o=new Set([q.ans]);shuf(L.filter(x=>x.id!==it.id)).forEach(x=>{if(o.size<4&&x.vi&&!o.has(x.vi))o.add(x.vi)});q.opts=shuf([...o]);return q}
+ const sw=new Set([it.word.toLowerCase()]),sv=new Set([it.vi.toLowerCase()]),ps=[it];
+ for(const x of shuf(L.filter(x=>x.id!==it.id))){if(ps.length>=5)break;const w=x.word.toLowerCase(),v=(x.vi||'').toLowerCase();if(!v||sw.has(w)||sv.has(v))continue;sw.add(w);sv.add(v);ps.push(x)}
+ if(ps.length<2)return mkQ(it,'mcq',L);
+ q.pairs=shuf(ps);q.right=shuf(ps);for(let k=0;k<5&&q.right.every((x,i)=>x.id===q.pairs[i].id);k++)q.right=shuf(ps);
  return q}
-function startPractice(sid){const L=pitems(sid);if(L.length<1)return toast('Chưa có từ để luyện tập');
+function startPractice(sid){const L=pitems(sid);if(L.length<2)return toast('Cần ít nhất 2 từ để luyện tập');
  const wt=i=>{const w=W(i.id);return({n:4,p:2,m:1}[w.st])+(w.c+w.w===0?2:0)+w.w},pool=[...L],qs=[],n=Math.min(L.length,Math.max(5,Math.round(L.length*.6)),15);
  while(qs.length<n&&pool.length){let r=Math.random()*pool.reduce((a,i)=>a+wt(i),0),k=0;for(;k<pool.length-1&&(r-=wt(pool[k]))>0;k++);const it=pool.splice(k,1)[0];
-  const ok=t=>t==='blank'?hasW(it):t==='order'?hasW(it)&&it.ex.split(/\s+/).length>=3:t==='mcq'?L.length>=2:t==='match'?L.length>=3:true;
-  const T=['mcq','ev'].filter(ok);qs.push(mkQ(it,T[Math.random()*T.length|0],L))}
+  qs.push(mkQ(it,L.length>=3&&qs.length%2===1?'match':'mcq',L))}
  go('pr',{sid,qs,i:0,st:[],started:Date.now()});clearInterval(PT);PT=setInterval(ptick,100)}
-const norm=s=>s.toLowerCase().replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
 const MSG_BAD=['Gần rồi, cố lên! Não bạn đang khởi động đó 😄','Chưa đúng, nhưng sai là một bước gần hơn tới đúng 💪','Ối, chưa trúng! Thử lại nhé, mình tin bạn.','Hơi lệch một chút thôi, bình tĩnh nào!'];
-const mask=(t,n)=>{let k=0;return[...t].map(c=>/\p{L}/u.test(c)?(k++<n?c:'_'):c).join('')},nlet=t=>(t.match(/\p{L}/gu)||[]).length;
-const tgt=q=>q.t==='ev'?q.it.vi:q.t==='mcq'?q.ans:q.t==='order'?q.it.ex:q.t==='match'?q.pairs.map(p=>p.word+' = '+p.vi).join(' · '):q.it.word;
-const newS=()=>({tries:0,hint:0,done:0,ok:0,given:'',msg:'',draft:'',pick:[],mt:[],sel:-1,bad:[],fl:[]});
+const tgt=q=>q.t==='mcq'?q.ans:q.pairs.map(p=>p.word+' = '+p.vi).join(' · ');
+const newS=()=>({tries:0,done:0,ok:0,given:'',msg:'',bad:[],mt:[],sl:'',sr:'',fl:[]});
 function ptick(){if(V.p!=='pr'){clearInterval(PT);return}const S1=V.st&&V.st[V.i];if(!S1||S1.done||!S1.dl)return;const r=S1.dl-Date.now(),e=$('#cdt'),b=$('#cdb');
  if(e)e.textContent=Math.max(0,Math.ceil(r/1000))+'s';if(b){b.style.width=Math.max(0,r/TLIM*100)+'%';b.parentNode.classList.toggle('low',r<3500)}if(r<=0)timeUp()}
 function timeUp(){const q=V.qs[V.i],S1=V.st[V.i];if(!q||!S1||S1.done)return;if(!S1.to)W(q.it.id).w++;
- if(TO==='s'){V.st=[];V.i=0;toast('⏱ Hết giờ! Quay lại từ câu đầu tiên');save();render();return}
  V.st[V.i]=Object.assign(newS(),{to:1,msg:'<b>⏱ Hết giờ!</b> Làm lại câu này từ đầu nhé.',dl:Date.now()+TLIM});save();render()}
-function pr(){if(V.i>=V.qs.length)return prDone();const q=V.qs[V.i],{it,t}=q,S1=V.st[V.i]??=newS(),T=tgt(q),sp=esc(it.word).replace(/'/g,''),typed=['vi','blank','lw','ev'].includes(q.t);
- if(!S1.done&&!S1.dl)S1.dl=Date.now()+TLIM;const r=Math.max(0,(S1.dl||0)-Date.now()),tt=q.t;let body='';
- if(typed){const qh={vi:`<div class="qh">Gõ từ tiếng Anh có nghĩa</div><div class="big">${esc(it.vi)}</div>`,blank:`<div class="qh">Điền từ còn thiếu</div><div class="sent">${esc(it.ex.replace(rx(it.word),'________'))}</div>`,lw:`<div class="qh">Nghe và gõ từ bạn nghe được</div><button class="g bigbtn" onclick="speak('${sp}')">🔊</button>`,ev:`<div class="qh">Gõ nghĩa tiếng Việt của từ</div><div class="big">${esc(it.word)}</div><button class="g spk" aria-label="Nghe" onclick="speak('${sp}')">🔊</button>`}[tt];
-  body=`${qh}<input id="ans" ${S1.done?'disabled':''} value="${esc(S1.done?S1.given:S1.draft)}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${tt==='ev'?'Gõ nghĩa tiếng Việt…':'Gõ câu trả lời…'}" oninput="V.st[V.i].draft=this.value" onkeydown="if(event.key==='Enter')submitA()">
-  ${S1.hint&&!S1.done?`<div class="mut" style="letter-spacing:.12em;margin:-6px 0 12px;overflow-wrap:anywhere">Gợi ý: <b>${esc(mask(T,S1.hint))}</b></div>`:''}`}
- else if(tt==='mcq')body=`<div class="qh">${q.rev?'Chọn từ tiếng Anh đúng với nghĩa':'Chọn nghĩa đúng của từ'}</div><div class="big">${esc(q.rev?it.vi:it.word)}</div><div class="opts">${q.opts.map((o,k)=>`<button class="opt ${S1.bad.includes(k)?'bad':''} ${S1.done&&o===q.ans?'right':''}" ${S1.done||S1.bad.includes(k)?'disabled':''} onclick="pickO(${k})">${esc(o)}</button>`).join('')}</div>`;
- else if(tt==='order'){const av=q.toks.map((x,k)=>k).filter(k=>!S1.pick.includes(k));body=`<div class="qh">Sắp xếp các từ thành câu đúng</div><div class="ordans">${S1.pick.map(k=>`<button class="chip on" ${S1.done?'disabled':''} onclick="unpickT(${k})">${esc(q.toks[k])}</button>`).join('')||'<span class="mut">Chạm vào các từ bên dưới</span>'}</div><div class="ordpool">${av.map(k=>`<button class="chip" ${S1.done?'disabled':''} onclick="pickT(${k})">${esc(q.toks[k])}</button>`).join('')}</div>`}
- else body=`<div class="qh">Nối từ tiếng Anh với nghĩa tiếng Việt</div><div class="mgrid">${q.cards.map((c,k)=>`<button class="mc ${S1.mt.includes(c.k)?'ok':''} ${S1.sel===k?'sel':''} ${S1.fl.includes(k)?'bad':''}" ${S1.mt.includes(c.k)||S1.done?'disabled':''} onclick="pickM(${k})">${esc(c.text)}</button>`).join('')}</div>`;
+function pr(){if(V.i>=V.qs.length)return prDone();const q=V.qs[V.i],{it}=q,S1=V.st[V.i]??=newS(),sp=esc(it.word).replace(/'/g,'');
+ if(!S1.done&&!S1.dl)S1.dl=Date.now()+TLIM;const r=Math.max(0,(S1.dl||0)-Date.now());let body;
+ if(q.t==='mcq')body=`<div class="qh">Chọn nghĩa đúng của từ</div><div class="big">${esc(it.word)}</div>${it.ipa?`<div class="ipa">${esc(it.ipa)}</div>`:''}<button class="g spk" aria-label="Nghe" onclick="speak('${sp}')">🔊</button><div class="opts">${q.opts.map((o,k)=>`<button class="opt ${S1.bad.includes(k)?'bad':''} ${S1.done&&o===q.ans?'right':''}" ${S1.done||S1.bad.includes(k)?'disabled':''} onclick="pickO(${k})">${esc(o)}</button>`).join('')}</div>`;
+ else{const cl=(side,id)=>`${S1.mt.includes(id)?'ok':''} ${(side==='L'?S1.sl:S1.sr)===id?'sel':''} ${S1.fl.includes(side+id)?'bad':''}`,dis=id=>S1.mt.includes(id)||S1.done?'disabled':'';
+  body=`<div class="qh">Nối từ tiếng Anh (trái) với nghĩa tiếng Việt (phải)</div><div class="mcols"><div>${q.pairs.map(p=>`<button class="mc ${cl('L',p.id)}" ${dis(p.id)} onclick="pickM('L','${p.id}')">${esc(p.word)}</button>`).join('')}</div><div>${q.right.map(p=>`<button class="mc ${cl('R',p.id)}" ${dis(p.id)} onclick="pickM('R','${p.id}')">${esc(p.vi)}</button>`).join('')}</div></div>`}
  const foot=S1.done?`<div class="row" style="justify-content:center">${V.i>0?`<button class="g" onclick="prGo(-1)">← Câu trước</button>`:''}<button onclick="prGo(1)">${V.i+1>=V.qs.length?'Xem kết quả':'Câu tiếp theo →'}</button></div>`
-  :typed?`<button onclick="submitA()">Kiểm tra</button>${S1.tries>=3?` <button class="p" onclick="hintA()">💡 Gợi ý</button>`:''}${S1.hint>=nlet(T)?` <button class="g" onclick="giveUp()">Xem đáp án</button>`:''}`
-  :`${tt==='order'?`<button onclick="checkO()" ${S1.pick.length?'':'disabled'}>Kiểm tra</button>`:''}${S1.tries>=3?` <button class="g" onclick="giveUp()">Xem đáp án</button>`:''}`;
+  :S1.tries>=3?`<button class="g" onclick="giveUp()">Xem đáp án</button>`:'';
  return`<div class="row top"><button class="g sm" onclick="go('${V.sid==='me'?'mine':'set'}',{sid:'${V.sid}'})">← Thoát</button><b>Practice</b><span class="mut">${V.i+1}/${V.qs.length}</span></div><div class="bar"><i style="width:${V.i/V.qs.length*100}%"></i></div>
  ${S1.done?'':`<div class="tm"><div class="bar ${r<3500?'low':''}"><i id="cdb" style="width:${r/TLIM*100}%"></i></div><b id="cdt">${Math.ceil(r/1000)}s</b></div>`}
  <div class="card q">${body}${S1.msg?`<div class="fb ${S1.done&&S1.ok?'good':'miss'}">${S1.msg}</div>`:''}${foot}</div>`}
-function wrongMsg(S1,b='Xem đáp án'){S1.tries++;S1.msg=MSG_BAD[Math.random()*MSG_BAD.length|0]+(S1.tries>=3?' Bạn có thể bấm '+b+' nhé.':'')}
-function submitA(){const q=V.qs[V.i],S1=V.st[V.i],a=$('#ans').value.trim();if(!a||S1.done)return;
- const ok=q.t==='ev'?vOk(a,q.it.vi):a.toLowerCase()===q.it.word.toLowerCase();
- if(ok)return prFin(true,a);S1.draft=a;wrongMsg(S1,'Gợi ý');render()}
-function pickO(k){const q=V.qs[V.i],S1=V.st[V.i];if(S1.done||S1.bad.includes(k))return;if(q.opts[k]===q.ans)return prFin(true,q.opts[k]);S1.bad.push(k);wrongMsg(S1);render()}
-function pickT(k){const S1=V.st[V.i];if(S1.done)return;S1.pick.push(k);render()}
-function unpickT(k){const S1=V.st[V.i];if(S1.done)return;S1.pick=S1.pick.filter(x=>x!==k);render()}
-function checkO(){const q=V.qs[V.i],S1=V.st[V.i];if(S1.done)return;const txt=S1.pick.map(k=>q.toks[k]).join(' '),a=norm(txt),b=norm(q.it.ex);
- if(a.length===b.length&&a.every((x,i)=>x===b[i]))return prFin(true,txt);wrongMsg(S1);render()}
-function pickM(k){const q=V.qs[V.i],S1=V.st[V.i];if(S1.done||S1.fl.length)return;const c=q.cards[k];if(S1.mt.includes(c.k))return;
- if(S1.sel<0){S1.sel=k;return render()}if(S1.sel===k){S1.sel=-1;return render()}
- const a=q.cards[S1.sel];if(a.k===c.k&&a.t!==c.t){S1.mt.push(c.k);S1.sel=-1;if(S1.mt.length===q.pairs.length)return prFin(true,'');return render()}
- wrongMsg(S1);S1.fl=[S1.sel,k];S1.sel=-1;render();setTimeout(()=>{if(V.st[V.i]===S1){S1.fl=[];render()}},450)}
-function prFin(ok,a){const q=V.qs[V.i],S1=V.st[V.i],w=W(q.it.id);S1.done=1;S1.ok=ok;S1.given=a;if(!S1.to){ok&&!S1.tries&&!S1.hint?w.c++:w.w++}
+function wrongMsg(S1){S1.tries++;S1.msg=MSG_BAD[Math.random()*MSG_BAD.length|0]+(S1.tries>=3?' Bạn có thể bấm Xem đáp án nhé.':'')}
+function pickO(k){const q=V.qs[V.i],S1=V.st[V.i];if(S1.done||S1.bad.includes(k)||k>=q.opts.length)return;if(q.opts[k]===q.ans)return prFin(true,q.opts[k]);S1.bad.push(k);wrongMsg(S1);render()}
+function pickM(side,id){const q=V.qs[V.i],S1=V.st[V.i];if(S1.done||S1.fl.length||S1.mt.includes(id))return;
+ const key=side==='L'?'sl':'sr';S1[key]=S1[key]===id?'':id;
+ if(S1.sl&&S1.sr){if(S1.sl===S1.sr){S1.mt.push(S1.sl);S1.sl=S1.sr='';S1.msg='';if(S1.mt.length===q.pairs.length)return prFin(true,'');return render()}
+  wrongMsg(S1);S1.fl=['L'+S1.sl,'R'+S1.sr];S1.sl=S1.sr='';render();setTimeout(()=>{if(V.st[V.i]===S1){S1.fl=[];render()}},450)}
+ else render()}
+function prFin(ok,a){const q=V.qs[V.i],S1=V.st[V.i],w=W(q.it.id);S1.done=1;S1.ok=ok;S1.given=a;if(!S1.to){ok&&!S1.tries?w.c++:w.w++}
  S1.msg=(ok?'<b>Chính xác! 🎉</b>':'<b>Chưa đúng</b>')+`<div>Đáp án: <b>${esc(tgt(q))}</b></div>`;save();render()}
-function hintA(){const S1=V.st[V.i];S1.hint=Math.min(S1.hint+1,nlet(tgt(V.qs[V.i])));render()}
 function giveUp(){prFin(false,'')}
 function prGo(d){V.i+=d;const S1=V.st[V.i];if(S1&&!S1.done)S1.dl=Date.now()+TLIM;render()}
 function prDone(){clearInterval(PT);V.res=V.qs.map((q,i)=>({id:q.it.id,ok:!!V.st[i]?.ok,t:q.t}));if(!V.fin){V.fin=1;const p=P(V.sid),c=V.res.filter(r=>r.ok).length;p.pr++;if(V.sid!=='me')bump();lg('Hoàn thành Practice',V.sid,{q:V.res.length,c});save()}
@@ -293,6 +278,6 @@ function loginView(){return`<div class="login"><div class="mascot">📘</div><h1
  </div>`}
 document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA/.test(e.target.tagName))return;
  if(V.p==='fc'){if(e.key===' '||e.key==='Enter'){e.preventDefault();flipCard()}else if(V.rv&&'123'.includes(e.key)&&e.key)mark('npm'[e.key-1]);else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1)}
- else if(V.p==='pr'&&V.st[V.i]?.done&&e.key==='Enter'){e.preventDefault();prGo(1)}});
+ else if(V.p==='pr'){const q=V.qs[V.i],z=V.st[V.i];if(z?.done&&e.key==='Enter'){e.preventDefault();prGo(1)}else if(q&&q.t==='mcq'&&z&&!z.done&&/^[1-4]$/.test(e.key))pickO(e.key-1)}});
 if(db.role==='t')db.role=null;if(db.role==='s'&&!me())db.role=null;V.p=db.role==='s'?'home':db.role==='t'?'tsets':'login';render();pull();document.addEventListener('visibilitychange',()=>{if(!document.hidden)pull()});
 </script></body></html>
