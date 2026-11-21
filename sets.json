@@ -769,5 +769,543 @@
     "ex": "She is a respected scholar of ancient history."
    }
   ]
+ },
+ {
+  "id": "c14-t4-p1",
+  "book": "Cambridge 14",
+  "test": "4",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c14t4p1-01",
+    "word": "immortal",
+    "ipa": "/ɪˈmɔːtl/",
+    "vi": "bất tử, sống mãi",
+    "pos": "adjective",
+    "ex": "Pheidole dentata, a native ant of the south-eastern U.S., isn’t immortal."
+   },
+   {
+    "id": "c14t4p1-02",
+    "word": "doctoral thesis",
+    "ipa": "/ˈdɒktərəl ˈθiːsɪs/",
+    "vi": "luận án tiến sĩ",
+    "pos": "noun phrase",
+    "ex": "‘We get a picture that these ants really don’t decline,’ says Ysabel Giraldo, who studies the ants for her doctoral thesis at Boston University."
+   },
+   {
+    "id": "c14t4p1-03",
+    "word": "deteriorate",
+    "ipa": "/dɪˈtɪəriəreɪt/",
+    "vi": "xấu đi, suy giảm, thoái hóa",
+    "pos": "verb",
+    "ex": "But the vast majority of animals deteriorate with age just like people do."
+   },
+   {
+    "id": "c14t4p1-04",
+    "word": "colony",
+    "ipa": "/ˈkɒləni/",
+    "vi": "đàn, tổ (côn trùng sống theo bầy đàn); thuộc địa",
+    "pos": "noun",
+    "ex": "Like the naked mole rat, ants are social creatures that usually live in highly organised colonies."
+   },
+   {
+    "id": "c14t4p1-05",
+    "word": "complexity",
+    "ipa": "/kəmˈpleksəti/",
+    "vi": "sự phức tạp",
+    "pos": "noun",
+    "ex": "‘It’s this social complexity that makes P. dentata useful for studying aging in people,’ says Giraldo, now at the California Institute of Technology."
+   },
+   {
+    "id": "c14t4p1-06",
+    "word": "trait",
+    "ipa": "/treɪt/",
+    "vi": "đặc điểm, đặc tính",
+    "pos": "noun",
+    "ex": "Humans are also highly social, a trait that has been connected to healthier aging."
+   },
+   {
+    "id": "c14t4p1-07",
+    "word": "telltale scent",
+    "ipa": "/ˈteltel sent/",
+    "vi": "mùi hương đặc trưng (để lộ/chỉ dấu điều gì đó)",
+    "pos": "noun phrase",
+    "ex": "She compared how well 20-day-old and 95-day-old ants followed the telltale scent that the insects usually leave to mark a trail to food."
+   },
+   {
+    "id": "c14t4p1-08",
+    "word": "trail",
+    "ipa": "/treɪl/",
+    "vi": "vệt, đường mòn (mùi)",
+    "pos": "noun",
+    "ex": "She compared how well 20-day-old and 95-day-old ants followed the telltale scent that the insects usually leave to mark a trail to food."
+   },
+   {
+    "id": "c14t4p1-09",
+    "word": "prey",
+    "ipa": "/preɪ/",
+    "vi": "con mồi",
+    "pos": "noun",
+    "ex": "And she experimented with how ants react to live prey: a tethered fruit fly."
+   },
+   {
+    "id": "c14t4p1-10",
+    "word": "counterpart",
+    "ipa": "/ˈkaʊntəpɑːt/",
+    "vi": "đối tác tương ứng, người/vật cùng loại, tương đương",
+    "pos": "noun",
+    "ex": "But the elderly insects were all good caretakers and trail-followers – the 95-day-old ants could track the scent even longer than their younger counterparts."
+   },
+   {
+    "id": "c14t4p1-11",
+    "word": "flare",
+    "ipa": "/fleə/",
+    "vi": "xòe ra, mở rộng ra (ở đây: giương hàm); bùng lên",
+    "pos": "verb",
+    "ex": "And when it came to reacting to prey, the older ants attacked the poor fruit fly just as aggressively as the young ones did, flaring their mandibles or pulling at the fly’s legs."
+   },
+   {
+    "id": "c14t4p1-12",
+    "word": "mandible",
+    "ipa": "/ˈmændɪbl/",
+    "vi": "hàm (của côn trùng); xương hàm dưới",
+    "pos": "noun",
+    "ex": "And when it came to reacting to prey, the older ants attacked the poor fruit fly just as aggressively as the young ones did, flaring their mandibles or pulling at the fly’s legs."
+   },
+   {
+    "id": "c14t4p1-13",
+    "word": "synaptic",
+    "ipa": "/sɪˈnæptɪk/",
+    "vi": "thuộc khớp thần kinh (synapse)",
+    "pos": "adjective",
+    "ex": "She also wanted to see if aging affects the density of synaptic complexes within these structures – regions where neurons come together."
+   },
+   {
+    "id": "c14t4p1-14",
+    "word": "density",
+    "ipa": "/ˈdensəti/",
+    "vi": "mật độ",
+    "pos": "noun",
+    "ex": "She also wanted to see if aging affects the density of synaptic complexes within these structures – regions where neurons come together."
+   },
+   {
+    "id": "c14t4p1-15",
+    "word": "coincide",
+    "ipa": "/ˌkəʊɪnˈsaɪd/",
+    "vi": "trùng khớp, xảy ra đồng thời",
+    "pos": "verb",
+    "ex": "What was more, the old ants didn’t experience any drop in the levels of either serotonin or dopamine – brain chemicals whose decline often coincides with aging."
+   },
+   {
+    "id": "c14t4p1-16",
+    "word": "age",
+    "ipa": "/eɪdʒ/",
+    "vi": "tuổi; (động từ) già đi, lão hóa",
+    "pos": "noun",
+    "ex": "Either way, it seems that for these ants, age really doesn’t matter."
+   },
+   {
+    "id": "c14t4p1-17",
+    "word": "predator",
+    "ipa": "/ˈpredətə/",
+    "vi": "động vật săn mồi, kẻ thù tự nhiên",
+    "pos": "noun",
+    "ex": "Out in the wild, the ants probably don’t live for a full 140 days thanks to predators, disease and just being in an environment that’s much harsher than the comforts of the lab."
+   },
+   {
+    "id": "c14t4p1-18",
+    "word": "steep",
+    "ipa": "/stiːp/",
+    "vi": "dốc; (sự suy giảm) mạnh, đột ngột",
+    "pos": "adjective",
+    "ex": "‘The lucky ants that do live into old age may suffer a steep decline just before dying,’ Giraldo says, but she can’t say for sure because her study wasn’t designed to follow an ant’s final moments."
+   },
+   {
+    "id": "c14t4p1-19",
+    "word": "entomologist",
+    "ipa": "/ˌentəˈmɒlədʒɪst/",
+    "vi": "nhà côn trùng học",
+    "pos": "noun",
+    "ex": "‘It will be important to extend these findings to other species of social insects,’ says Gene E. Robinson, an entomologist at the University of Illinois at Urbana-Champaign."
+   }
+  ]
+ },
+ {
+  "id": "c15-t1-p1",
+  "book": "Cambridge 15",
+  "test": "1",
+  "passage": "1",
+  "status": "pub",
+  "items": [
+   {
+    "id": "c15t1p1-01",
+    "word": "native",
+    "ipa": "/ˈneɪtɪv/",
+    "vi": "bản địa, có nguồn gốc từ (một nơi nào đó)",
+    "pos": "adjective",
+    "ex": "The nutmeg tree, Myristica fragrans, is a large evergreen tree native to Southeast Asia."
+   },
+   {
+    "id": "c15t1p1-02",
+    "word": "branch",
+    "ipa": "/brɑːntʃ/",
+    "vi": "cành cây (thickly branched: có nhiều cành)",
+    "pos": "noun",
+    "ex": "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits."
+   },
+   {
+    "id": "c15t1p1-03",
+    "word": "foliage",
+    "ipa": "/ˈfəʊliɪdʒ/",
+    "vi": "tán lá, cây lá",
+    "pos": "noun",
+    "ex": "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits."
+   },
+   {
+    "id": "c15t1p1-04",
+    "word": "dense",
+    "ipa": "/dens/",
+    "vi": "dày đặc, rậm rạp",
+    "pos": "adjective",
+    "ex": "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits."
+   },
+   {
+    "id": "c15t1p1-05",
+    "word": "oval",
+    "ipa": "/ˈəʊvl/",
+    "vi": "hình bầu dục, hình trái xoan",
+    "pos": "adjective",
+    "ex": "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits."
+   },
+   {
+    "id": "c15t1p1-06",
+    "word": "pale",
+    "ipa": "/peɪl/",
+    "vi": "nhạt, nhợt nhạt (màu)",
+    "pos": "adjective",
+    "ex": "The tree is thickly branched with dense foliage of tough, dark green oval leaves, and produces small, yellow, bell-shaped flowers and pale yellow pear-shaped fruits."
+   },
+   {
+    "id": "c15t1p1-07",
+    "word": "encased in",
+    "ipa": "/ɪnˈkeɪst ɪn/",
+    "vi": "được bao bọc trong, được bọc kín trong",
+    "pos": "verb phrase",
+    "ex": "The fruit is encased in a flesh husk."
+   },
+   {
+    "id": "c15t1p1-08",
+    "word": "flesh",
+    "ipa": "/fleʃ/",
+    "vi": "thịt, phần cùi (của quả)",
+    "pos": "noun",
+    "ex": "The fruit is encased in a flesh husk."
+   },
+   {
+    "id": "c15t1p1-09",
+    "word": "husk",
+    "ipa": "/hʌsk/",
+    "vi": "vỏ (hạt, quả), vỏ trấu",
+    "pos": "noun",
+    "ex": "When the fruit is ripe, this husk splits into two halves along a ridge running the length of the fruit."
+   },
+   {
+    "id": "c15t1p1-10",
+    "word": "ripe",
+    "ipa": "/raɪp/",
+    "vi": "chín (quả)",
+    "pos": "adjective",
+    "ex": "When the fruit is ripe, this husk splits into two halves along a ridge running the length of the fruit."
+   },
+   {
+    "id": "c15t1p1-11",
+    "word": "ridge",
+    "ipa": "/rɪdʒ/",
+    "vi": "đường gờ, đường nổi",
+    "pos": "noun",
+    "ex": "When the fruit is ripe, this husk splits into two halves along a ridge running the length of the fruit."
+   },
+   {
+    "id": "c15t1p1-12",
+    "word": "lacy red",
+    "ipa": "/ˈleɪsi red/",
+    "vi": "màu đỏ có hình ren, đỏ dạng lưới ren",
+    "pos": "adjective phrase",
+    "ex": "Inside is a purple-brown shiny seed, 2-3 cm long by about 2 cm across, surrounded by a lacy red or crimson covering called an ‘aril’."
+   },
+   {
+    "id": "c15t1p1-13",
+    "word": "crimson",
+    "ipa": "/ˈkrɪmzn/",
+    "vi": "đỏ thẫm, đỏ tươi",
+    "pos": "adjective",
+    "ex": "Inside is a purple-brown shiny seed, 2-3 cm long by about 2 cm across, surrounded by a lacy red or crimson covering called an ‘aril’."
+   },
+   {
+    "id": "c15t1p1-14",
+    "word": "mace",
+    "ipa": "/meɪs/",
+    "vi": "mace (gia vị làm từ áo hạt của quả nhục đậu khấu)",
+    "pos": "noun",
+    "ex": "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril."
+   },
+   {
+    "id": "c15t1p1-15",
+    "word": "preservative",
+    "ipa": "/prɪˈzɜːvətɪv/",
+    "vi": "chất bảo quản; có tính bảo quản",
+    "pos": "noun / adjective",
+    "ex": "Nutmeg was a highly prized and costly ingredient in European cuisine in the Middle Ages, and was used as a flavouring, medicinal, and preservative agent."
+   },
+   {
+    "id": "c15t1p1-16",
+    "word": "exclusive",
+    "ipa": "/ɪkˈskluːsɪv/",
+    "vi": "độc quyền, duy nhất",
+    "pos": "adjective",
+    "ex": "Throughout this period, the Arabs were the exclusive importers of the spice to Europe."
+   },
+   {
+    "id": "c15t1p1-17",
+    "word": "merchant",
+    "ipa": "/ˈmɜːtʃənt/",
+    "vi": "thương nhân, nhà buôn",
+    "pos": "noun",
+    "ex": "They sold nutmeg for high prices to merchants based in Venice, but they never revealed the exact location of the source of this extremely valuable commodity."
+   },
+   {
+    "id": "c15t1p1-18",
+    "word": "dominance",
+    "ipa": "/ˈdɒmɪnəns/",
+    "vi": "sự thống trị, sự chi phối",
+    "pos": "noun",
+    "ex": "The Arab-Venetian dominance of the trade finally ended in 1512, when the Portuguese reached the Banda Islands and began exploiting its precious resources."
+   },
+   {
+    "id": "c15t1p1-19",
+    "word": "commodity",
+    "ipa": "/kəˈmɒdəti/",
+    "vi": "hàng hóa, mặt hàng",
+    "pos": "noun",
+    "ex": "They sold nutmeg for high prices to merchants based in Venice, but they never revealed the exact location of the source of this extremely valuable commodity."
+   },
+   {
+    "id": "c15t1p1-20",
+    "word": "exploit",
+    "ipa": "/ɪkˈsplɔɪt/",
+    "vi": "khai thác, tận dụng (thường để trục lợi)",
+    "pos": "verb",
+    "ex": "The Arab-Venetian dominance of the trade finally ended in 1512, when the Portuguese reached the Banda Islands and began exploiting its precious resources."
+   },
+   {
+    "id": "c15t1p1-21",
+    "word": "subcontract",
+    "ipa": "/ˌsʌbkənˈtrækt/",
+    "vi": "thuê ngoài, giao thầu lại",
+    "pos": "verb",
+    "ex": "Always in danger of competition from neighbouring Spain, the Portuguese began subcontracting their spice distribution to Dutch traders."
+   },
+   {
+    "id": "c15t1p1-22",
+    "word": "spice",
+    "ipa": "/spaɪs/",
+    "vi": "gia vị",
+    "pos": "noun",
+    "ex": "These are the sources of the two spices nutmeg and mace, the former being produced from the dried seed and the latter from the aril."
+   },
+   {
+    "id": "c15t1p1-23",
+    "word": "corporation",
+    "ipa": "/ˌkɔːpəˈreɪʃn/",
+    "vi": "tập đoàn, công ty lớn",
+    "pos": "noun",
+    "ex": "In 1602, Dutch merchants founded the VOC, a trading corporation better known as the Dutch East India Company."
+   },
+   {
+    "id": "c15t1p1-24",
+    "word": "fleet",
+    "ipa": "/fliːt/",
+    "vi": "đội tàu, hạm đội",
+    "pos": "noun",
+    "ex": "Profits began to flow into the Netherlands, and the Dutch commercial fleet swiftly grew into one of the largest in the world."
+   },
+   {
+    "id": "c15t1p1-25",
+    "word": "plague",
+    "ipa": "/pleɪɡ/",
+    "vi": "bệnh dịch hạch, đại dịch",
+    "pos": "noun",
+    "ex": "At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease."
+   },
+   {
+    "id": "c15t1p1-26",
+    "word": "contagious",
+    "ipa": "/kənˈteɪdʒəs/",
+    "vi": "lây nhiễm, dễ lây",
+    "pos": "adjective",
+    "ex": "At the same time, thousands of people across Europe were dying of the plague, a highly contagious and deadly disease."
+   },
+   {
+    "id": "c15t1p1-27",
+    "word": "desperate",
+    "ipa": "/ˈdespərət/",
+    "vi": "tuyệt vọng, khao khát cháy bỏng",
+    "pos": "adjective",
+    "ex": "Doctors were desperate for a way to stop the spread of this disease, and they decided nutmeg held the cure."
+   },
+   {
+    "id": "c15t1p1-28",
+    "word": "spread",
+    "ipa": "/spred/",
+    "vi": "sự lây lan, sự lan rộng",
+    "pos": "noun",
+    "ex": "Doctors were desperate for a way to stop the spread of this disease, and they decided nutmeg held the cure."
+   },
+   {
+    "id": "c15t1p1-29",
+    "word": "cure",
+    "ipa": "/kjʊə/",
+    "vi": "phương thuốc chữa, cách chữa trị",
+    "pos": "noun",
+    "ex": "Doctors were desperate for a way to stop the spread of this disease, and they decided nutmeg held the cure."
+   },
+   {
+    "id": "c15t1p1-30",
+    "word": "sultan",
+    "ipa": "/ˈsʌltən/",
+    "vi": "quốc vương Hồi giáo, vua",
+    "pos": "noun",
+    "ex": "The Banda Islands were ruled by local sultans who insisted on maintaining a neutral trading policy towards foreign powers."
+   },
+   {
+    "id": "c15t1p1-31",
+    "word": "presence",
+    "ipa": "/ˈprezns/",
+    "vi": "sự hiện diện, sự có mặt",
+    "pos": "noun",
+    "ex": "This allowed them to avoid the presence of Portuguese or Spanish troops on their soil, but it also left them unprotected from other invaders."
+   },
+   {
+    "id": "c15t1p1-32",
+    "word": "invader",
+    "ipa": "/ɪnˈveɪdə/",
+    "vi": "kẻ xâm lược",
+    "pos": "noun",
+    "ex": "This allowed them to avoid the presence of Portuguese or Spanish troops on their soil, but it also left them unprotected from other invaders."
+   },
+   {
+    "id": "c15t1p1-33",
+    "word": "fertile",
+    "ipa": "/ˈfɜːtaɪl/",
+    "vi": "có khả năng nảy mầm/sinh sản; màu mỡ",
+    "pos": "adjective",
+    "ex": "In addition, all exported nutmeg was covered with lime to make sure there was no chance a fertile seed which could be grown elsewhere would leave the islands."
+   },
+   {
+    "id": "c15t1p1-34",
+    "word": "obstacle",
+    "ipa": "/ˈɒbstəkl/",
+    "vi": "trở ngại, chướng ngại vật",
+    "pos": "noun",
+    "ex": "There was only one obstacle to Dutch domination."
+   },
+   {
+    "id": "c15t1p1-35",
+    "word": "settlement",
+    "ipa": "/ˈsetlmənt/",
+    "vi": "thỏa thuận, sự dàn xếp",
+    "pos": "noun",
+    "ex": "After decades of fighting for control of this tiny island, the Dutch and British arrived at a compromise settlement, the Treaty of Breda, in 1667."
+   },
+   {
+    "id": "c15t1p1-36",
+    "word": "compromise",
+    "ipa": "/ˈkɒmprəmaɪz/",
+    "vi": "sự thỏa hiệp, sự nhượng bộ lẫn nhau",
+    "pos": "noun",
+    "ex": "After decades of fighting for control of this tiny island, the Dutch and British arrived at a compromise settlement, the Treaty of Breda, in 1667."
+   },
+   {
+    "id": "c15t1p1-37",
+    "word": "monopoly",
+    "ipa": "/məˈnɒpəli/",
+    "vi": "sự độc quyền",
+    "pos": "noun",
+    "ex": "The Dutch now had a monopoly over the nutmeg trade which would last for another century."
+   },
+   {
+    "id": "c15t1p1-38",
+    "word": "smuggle",
+    "ipa": "/ˈsmʌɡl/",
+    "vi": "buôn lậu, đưa lén, tuồn",
+    "pos": "verb",
+    "ex": "Then, in 1770, a Frenchman named Pierre Poivre successfully smuggled nutmeg plants to safety in Mauritius, an island off the coast of Africa."
+   },
+   {
+    "id": "c15t1p1-39",
+    "word": "thrive",
+    "ipa": "/θraɪv/",
+    "vi": "phát triển mạnh, phát đạt",
+    "pos": "verb",
+    "ex": "Some of these were later exported to the Caribbean where they thrived, especially on the island of Grenada."
+   },
+   {
+    "id": "c15t1p1-40",
+    "word": "volcanic eruption",
+    "ipa": "/vɒlˌkænɪk ɪˈrʌpʃn/",
+    "vi": "vụ phun trào núi lửa",
+    "pos": "noun phrase",
+    "ex": "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves."
+   },
+   {
+    "id": "c15t1p1-41",
+    "word": "tsunami",
+    "ipa": "/tsuːˈnɑːmi/",
+    "vi": "sóng thần",
+    "pos": "noun",
+    "ex": "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves."
+   },
+   {
+    "id": "c15t1p1-42",
+    "word": "wipe out",
+    "ipa": "/ˌwaɪp ˈaʊt/",
+    "vi": "xóa sổ, quét sạch, tiêu diệt",
+    "pos": "phrasal verb",
+    "ex": "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves."
+   },
+   {
+    "id": "c15t1p1-43",
+    "word": "grove",
+    "ipa": "/ɡrəʊv/",
+    "vi": "rừng cây nhỏ, lùm cây (trồng)",
+    "pos": "noun",
+    "ex": "Next, in 1778, a volcanic eruption in the Banda region caused a tsunami that wiped out half the nutmeg groves."
+   },
+   {
+    "id": "c15t1p1-44",
+    "word": "seize",
+    "ipa": "/siːz/",
+    "vi": "chiếm lấy, nắm giữ (bằng vũ lực)",
+    "pos": "verb",
+    "ex": "Finally, in 1809, the British returned to Indonesia and seized the Banda Islands by force."
+   },
+   {
+    "id": "c15t1p1-45",
+    "word": "estimate",
+    "ipa": "/ˈestɪmeɪt/",
+    "vi": "ước tính, ước lượng",
+    "pos": "verb",
+    "ex": "Today, nutmeg is grown in Indonesia, the Caribbean, India, Malaysia, Papua New Guinea and Sri Lanka, and world nutmeg production is estimated to average between 10,000 and 12,000 tonnes per year."
+   },
+   {
+    "id": "c15t1p1-46",
+    "word": "plantation",
+    "ipa": "/plɑːnˈteɪʃn/",
+    "vi": "đồn điền",
+    "pos": "noun",
+    "ex": "They returned the islands to the Dutch in 1817, but not before transplanting hundreds of nutmeg seedlings to plantations in several locations across southern Asia."
+   }
+  ]
  }
 ]
