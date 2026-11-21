@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IELTS Vocab</title>
+<title>Mr. Duc Tung</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f4f5fd;--ink:#1f2347;--mut:#6c7194;--pri:#5848e5;--pd:#4337bd;--soft:#ecebff;--line:#e4e6f5;--sun:#ffb21a;--ok:#1fb26b;--bad:#ff5a6e;--sh:0 6px 20px rgba(60,60,140,.08)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Nunito","Noto Sans","Segoe UI",system-ui,sans-serif}
 h1,h2,.logo,.w,.big,.vi,.fire b{font-family:"Nunito","Noto Sans",system-ui,sans-serif;font-weight:800}
 header{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 18px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-.logo{font-size:20px;color:var(--pri)}#hx{display:flex;gap:6px}nav{display:flex;gap:4px;flex:1;justify-content:center}
+.logo{font-size:20px;color:var(--pri);cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}.gtime{font-weight:800;color:var(--mut);min-width:54px}.gtime.low{color:var(--bad)}#hx{display:flex;gap:6px}nav{display:flex;gap:4px;flex:1;justify-content:center}
 nav a{cursor:pointer;padding:7px 14px;border-radius:99px;color:var(--mut);font-weight:800;display:flex;gap:6px;align-items:center}nav a i{font-style:normal}nav a.on{background:var(--soft);color:var(--pri)}
 main{max-width:720px;margin:0 auto;padding:22px 16px 90px}h1{font-size:28px;margin:.2em 0 .4em}h2{font-size:19px;margin:1.6em 0 .5em}
 .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;margin:12px 0;box-shadow:var(--sh)}
@@ -52,7 +52,7 @@ button:disabled{opacity:.5;cursor:default}
 nav.st a{flex-direction:column;gap:0;font-size:12px;padding:4px 12px;border-radius:14px}nav.st a i{font-size:22px}#t{bottom:90px}.hero{flex-direction:column;align-items:flex-start}.face .w{font-size:34px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head><body>
-<header><div class="logo">📘 IELTS Vocab</div><nav id="nav"></nav><div id="hx"></div></header>
+<header><div class="logo" id="logo" role="button" tabindex="0" title="Về trang chủ" onclick="goHome()" onkeydown="if(event.key==='Enter')goHome()">📘 Mr. Duc Tung</div><nav id="nav"></nav><div id="hx"></div></header>
 <main id="app"></main><div id="t"></div>
 <script>
 const K='ielts_v1',TZ='Asia/Ho_Chi_Minh',DAYS=[1,3,7,12,18,24,30],D=864e5,REP={n:3,p:2,m:1};
@@ -241,7 +241,8 @@ const GRAM=[{id:'present-simple',vi:'Hiện tại đơn',en:'Present Simple',ite
  {id:'ps3',vi:'Anh trai tôi không thích cà phê.',ans:["My brother doesn't like coffee"],hint:'like',note:'Phủ định ngôi thứ ba dùng does not (doesn\'t), và động từ chính trở về nguyên mẫu (like, không phải likes).'},
  {id:'ps4',vi:'Bạn có đi bộ đến trường không?',ans:['Do you walk to school?','Do you go to school on foot?'],hint:'walk',note:'Câu hỏi Yes/No dùng Do/Does đứng đầu câu. Chủ ngữ là you nên dùng Do.'},
  {id:'ps5',vi:'Nước sôi ở 100 độ C.',ans:['Water boils at 100 degrees Celsius','Water boils at 100 degrees'],hint:'boil, Celsius',note:'Sự thật hiển nhiên, chân lý khoa học dùng hiện tại đơn. "Water" là ngôi thứ ba nên boil thêm -s.'}]}];
-const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition,GLIM=10;
+function goHome(){if(db.role==='s')go('menu');else if(db.role==='t')go('tsets')}
 const NUMW={zero:0,one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12};
 /* chuẩn hóa để so câu: bỏ hoa/thường, dấu câu; I've = I have; doesn't = does not; five = 5; 6 o'clock = 6; °C = degrees Celsius */
 const gnorm=t=>String(t||'').toLowerCase().replace(/[’‘`]/g,"'").replace(/°\s*c\b/g,' degrees celsius ').replace(/\b(?:one|a)\s+hundred\b/g,'100').replace(/\bo'?clock\b/g,' ').replace(/\bdegrees?\s+c\b/g,'degrees celsius')
@@ -256,7 +257,7 @@ function gdiff(txt,it){const T=gnorm(txt).split(' ').filter(Boolean);let best=nu
 const GP=id=>((me().gram??={})[id]??={ok:{},rounds:0});
 function menu(){const m=me(),n=S().filter(s=>s.status==='pub'&&due(m.prog[s.id])).length+pdueN();
  return`<h1>Hôm nay bạn muốn học gì?</h1><div class="tiles"><a class="tile" onclick="go('home')"><span>📖</span><b>Vocabulary</b><small>${n?n+' mục đến hạn ôn':'Flashcards · Review · Practice'}</small></a><a class="tile" onclick="go('gram')"><span>✏️</span><b>Grammar</b><small>Dịch và nói lại câu</small></a></div>`}
-function gram(){return`<h1>Grammar</h1><p class="mut">Chọn chủ đề, xem câu tiếng Việt rồi nói hoặc gõ lại bằng tiếng Anh.</p>`+GRAM.map(g=>{const k=Object.keys(GP(g.id).ok).filter(id=>g.items.some(x=>x.id===id)).length;
+function gram(){return`<h1>Grammar</h1><p class="mut">Chọn chủ đề, xem câu tiếng Việt rồi nói lại bằng tiếng Anh trong 10 giây (hoặc gõ).</p>`+GRAM.map(g=>{const k=Object.keys(GP(g.id).ok).filter(id=>g.items.some(x=>x.id===id)).length;
  return`<div class="card set" style="cursor:pointer" onclick="gstart('${g.id}')"><div style="flex:1;min-width:150px"><b>${esc(g.vi)}</b> <span class="tag">${esc(g.en)}</span><div class="bar sm"><i style="width:${k/g.items.length*100}%"></i></div><div class="mut">${k}/${g.items.length} câu đã làm đúng</div></div><button>Luyện tập</button></div>`}).join('')+`<p class="mut">Các chủ đề khác sẽ được thêm sau.</p>`}
 function gstart(id){const g=GRAM.find(x=>x.id===id);go('gq',{gid:id,q:shuf(g.items.map(x=>x.id)),tries:0,draft:'',fb:'',done:0,flip:0,gave:0,re:{},okSet:{},first:0,total:g.items.length})}
 function gcur(){const g=GRAM.find(x=>x.id===V.gid);return{g,it:g.items.find(x=>x.id===V.q[0])}}
@@ -264,15 +265,24 @@ function gq(){const{g,it}=gcur();if(!it)return'';const ok=Object.keys(V.okSet).l
  return`<div class="row top"><button class="g sm" onclick="go('gram')">← Thoát</button><b>${esc(g.vi)}</b><span class="mut" id="gcnt">${ok}/${V.total} câu</span></div><div class="bar"><i id="gbar" style="width:${ok/V.total*100}%"></i></div>
  ${V.re[it.id]?'<div class="repchip">🔁 Ôn lại câu này</div>':''}
  <div class="flip gf"><div class="flipin ${V.flip?'on':''}" id="gfi">
- <div class="face front g"><span class="tag">${esc(g.en)}</span><div class="gq">${esc(it.vi)}</div><div class="ghint">Gợi ý: ${esc(it.hint)}</div>
+ <div class="face front g"><span class="tag">${esc(g.en)}</span><div class="gq">${esc(it.vi)}</div>
  ${V.fb?`<div class="fb miss gfb">${V.fb}</div>`:''}
  <input id="gin" value="${esc(V.draft)}" placeholder="Gõ câu tiếng Anh, hoặc bấm 🎤 để nói…" autocomplete="off" autocapitalize="off" spellcheck="false" ${V.done?'disabled':''} oninput="V.draft=this.value" onkeydown="if(event.key==='Enter')gCheck()">
- <div class="row">${SR?`<button id="gmic" class="micbtn ${V.listening?'on':''}" aria-label="Nói" onclick="gMic()">${V.listening?'⏹':'🎤'}</button>`:''}<button onclick="gCheck()">Kiểm tra</button>${V.tries>=3?`<button class="g" onclick="gGive()">Xem đáp án</button>`:''}</div>${SR?'':'<p class="hint">Trình duyệt này chưa hỗ trợ nói, hãy gõ câu trả lời.</p>'}</div>
+ <div class="row">${SR?`<button id="gmic" class="micbtn ${V.listening?'on':''}" aria-label="Nói" onclick="gMic()">${V.listening?'⏹':'🎤'}</button><span id="gtime" class="gtime"></span>`:''}<button onclick="gCheck()">Kiểm tra</button>${V.tries>=3?`<button class="g" onclick="gGive()">Xem đáp án</button>`:''}</div>${SR?'':'<p class="hint">Trình duyệt này chưa hỗ trợ nói, hãy gõ câu trả lời.</p>'}${V.micMsg?`<p class="hint bad" id="gmicmsg">${esc(V.micMsg)}</p>`:''}</div>
  <div class="face back g"><span class="tag" id="gtag">${V.gave?'Đáp án':'Chính xác! 🎉'}</span><div class="w" style="font-size:30px">${esc(it.ans[0])}</div><button class="spk" aria-label="Nghe câu" onclick="gSay()">🔊</button><p class="ex">${esc(it.note)}</p>${it.ans.length>1?`<p class="mut">Cách nói khác cũng đúng: ${it.ans.slice(1,4).map(esc).join(' · ')}</p>`:''}</div></div></div>
  <div class="row" style="justify-content:center;margin-top:12px"><button id="gnext" style="${V.done?'':'display:none'}" onclick="gNext()">Tiếp tục →</button></div>`}
 function gSay(){speak(gcur().it.ans[0])}
+/* So sánh theo âm: bỏ nguyên âm, h, y, chữ đôi rồi đo độ giống. Chỉ dùng cho phần nói, để hỏi lại người học chứ không tự cho đúng. */
+const gskel=t=>gnorm(t).replace(/wh/g,'w').replace(/ph/g,'f').replace(/[aeiouyh ]/g,'').replace(/(.)\1+/g,'$1');
+function lev(a,b){const m=a.length,n=b.length;let p=Array.from({length:n+1},(_,j)=>j);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+/* Lỗi ngữ pháp (thiếu -s/-ed/-ing, nhầm do/does, is/are...) thì KHÔNG được bỏ qua dù nghe gần đúng */
+const AUX=new Set('do does did am is are was were have has had will would can could'.split(' '));
+function gRel(w,v){if(AUX.has(w)&&AUX.has(v))return true;const[x,y]=w.length<v.length?[w,v]:[v,w];return y.startsWith(x)&&/^(s|es|ed|d|ing|ies)$/.test(y.slice(x.length))||(x.endsWith('y')&&y===x.slice(0,-1)+'ies')}
+function gGramDiff(h,a){const H=gnorm(h).split(' '),A=gnorm(a).split(' '),hx=H.filter(w=>!A.includes(w)),ax=A.filter(w=>!H.includes(w));return hx.some(w=>ax.some(v=>gRel(w,v)))}
+function gClose(alts,it){let best=null;for(const t of alts){const s=gskel(t);if(s.length<4)continue;for(const a of it.ans){if(gGramDiff(t,a))continue;const k=gskel(a),sim=1-lev(s,k)/Math.max(s.length,k.length);if(sim>=0.8&&(!best||sim>best.sim))best={sim,heard:t,ans:a}}}return best}
 function gCheck(alts){if(V.done)return;const{it}=gcur(),el=$('#gin'),arr=alts||[el?el.value:''],txt=(arr[0]||'').trim();if(!txt)return toast('Hãy gõ hoặc nói câu tiếng Anh');
  V.draft=txt;if(arr.some(t=>gok(t,it)))return gPass();
+ if(alts){const c=gClose(alts,it);if(c){toast('Máy nghe: "'+c.heard+'", tính là đúng ✓');return gPass()}}
  V.tries++;const d=gdiff(txt,it);V.fb=`<b>Chưa đúng, cần làm lại.</b><div>Câu của bạn: ${d.html}</div>${d.miss>0?`<div class="mut">Còn thiếu ${d.miss} từ</div>`:''}`;render()}
 function gReveal(ok){V.done=1;V.flip=1;try{V.rec&&V.rec.abort()}catch{}const f=$('#gfi');if(f)f.classList.add('on');const n=$('#gnext');if(n)n.style.display='';const t=$('#gtag');if(t)t.textContent=ok?'Chính xác! 🎉':'Đáp án';const i=$('#gin');if(i){i.blur();i.disabled=true}const m=$('#gmic');if(m)m.disabled=true;save()}
 function gPass(){const{it}=gcur(),o=GP(V.gid);o.ok[it.id]=(o.ok[it.id]||0)+1;
@@ -283,14 +293,21 @@ function gNext(){if(!V.done)return;const{it}=gcur();V.q.shift();if(V.gave)V.q.sp
  V.tries=0;V.draft='';V.fb='';V.done=0;V.flip=0;V.gave=0;if(!V.q.length)return gFinish();render()}
 function gFinish(){const id=V.gid,first=V.first,total=V.total;GP(id).rounds++;bump();lg('Hoàn thành Grammar','gram:'+id,{n:total});save();go('gdone',{gid:id,first,total})}
 function gdone(){const g=GRAM.find(x=>x.id===V.gid);return`<div class="card" style="text-align:center"><div class="emo">${V.first===V.total?'🏆':'🎉'}</div><h1>Hoàn thành!</h1><p class="mut">${esc(g.vi)}</p><p><b>${V.first}/${V.total}</b> câu đúng ngay lần đầu</p><div class="row" style="justify-content:center"><button onclick="gstart('${g.id}')">Luyện lại</button><button class="g" onclick="go('gram')">Về Grammar</button></div></div>`}
-function gMicUi(){const b=$('#gmic');if(b){b.classList.toggle('on',!!V.listening);b.textContent=V.listening?'⏹':'🎤'}}
+function gMicUi(){const b=$('#gmic');if(b){b.classList.toggle('on',!!V.listening);b.textContent=V.listening?'⏹':'🎤'}const t=$('#gtime');if(t){t.textContent=V.listening?'⏱ '+V.left+'s':'';t.classList.toggle('low',!!V.listening&&V.left<=3)}}
+/* Bảng sửa lỗi nhận diện giọng nói hay gặp (chỉ áp dụng khi nói, không áp dụng khi gõ). Thêm dòng mới theo mẫu: [/\bnghe sai\b/g,'từ đúng'] */
+const SPFIX=[[/\bwhat are\b/g,'water'],[/\bboys\b/g,'boils']];
+const speechFix=t=>SPFIX.reduce((x,[a,b])=>x.replace(a,b),String(t).toLowerCase());
+const NETMSG='Trình duyệt không kết nối được dịch vụ nhận diện giọng nói (của Google), dù máy bạn có mạng. Hãy thử: mở bằng Chrome bản mới (không dùng Brave hoặc trình duyệt trong Zalo/Facebook), tắt VPN hoặc trình chặn quảng cáo, rồi bấm mic lại. Hoặc bấm mic trên bàn phím điện thoại để nói vào ô nhập.';
 function gMic(){if(V.done)return;if(!SR)return toast('Trình duyệt chưa hỗ trợ nói, hãy gõ câu trả lời');
  if(V.rec){V.rec.stop();return}
- const r=new SR();r.lang=db.acc||'en-GB';r.maxAlternatives=5;r.interimResults=false;r.continuous=false;V.rec=r;V.listening=1;gMicUi();let got=0,err=0;
- r.onresult=e=>{got=1;const alts=[...e.results[0]].map(a=>a.transcript);if(V.rec===r&&V.p==='gq')gCheck(alts)};
- r.onerror=e=>{err=1;const m={'not-allowed':'Hãy cho phép trang dùng micro rồi thử lại','service-not-allowed':'Hãy cho phép trang dùng micro rồi thử lại','no-speech':'Không nghe thấy gì, thử lại nhé','network':'Cần có mạng để nhận diện giọng nói','audio-capture':'Không tìm thấy micro'}[e.error];if(e.error!=='aborted')toast(m||'Lỗi micro: '+e.error)};
- r.onend=()=>{if(V.rec===r){V.rec=null;V.listening=0;gMicUi();if(!got&&!err&&V.p==='gq')toast('Không nghe thấy gì, thử lại nhé')}};
- try{r.start()}catch{V.rec=null;V.listening=0;gMicUi()}}
+ const r=new SR();r.lang=db.acc||'en-GB';r.maxAlternatives=5;r.interimResults=false;r.continuous=false;V.rec=r;V.listening=1;V.left=GLIM;V.micMsg='';const mm=$('#gmicmsg');if(mm)mm.remove();gMicUi();let got=0,err=0,late=0;
+ /* đồng hồ 10 giây: hết giờ thì dừng thu và chấm câu đã nói */
+ const tm=setInterval(()=>{if(V.rec!==r){clearInterval(tm);return}V.left--;gMicUi();if(V.left<=0){clearInterval(tm);late=1;try{r.stop()}catch{}}},1000);
+ r.onresult=e=>{got=1;const raw=[...e.results[0]].map(a=>a.transcript),alts=raw.concat(raw.map(speechFix));if(V.rec===r&&V.p==='gq')gCheck(alts)};
+ r.onerror=e=>{err=1;if(e.error==='aborted')return;if(e.error==='network'&&V.p==='gq'){V.micMsg=NETMSG;toast('Mic không kết nối được, xem hướng dẫn bên dưới');return}
+  const m={'not-allowed':'Hãy cho phép trang dùng micro rồi thử lại','service-not-allowed':'Hãy cho phép trang dùng micro rồi thử lại','no-speech':late?'Hết 10 giây rồi, thử lại nhé':'Không nghe thấy gì, thử lại nhé','audio-capture':'Không tìm thấy micro'}[e.error];toast(m||'Lỗi micro: '+e.error)};
+ r.onend=()=>{clearInterval(tm);if(V.rec===r){V.rec=null;V.listening=0;if(V.micMsg&&V.p==='gq'&&!$('#gmicmsg'))render();else gMicUi();if(!got&&!err&&V.p==='gq')toast(late?'Hết 10 giây rồi, thử lại nhé':'Không nghe thấy gì, thử lại nhé')}};
+ try{r.start()}catch{clearInterval(tm);V.rec=null;V.listening=0;gMicUi()}}
 /* ---------- teacher ---------- */
 function tsets(){return`<div class="row"><h1>Bộ từ vựng</h1><button onclick="newSet()">+ Tạo bộ từ</button></div><div class="card"><b>Cập nhật cho học viên</b><p class="mut">Sau khi tạo hoặc sửa bộ từ: bấm "Tải sets.json", vào GitHub → Add file → Upload files → tải file này lên (ghi đè sets.json) → Commit. Sau 1–2 phút, học viên mở lại trang sẽ tự thấy bản mới, tiến độ học được giữ nguyên.</p><button onclick="exportSets()">Tải sets.json</button></div>`+(db.sets.length?db.sets.map(s=>`<div class="card row"><div><b>${esc(title(s))}</b> <span class="tag">${s.status==='pub'?'Đã đăng':'Nháp'}</span><div class="mut">${act(s).length} từ</div></div>
  <div><button class="g" onclick="go('tstat',{sid:'${s.id}'})">Học sinh</button> <button class="g" onclick="editSet('${s.id}')">Sửa</button></div></div>`).join(''):'<div class="card mut">Chưa có bộ từ nào. Bấm "Tạo bộ từ" để bắt đầu.</div>')}
@@ -328,14 +345,14 @@ function tstat(){const s=db.sets.find(x=>x.id===V.sid);return`<h1>${esc(title(s)
  ${Object.values(db.students).map(st=>{const p=st.prog[s.id];return`<tr><td>${esc(st.name)} (${esc(st.cls)})</td><td>${!p?'Chưa học':p.init?'Hoàn thành':'Đang học'}</td><td>${p?.rev||0}</td><td>${p?.pr||0}</td><td>${fd(p?.first)}</td><td>${fd(st.log.filter(l=>l.sid===s.id).at(-1)?.at)}</td><td>${fd(p?.next)}</td></tr>`}).join('')||'<tr><td colspan=7 class="mut">Chưa có học sinh</td></tr>'}</table></div>`}
 /* ---------- shell ---------- */
 function render(){const t=db.role==='t',s=db.role==='s',on=(...p)=>p.includes(V.p)?'on':'',nav=$('#nav');nav.className=s?'st':'';
- nav.innerHTML=s?`<a class="${on('menu')}" onclick="go('menu')"><i>🏠</i>Home</a><a class="${on('home','lib','mine','set','fc','pr','done','pcr')}" onclick="go('home')"><i>📖</i>Vocabulary</a><a class="${on('gram','gq','gdone')}" onclick="go('gram')"><i>✏️</i>Grammar</a>`:t?`<a class="${on('tsets','tnew','tstat')}" onclick="go('tsets')">Bộ từ</a><a class="${on('tstud','tone')}" onclick="go('tstud')">Học sinh</a>`:'';
+ nav.innerHTML=s?`<a class="${on('home','lib','mine','set','fc','pr','done','pcr')}" onclick="go('home')"><i>📖</i>Vocabulary</a><a class="${on('gram','gq','gdone')}" onclick="go('gram')"><i>✏️</i>Grammar</a>`:t?`<a class="${on('tsets','tnew','tstat')}" onclick="go('tsets')">Bộ từ</a><a class="${on('tstud','tone')}" onclick="go('tstud')">Học sinh</a>`:'';
  $('#hx').innerHTML=db.role?`<button class="g sm" onclick="accent()">🔊 ${db.acc==='en-US'?'Mỹ':'Anh'}</button><button class="g sm" onclick="out()">Thoát</button>`:'';
  const guard=(r,f)=>db.role===r?f():loginView();
  const v={login:loginView,menu:()=>guard('s',menu),gram:()=>guard('s',gram),gq:()=>guard('s',gq),gdone:()=>guard('s',gdone),home:()=>guard('s',home),lib:()=>guard('s',lib),set:()=>guard('s',setPage),mine:()=>guard('s',mine),fc:()=>guard('s',fc),done:()=>guard('s',doneView),pr:()=>guard('s',pr),pcr:()=>guard('s',pcr),
  tsets:()=>guard('t',tsets),tnew:()=>guard('t',tnew),tstud:()=>guard('t',tstud),tone:()=>guard('t',tone),tstat:()=>guard('t',tstat)}[V.p];
  $('#app').innerHTML=v();cnt();const a=$('#ans');if(a&&!a.disabled)a.focus()}
-function loginView(){return`<div class="login"><div class="mascot">📘</div><h1>IELTS Vocab</h1><p class="mut">Học từ vựng IELTS mỗi ngày: flashcard, luyện tập và lịch ôn thông minh giúp bạn nhớ lâu hơn.</p>
- <div class="card"><label>Tên tiếng Anh đầy đủ</label><input id="n" placeholder="Alex Nguyen" autocomplete="off"><label>Lớp</label><input id="c" placeholder="IELTS Foundation 01" onkeydown="if(event.key==='Enter')login()"><p><button class="wide" onclick="login()">Start Learning</button></p></div>
+function loginView(){return`<div class="login"><div class="mascot">📘</div><h1>Mr. Duc Tung</h1><p class="mut">Học từ vựng và ngữ pháp mỗi ngày: flashcard, luyện nói và lịch ôn thông minh giúp bạn nhớ lâu hơn.</p>
+ <div class="card"><label>Tên tiếng Anh đầy đủ</label><input id="n" placeholder="Alex Nguyen" autocomplete="off"><label>Lớp</label><input id="c" placeholder="Foundation 01" onkeydown="if(event.key==='Enter')login()"><p><button class="wide" onclick="login()">Start Learning</button></p></div>
  </div>`}
 document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA/.test(e.target.tagName))return;
  if(V.p==='fc'){if(e.key===' '||e.key==='Enter'){e.preventDefault();flipCard()}else if(V.rv&&'123'.includes(e.key)&&e.key)mark('npm'[e.key-1]);else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1)}
